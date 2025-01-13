@@ -1,0 +1,60 @@
+---
+
+---
+
+<script client:load>
+    function openMenu() {
+        const menu = document.getElementById('menu');
+
+        if (menu instanceof HTMLElement) {
+            menu.classList.toggle('hidden');
+        }
+    }
+</script>
+
+<!-- 
+<nav class="bg-gray-600 py-6 relative">
+    <div class="container mx-auto flex md:px-4">
+        <div class="flex flex-grow px-4">
+            <a href="#">
+                <img class="h-16 transform hover:scale-110 transition duration-300 ease-in-out" src="/src/assets/bordart-logo.svg" alt="">
+            </a>
+        </div>
+        <div class="flex md:hidden px-4">
+            <img src="src/assets/menu.svg" id="menu-icon" onclick="openMenu()" alt="">
+        </div>
+
+        <div id="menu" class="md:flex hidden justify-between items-center top-20 sm:w-full sm:items-end">
+            <div class="sm:flex sm:flex-col">
+                <a class="lg:mr-7 text-white transform hover:scale-110 transition duration-300 ease-in-out" href="#">Productos</a>
+                <a class="lg:mr-7 text-white transform hover:scale-110 transition duration-300 ease-in-out" href="#">Catálogo</a>
+                <a class="lg:mr-7 text-white transform hover:scale-110 transition duration-300 ease-in-out" href="#">Preguntas</a>
+                <a class="lg:mr-7 text-white transform hover:scale-110 transition duration-300 ease-in-out" href="#">Nosotros</a>
+            </div>
+        </div>
+    </div>
+</nav>
+-->
+
+<nav class="bg-gray-800 py-6 relative">
+    <div class="container mx-auto flex px-8 xl-px0">
+        <div class="flex flex-grow items-center">
+            <a href="#">
+                <img class="h-12" src="/src/assets/bordart-logo.svg" alt="">
+            </a>
+        </div>
+        <div class="flex lg:hidden>">
+            <img src="/src/assets/menu.svg" onclick="openMenu()" alt="">
+        </div>
+        <div id="menu" class="lg:flex hidden flex-grow justify-between absolute lg:relative lg:top-0 top-20 left-0 
+        bg-gray-800 w-full lg:w-auto items-center py-14 lg:py-0 px-8 sm:px-24 lg:px-0">
+            <div class="flex flex-col lg:flex-row mb-8 lg:mb-0">
+                <a href="#" class="text-white lg:mr-7 mb:8 lg:mb-0">Productos</a>
+                <a href="#" class="text-white lg:mr-7 mb:8 lg:mb-0">Catalogo</a>
+                <a href="#" class="text-white lg:mr-7 mb:8 lg:mb-0">Preguntas</a>
+                <a href="#" class="text-white lg:mr-7 mb:8 lg:mb-0">Nosotros</a>
+
+            </div>
+        </div>
+    </div>
+</nav>
