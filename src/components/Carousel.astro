@@ -1,0 +1,76 @@
+---
+
+---
+
+<section class="flex flex-col items-center py-4 bg-orange-100">
+    <div class="mb-2">
+        <h2 class="font-bold text-lg md:text-2xl">Nuestros ultimos bordados</h2>
+    </div>
+    <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden">
+        <div class="slide-track flex gap-3 ">
+            <div class="slide ">
+                <img src="/src/assets/carousel-1.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="/src/assets/carousel-2.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="/src/assets/carousel-3.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="/src/assets/carousel-4.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="/src/assets/carousel-5.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="/src/assets/carousel-6.webp" alt="">
+            </div>
+            <!-- repeat -->
+            <div class="slide">
+                <img src="/src/assets/carousel-1.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="/src/assets/carousel-2.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="/src/assets/carousel-3.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="/src/assets/carousel-4.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="/src/assets/carousel-5.webp" alt="">
+            </div>
+            <div class="slide">
+                <img src="/src/assets/carousel-6.webp" alt="">
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<style>
+    @keyframes scroll{
+        0%{
+            transform: translateX(0);
+            -webkit-animation: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-200px * 6));
+            -webkit-animation: translateX(calc(-200px * 6));
+        }
+    }
+
+    .slider .slide-track{
+        width: calc(200px * 12);
+        animation: scroll 40s linear infinite;
+        -webkit-animation: scroll 40s linear infinite;
+    }
+
+    .slider .slide img{
+        width: 100%;
+        height: 100%;
+        border-radius: 25%;
+    }
+</style>
