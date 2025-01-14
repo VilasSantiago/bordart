@@ -9,7 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.5"
+    "astro": "^5.1.5",
+    "solid-js": "^1.9.4"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.4",
