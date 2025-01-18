@@ -1,0 +1,724 @@
+---
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+    <Navigation client:load />
+    <!-- Explanation -->
+    <div class="flex items-center flex-col p-4">
+        <h2 class="text-3xl font-bold py-4">Aclaraciones</h2>
+        <ul class="border list-disc border-red-500 py-2 px-4">
+            <li>
+                <p class="text-xl">Los disenos estan expresados en ALTO x ANCHO</p>
+            </li>
+            <li>
+                <p class="text-xl font-bold">Los circulos de colores indican el VALOR DEL DISENO. Podes revisarlo en la lista de precios</p>
+            </li>
+            <li>
+                <p class="text-xl">Los disenos del catalogo no pueden modificar mucho su tamano porque pueden haber deformaciones</p>
+            </li>
+        </ul>
+    </div>
+    <!-- Colors -->
+    <div class="grid grid-cols-3 gap-6 w-full max-w-8xl px-4 justify-center items-center p-4">
+
+        <!-- Green -->
+        <div class="w-16 mx-auto">
+            <p class="text-center font-bold ">Verde</p>
+        </div>
+        <!-- Yellow -->
+         <div class="w-16 mx-auto">
+            <p class="text-center font-bold ">Amarillo</p>
+         </div>
+        <!-- Blue -->
+        <div class="w-16 mx-auto">
+            <p class="text-center font-bold ">Azul</p>
+        </div>
+        
+        <!-- Green Dot -->
+        <div class="h-16 w-16 mx-auto">
+            <img src="/src/assets/catalog/green-round.png" alt="">
+        </div>
+        <!-- Yellow Dot -->
+         <div class="h-16 w-16 mx-auto">
+            <img class="" src="/src/assets/catalog/yellow-round.png" alt="">
+         </div>
+        <!-- Blue Dot -->
+         <div class="h-16 w-16 mx-auto">
+            <img src="/src/assets/catalog/blue-round.png" alt="">
+         </div>
+    </div>
+
+    <!-- Catalog: Bordados -->
+    <div class="flex flex-row p-4 gap-4 items-center justify-center md:flex-col">
+        <h3 class="font-bold text-4xl text-center">
+            Catalogo de Bordados
+        </h3>
+
+        <button class="border text-lg shadow-lg hover:bg-gray-700 max-w-34">
+            <a class="font-bold text-cyan-700 hover:text-white" 
+            href="https://www.canva.com/design/DAGU_JUNAQY/HgZJlDzI8OeJCZB51X4COA/view?utm_content=DAGU_JUNAQY&utm_campaign=designshare&utm_medium=link&utm_source=editor">
+            Lista de precios
+            </a>
+        </button>
+    </div>
+    <!-- Carousel 1 -->
+     <div class="flex flex-col p-4">
+        <div class="mb-2 flex flex-row gap-4 justify-center md:justify-start items-center m-auto">
+            <h2 class="font-bold text-center text-xl md:text-3xl md:text-left">
+                DISEÑOS BORDART
+            </h2>
+            <button>
+                <a class="font-bold text-violet-900" 
+                href="https://www.canva.com/design/DAGcO6h6s24/MPXqgO_3734ImU233YViWw/view?utm_content=DAGcO6h6s24&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha77288a143#1">
+                    Ver mas disenos
+                </a>
+            </button>
+        </div>
+        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
+            <div class="slide-track flex gap-3 ">
+                <div class="slide ">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <!-- repeat -->
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Carousel 2 -->
+     <div class="flex flex-col items-center p-4">
+        <div class="mb-2 flex flex-row gap-4">
+            <h2 class="font-bold text-center text-xl md:text-3xl">
+                AMOR
+            </h2>
+            <button>
+                <a class="font-bold text-violet-900" 
+                href="https://www.canva.com/design/DAGcO3izIpI/UXoLG4786b6vqlLud3DiLg/view?utm_content=DAGcO3izIpI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=heba01d7de6">
+                    Ver mas disenos
+                </a>
+            </button>
+        </div>
+        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
+            <div class="slide-track flex gap-3 ">
+                <div class="slide ">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <!-- repeat -->
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+    
+     <!-- Carousel 3 -->
+     <div class="flex flex-col items-center p-4">
+        <div class="mb-2 flex flex-row gap-4">
+            <h2 class="font-bold text-center text-xl md:text-3xl">
+                ARTE
+            </h2>
+            <button>
+                <a class="font-bold text-violet-900 text-end" 
+                href="https://www.canva.com/design/DAGcO-rl358/at7J7ocorn4Ks9gN_MybGA/view?utm_content=DAGcO-rl358&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hfb77259e44">
+                    Ver mas disenos
+                </a>
+            </button>
+        </div>
+        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
+            <div class="slide-track flex gap-3 ">
+                <div class="slide ">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <!-- repeat -->
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Carousel 4 -->
+     <div class="flex flex-col items-center p-4">
+        <div class="mb-2 flex flex-row gap-4">
+            <h2 class="font-bold text-center text-xl md:text-3xl">
+                DIBUJOS ANIMADOS
+            </h2>
+            <button>
+                <a class="font-bold text-violet-900" 
+                href="https://www.canva.com/design/DAGcO4TBEg8/XzBf8PcAx1TZJ8P6yNrOxQ/view?utm_content=DAGcO4TBEg8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h86c1121a03">
+                    Ver mas disenos
+                </a>
+            </button>
+        </div>
+        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
+            <div class="slide-track flex gap-3 ">
+                <div class="slide ">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <!-- repeat -->
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Carousel 5 -->
+     <div class="flex flex-col items-center p-4">
+        <div class="mb-2 flex flex-row gap-4">
+            <h2 class="font-bold text-center text-xl md:text-3xl">
+                MARCAS Y LOGOS
+            </h2>
+            <button>
+                <a class="font-bold text-violet-900" 
+                href="https://www.canva.com/design/DAGcOzj8g8s/9TSlg_hxBSGTJG8w7KPfRQ/view?utm_content=DAGcOzj8g8s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h75f8886b6e">
+                    Ver mas disenos
+                </a>
+            </button>
+        </div>
+        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
+            <div class="slide-track flex gap-3 ">
+                <div class="slide ">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <!-- repeat -->
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Carousel 6 -->
+     <div class="flex flex-col items-center p-4">
+        <div class="mb-2 flex flex-row gap-4">
+            <h2 class="font-bold text-center text-xl md:text-3xl">
+                MUSICA
+            </h2>
+            <button>
+                <a class="font-bold text-violet-900" 
+                href="https://www.canva.com/design/DAGcO9ig2B0/oWGjkqM4nSoxU7HaRULk1w/view?utm_content=DAGcO9ig2B0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h85b28bd405">
+                    Ver mas disenos
+                </a>
+            </button>
+        </div>
+        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
+            <div class="slide-track flex gap-3 ">
+                <div class="slide ">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <!-- repeat -->
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Carousel 7 -->
+     <div class="flex flex-col items-center p-4">
+        <div class="mb-2 flex flex-row gap-4">
+            <h2 class="font-bold text-center text-xl md:text-3xl">
+                ANIME
+            </h2>
+            <button>
+                <a class="font-bold text-violet-900" 
+                href="https://www.canva.com/design/DAGcO6rYVxY/LuxM55Q3tJYuuz2Xs6B_NQ/view?utm_content=DAGcO6rYVxY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha5e8d83a3f">
+                    Ver mas disenos
+                </a>
+            </button>
+        </div>
+        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
+            <div class="slide-track flex gap-3 ">
+                <div class="slide ">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <!-- repeat -->
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Carousel 8 -->
+     <div class="flex flex-col items-center p-4">
+        <div class="mb-2 flex flex-row gap-4">
+            <h2 class="font-bold text-center text-xl md:text-3xl">
+                NIKE x PERSONAJES
+            </h2>
+            <button>
+                <a class="font-bold text-violet-900" 
+                href="https://www.canva.com/design/DAGcO4uAtXs/Zk4bhDzncFxDRWCLntG4Lg/view?utm_content=DAGcO4uAtXs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h136c53b143#1">
+                    Ver mas disenos
+                </a>
+            </button>
+        </div>
+        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
+            <div class="slide-track flex gap-3 ">
+                <div class="slide ">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <!-- repeat -->
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Carousel 9 -->
+     <div class="flex flex-col items-center p-4">
+        <div class="mb-2 flex flex-row gap-4">
+            <h2 class="font-bold text-center text-xl md:text-3xl">
+                DEPORTES
+            </h2>
+            <button>
+                <a class="font-bold text-violet-900" 
+                href="https://www.canva.com/design/DAGcOwa6TMs/ddMwlDUg36yWyoXuFVv9AQ/view?utm_content=DAGcOwa6TMs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5025fe742b">
+                    Ver mas disenos
+                </a>
+            </button>
+        </div>
+        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
+            <div class="slide-track flex gap-3 ">
+                <div class="slide ">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <!-- repeat -->
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Carousel 10 -->
+     <div class="flex flex-col items-center p-4">
+        <div class="mb-2 flex flex-row gap-4">
+            <h2 class="font-bold text-center text-xl md:text-3xl">
+                FLORES
+            </h2>
+            <button>
+                <a class="font-bold text-violet-900" 
+                href="https://www.canva.com/design/DAGcO9zWKJo/zSuSupYOIZpRWapioMArQg/view?utm_content=DAGcO9zWKJo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=haead08d502">
+                    Ver mas disenos
+                </a>
+            </button>
+        </div>
+        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
+            <div class="slide-track flex gap-3 ">
+                <div class="slide ">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <!-- repeat -->
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- Catalog: Pines -->
+    <div class="flex flex-row p-4 gap-4 items-center justify-center md:flex-col">
+        <h3 class="font-bold text-4xl text-center">
+            Catalogo de Pines
+        </h3>
+
+        <button class="border text-lg shadow-lg hover:bg-gray-700 max-w-34">
+            <a class="font-bold text-cyan-700 hover:text-white" 
+            href="https://www.canva.com/design/DAGU_JUNAQY/HgZJlDzI8OeJCZB51X4COA/view?utm_content=DAGU_JUNAQY&utm_campaign=designshare&utm_medium=link&utm_source=editor">
+            Lista de precios
+            </a>
+        </button>
+    </div>
+
+    <!-- Carousel 11 -->
+    <div class="flex flex-col p-4">
+        <div class="mb-2 flex flex-row gap-4 items-center justify-center max-w-6xl">
+            <h2 class="font-bold text-center text-xl md:text-3xl md:justify-end">
+                PINES
+            </h2>
+            <button class="">
+                <a class="font-bold text-violet-900" 
+                href="https://www.canva.com/design/DAF1UlYs1g0/eMC1WO6zq4GNpVWML0L4mA/view?utm_content=DAF1UlYs1g0&utm_campaign=designshare&utm_medium=link&utm_source=editor">
+                    Ver mas disenos
+                </a>
+            </button>
+        </div>
+        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
+            <div class="slide-track flex gap-3 ">
+                <div class="slide ">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <!-- repeat -->
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/src/assets/catalog/db-1.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <Footer />
+</Layout>
+
+<style>
+    @keyframes scroll{
+        0%{
+            transform: translateX(0);
+            -webkit-animation: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-200px * 6));
+            -webkit-animation: translateX(calc(-200px * 6));
+        }
+    }
+
+    .slider .slide-track{
+        width: calc(200px * 12);
+        animation: scroll 20s linear infinite;
+        -webkit-animation: scroll 20s linear infinite;
+    }
+
+    .slider .slide img{
+        width: 100%;
+        height: 100%;
+        border-radius: 25%;
+    }
+</style>
+   
