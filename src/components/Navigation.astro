@@ -2,7 +2,7 @@
 
 ---
 
-<nav class="bg-yellow-400 border-b border-gray-200">
+<nav id="fondo" class="bg-yellow-400 border-b border-gray-200">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
       <div class="text-lg font-bold flex items-center ">
@@ -108,5 +108,12 @@
 
 [transition-style="in:wipe:down"] {
   animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-down both;
+}
+
+#fondo{
+  mask-image: linear-gradient(
+    black 90%,
+    transparent
+  );
 }
   </style>
