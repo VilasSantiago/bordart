@@ -1,39 +1,112 @@
 ---
+
 ---
 
-<script client:load>
-    function openMenu() {
-        const menu = document.getElementById('menu');
-
-        if (menu instanceof HTMLElement) {
-            menu.classList.toggle('hidden');
-        }
-    }
-</script>
-
-<nav class="bg-yellow-400 md:py-4 relative">
-    <div class="container mx-auto flex md:px-8 px-2 xl:px-0 ">
-        <div class="flex flex-grow items-center justify-between">
-            <a class="flex justify-between items-center" href="/">
-                <!-- Imagen más grande -->
-                <img class="md:p-0 p-1 h-16 w-auto" src="/src/assets/logo-bordart.png" alt="Bordart Logo">
-                <p class="text-black font-bold px-4">Bordart</p>
-            </a>
-        </div>
-
-        <!-- Menú móvil -->
-        <div class="flex items-center lg:hidden ">
-            <img class="h-8 w-8" src="/src/assets/menu.svg" onclick="openMenu()" alt="Menu">
-        </div>
-
-        <!-- Menú desplegable -->
-        <div id="menu" class="lg:flex hidden flex-grow absolute lg:relative lg:top-0 top-20 left-0 bg-yellow-400 w-full lg:w-auto items-center py-14 lg:py-0 px-8 sm:px-24 lg:px-0 lg:justify-end">
-            <div class="flex flex-col lg:flex-row lg:text-right mb-8 lg:mb-0 font-bold">
-                <a href="#products" class="text-black lg:mr-7 mb-8 lg:mb-0">Productos</a>
-                <a href="#" class="text-black lg:mr-7 mb-8 lg:mb-0">Catálogo</a>
-                <a href="#questions" class="text-black lg:mr-7 mb-8 lg:mb-0">Preguntas</a>
-                <a href="#" class="text-black lg:mr-7 mb-8 lg:mb-0">Nosotros</a>
-            </div>
-        </div>
+<nav class="bg-yellow-400 border-b border-gray-200">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="text-lg font-bold flex items-center ">
+        <a href="#" class="text-black flex items-center gap-4 hover:scale-110 transition-transform duration-300">
+            <img class="h-10 w-10" src="/src/assets/logo-bordart.png" alt="">
+            Bordart
+        </a>
+      </div>
+  
+      <!-- Menu Button for small screens -->
+      <button
+        id="menu-button"
+        class="sm:hidden flex items-center focus:outline-none"
+      >
+        <img id="menu-icon" src="/src/assets/menu-black.svg" alt="Menu" class="h-6 w-6" />
+      </button>
+  
+      <!-- Links (Hidden on sm, flex on md+) -->
+      <div class="hidden sm:flex space-x-6">
+        <a href="#" class="text-black font-bold hover:text-gray-500 hover:scale-110 transition-transform duration-300">Productos</a>
+        <a href="#" class="text-black font-bold hover:text-gray-500 hover:scale-110 transition-transform duration-300">Catalogo</a>
+        <a href="#" class="text-black font-bold hover:text-gray-500 hover:scale-110 transition-transform duration-300">Preguntas</a>
+        <a href="#" class="text-black font-bold hover:text-gray-500 hover:scale-110 transition-transform duration-300">Nosotros</a>
+      </div>
     </div>
-</nav>
+  
+    <!-- Dropdown menu for small screens -->
+    <div id="menu-dropdown" class="hidden sm:hidden bg-gray-50 border-gray-200 "
+    transition-style="in:wipe:down"
+    >
+      <a
+        href="#"
+        class="block px-4 py-2 text-black hover:bg-gray-500 hover:text-white"
+        transition-style="in:wipe:down"
+      >
+        Productos
+      </a>
+      <a
+        href="#"
+        class="block px-4 py-2 text-black hover:bg-gray-500 hover:text-white"
+        transition-style="in:wipe:down"
+      >
+        Catalogo
+      </a>
+      <a
+        href="#"
+        class="block px-4 py-2 text-black hover:bg-gray-500 hover:text-white"
+        transition-style="in:wipe:down"
+      >
+        Preguntas
+      </a>
+      <a
+        href="#"
+        class="block px-4 py-2 text-black hover:bg-gray-500 hover:text-white"
+        transition-style="in:wipe:down"
+      >
+        Nosotros
+      </a>
+    </div>
+  </nav>
+  
+  <script>
+    // Astro Vanilla JS Script
+    const menuButton = document.getElementById("menu-button");
+    const menuDropdown = document.getElementById("menu-dropdown");
+    const menuIcon = document.getElementById("menu-icon");
+  
+    if (menuButton) {
+    menuButton.addEventListener("click", () => {
+      // Toggle visibility of the dropdown menu
+      if (menuDropdown) {
+        const isHidden = menuDropdown.classList.contains("hidden");
+        menuDropdown.classList.toggle("hidden");
+
+        // Cambia el ícono basado en el estado del menú
+        if (isHidden) {
+          // El menú se abre, cambia a la cruz
+          if (menuIcon) {
+            (menuIcon as HTMLImageElement).src = "/src/assets/close.svg"; // Cambia al ícono de cruz
+            (menuIcon as HTMLImageElement).alt = "Close Menu";
+          }
+        } else {
+          // El menú se cierra, cambia al ícono de menú
+          if (menuIcon) {
+            (menuIcon as HTMLImageElement).src = "/src/assets/menu-black.svg"; // Cambia al ícono del menú
+            (menuIcon as HTMLImageElement).alt = "Open Menu";
+          }
+        }
+      }
+    });
+  }
+  </script>
+  
+  <style>
+    @keyframes wipe-in-down {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:wipe:down"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-down both;
+}
+  </style>

@@ -1,10 +1,7 @@
 ---
 
 ---
-
 <script>
-    declare var confetti: (options: { particleCount: number, spread: number, origen: { x: number, y: number } }) => void;
-
 const drop = new Date('2025-03-01 00:00:00');
 
 function upDateCountdown(){
@@ -28,18 +25,7 @@ function upDateCountdown(){
         comingSoon.style.display = 'none';
         openDrop.style.display = 'flex';
         }
-        
-        setInterval(() => {
-            confetti({
-                particleCount: 200,
-                spread: 360,
-                origen: {
-                    x: Math.random(),
-                    y: Math.random(),
-                }
-
-            });
-       }, 1000);         
+           
     }
 
     document.getElementById('days')!.textContent = days.toString().padStart(2, '0');
@@ -52,7 +38,6 @@ const countdownInterval = setInterval(upDateCountdown, 1000);
 upDateCountdown();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
 
 <section class="bg-yellow-300 py-12">
     <div class="flex items-center justify-center flex-col ">
