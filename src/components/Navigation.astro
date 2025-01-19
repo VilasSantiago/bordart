@@ -7,7 +7,7 @@
       <!-- Logo -->
       <div class="text-lg font-bold flex items-center ">
         <a href="/" class="text-black flex items-center gap-4 hover:scale-110 transition-transform duration-300">
-            <img class="h-10 w-10" src="/images/logo-bordart.png" alt="Bordart Logo">
+            <img class="h-10 w-10" src="/src/assets/logo-bordart.png" alt="Bordart Logo">
             Bordart
         </a>
       </div>
@@ -65,40 +65,8 @@
   </nav>
   
 <script>
-interface MenuElements {
-    button: HTMLElement;
-    dropdown: HTMLElement;
-    icon: HTMLImageElement;
-}
-
-function isImageElement(element: Element): element is HTMLImageElement {
-    return element instanceof HTMLImageElement;
-}
-
-const menuElements: Partial<MenuElements> = {
-    button: document.getElementById("menu-button")!,
-    dropdown: document.getElementById("menu-dropdown")!,
-    icon: isImageElement(document.getElementById("menu-icon")!) 
-    ? (document.getElementById("menu-icon") as HTMLImageElement) 
-    : undefined
-};
-
-if (menuElements.button && menuElements.dropdown && menuElements.icon) {
-    menuElements.button.addEventListener("click", () => {
-    const isHidden = menuElements.dropdown?.classList.contains("hidden");
-    menuElements.dropdown?.classList.toggle("hidden");
-
-    if (menuElements.icon) {
-        if (isHidden) {
-        menuElements.icon.src = "/images/close.svg";
-        menuElements.icon.alt = "Close Menu";
-        } else {
-        menuElements.icon.src = "/images/menu-black.svg";
-        menuElements.icon.alt = "Open Menu";
-        }
-    }
-    });
-}
+//import { initializeNavigation } from '../scripts/navigation';
+//document.addEventListener('DOMContentLoaded', initializeNavigation);
 </script>
   
   <style>
@@ -121,4 +89,5 @@ if (menuElements.button && menuElements.dropdown && menuElements.icon) {
     transparent
   );
 }
+</style>
   </style>
