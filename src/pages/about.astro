@@ -1,37 +1,42 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Navigation />
 
-<section class="max-w-6xl"> 
-    <div class="flex flex-col">
-        <!-- Textos -->
-        <div>
-            <h2 class="text-3xl font-bold text-center">
-                Bordart
-            </h2>
-            <p>
-                En BORDART, nos apasiona transformar prendas de vestir y accesorios comunes
-                en obras de arte personalizadas y unicas. Desde Bahia Blanca a todo el pais,
-                utilizamos nuestras maquinas de bordado y un toque creativo para dar vida
-                a tus ideas y disenos.
-            </p>
-            <p>
-                Nuestra mision es ofrecer a nuestros clientes una experiencia de compra
-                personalizada y memorable, donde cada prensa bordada cuente una historia
-                y refleke la personalidad unica de su propietario. Nos esforzamos por superar
-                las expectativas de nuestros clientes en cuanto a calidad, originalidad y 
-                servicio al cliente.
-            </p>
+<Layout>
+    <Navigation />
+    <section class="max-w-6xl"> 
+        <div class="flex flex-col">
+            <!-- Textos -->
+            <div>
+                <h2 class="text-3xl font-bold text-center">
+                    Bordart
+                </h2>
+                <p>
+                    En BORDART, nos apasiona transformar prendas de vestir y accesorios comunes
+                    en obras de arte personalizadas y unicas. Desde Bahia Blanca a todo el pais,
+                    utilizamos nuestras maquinas de bordado y un toque creativo para dar vida
+                    a tus ideas y disenos.
+                </p>
+                <p>
+                    Nuestra mision es ofrecer a nuestros clientes una experiencia de compra
+                    personalizada y memorable, donde cada prensa bordada cuente una historia
+                    y refleke la personalidad unica de su propietario. Nos esforzamos por superar
+                    las expectativas de nuestros clientes en cuanto a calidad, originalidad y 
+                    servicio al cliente.
+                </p>
+            </div>
+            <!-- Imagen -->
+            <div>
+                <img src="/src/assets/dibujo-sonrisol.png" alt="">
+            </div>
         </div>
-        <!-- Imagen -->
-        <div>
-            <img src="/src/assets/dibujo-sonrisol.png" alt="">
-        </div>
-    </div>
-</section>
+    </section>
+    
+    
+    <Footer />
+    
+</Layout>
 
-
-<Footer />
