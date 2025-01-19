@@ -7,7 +7,7 @@
       <!-- Logo -->
       <div class="text-lg font-bold flex items-center ">
         <a href="/" class="text-black flex items-center gap-4 hover:scale-110 transition-transform duration-300">
-            <img class="h-10 w-10" src="/src/assets/logo-bordart.png" alt="">
+            <img class="h-10 w-10" src="/images/logo-bordart.png" alt="Bordart Logo">
             Bordart
         </a>
       </div>
@@ -17,7 +17,7 @@
         id="menu-button"
         class="sm:hidden flex items-center focus:outline-none"
       >
-        <img id="menu-icon" src="/src/assets/menu-black.svg" alt="Menu" class="h-6 w-6" />
+        <img id="menu-icon" src="/images/menu-black.svg" alt="Menu" class="h-6 w-6" />
       </button>
   
       <!-- Links (Hidden on sm, flex on md+) -->
@@ -64,37 +64,42 @@
     </div>
   </nav>
   
-  <script>
-    // Astro Vanilla JS Script
-    const menuButton = document.getElementById("menu-button");
-    const menuDropdown = document.getElementById("menu-dropdown");
-    const menuIcon = document.getElementById("menu-icon");
-  
-    if (menuButton) {
-    menuButton.addEventListener("click", () => {
-      // Toggle visibility of the dropdown menu
-      if (menuDropdown) {
-        const isHidden = menuDropdown.classList.contains("hidden");
-        menuDropdown.classList.toggle("hidden");
+<script>
+interface MenuElements {
+    button: HTMLElement;
+    dropdown: HTMLElement;
+    icon: HTMLImageElement;
+}
 
-        // Cambia el ícono basado en el estado del menú
+function isImageElement(element: Element): element is HTMLImageElement {
+    return element instanceof HTMLImageElement;
+}
+
+const menuElements: Partial<MenuElements> = {
+    button: document.getElementById("menu-button")!,
+    dropdown: document.getElementById("menu-dropdown")!,
+    icon: isImageElement(document.getElementById("menu-icon")!) 
+    ? (document.getElementById("menu-icon") as HTMLImageElement) 
+    : undefined
+};
+
+if (menuElements.button && menuElements.dropdown && menuElements.icon) {
+    menuElements.button.addEventListener("click", () => {
+    const isHidden = menuElements.dropdown?.classList.contains("hidden");
+    menuElements.dropdown?.classList.toggle("hidden");
+
+    if (menuElements.icon) {
         if (isHidden) {
-          // El menú se abre, cambia a la cruz
-          if (menuIcon) {
-            (menuIcon as HTMLImageElement).src = "/src/assets/close.svg"; // Cambia al ícono de cruz
-            (menuIcon as HTMLImageElement).alt = "Close Menu";
-          }
+        menuElements.icon.src = "/images/close.svg";
+        menuElements.icon.alt = "Close Menu";
         } else {
-          // El menú se cierra, cambia al ícono de menú
-          if (menuIcon) {
-            (menuIcon as HTMLImageElement).src = "/src/assets/menu-black.svg"; // Cambia al ícono del menú
-            (menuIcon as HTMLImageElement).alt = "Open Menu";
-          }
+        menuElements.icon.src = "/images/menu-black.svg";
+        menuElements.icon.alt = "Open Menu";
         }
-      }
+    }
     });
-  }
-  </script>
+}
+</script>
   
   <style>
     @keyframes wipe-in-down {
