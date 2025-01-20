@@ -1,96 +1,52 @@
----
-
----
-
-<nav id="fondo" class="bg-yellow-400 border-b border-gray-200">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<nav class="bg-gray-800 text-white">
+    <div class="container mx-auto flex items-center justify-between px-4 py-2">
       <!-- Logo -->
-      <div class="text-lg font-bold flex items-center ">
-        <a href="/" class="text-black flex items-center gap-4 hover:scale-110 transition-transform duration-300">
-            <img class="h-10 w-10" src="/src/assets/logo-bordart.png" alt="Bordart Logo">
-            Bordart
-        </a>
-      </div>
+      <a href="#" class="text-2xl font-bold">TuLogo</a>
   
-      <!-- Menu Button for small screens -->
-      <button
-        id="menu-button"
-        class="sm:hidden flex items-center focus:outline-none"
+      <!-- Botón para pantallas pequeñas -->
+      <button 
+        class="md:hidden flex flex-col gap-1 focus:outline-none"
+        id="menu-toggle"
+        aria-label="Abrir menú"
       >
-        <img id="menu-icon" src="/src/assets/menu-black.svg" alt="Menu" class="h-6 w-6" />
+        <span class="block h-1 w-6 bg-white"></span>
+        <span class="block h-1 w-6 bg-white"></span>
+        <span class="block h-1 w-6 bg-white"></span>
       </button>
   
-      <!-- Links (Hidden on sm, flex on md+) -->
-      <div class="hidden sm:flex space-x-6">
-        <a href="/products/" class="text-black font-bold hover:text-gray-500 hover:scale-110 transition-transform duration-300">Productos</a>
-        <a href="/catalog/" class="text-black font-bold hover:text-gray-500 hover:scale-110 transition-transform duration-300">Catalogo</a>
-        <a href="/#questions" class="text-black font-bold hover:text-gray-500 hover:scale-110 transition-transform duration-300">Preguntas</a>
-        <a href="/about/" class="text-black font-bold hover:text-gray-500 hover:scale-110 transition-transform duration-300">Nosotros</a>
-      </div>
+      <!-- Links de navegación -->
+      <ul 
+        class="hidden md:flex gap-6 items-center"
+        id="nav-links"
+      >
+        <li><a href="#inicio" class="hover:text-gray-400">Inicio</a></li>
+        <li><a href="#nosotros" class="hover:text-gray-400">Nosotros</a></li>
+        <li><a href="#servicios" class="hover:text-gray-400">Servicios</a></li>
+        <li><a href="#contacto" class="hover:text-gray-400">Contacto</a></li>
+      </ul>
     </div>
   
-    <!-- Dropdown menu for small screens -->
-    <div id="menu-dropdown" class="hidden sm:hidden bg-gray-50 border-gray-200 "
-    transition-style="in:wipe:down"
+    <!-- Menú desplegable en pantallas pequeñas -->
+    <ul 
+      class="hidden flex-col bg-gray-800 px-4 py-2 md:hidden" 
+      id="mobile-menu"
     >
-      <a
-        href="/products/"
-        class="block px-4 py-2 text-black hover:bg-gray-500 hover:text-white"
-        transition-style="in:wipe:down"
-      >
-        Productos
-      </a>
-      <a
-        href="/catalog/"
-        class="block px-4 py-2 text-black hover:bg-gray-500 hover:text-white"
-        transition-style="in:wipe:down"
-      >
-        Catalogo
-      </a>
-      <a
-        href="/#questions"
-        class="block px-4 py-2 text-black hover:bg-gray-500 hover:text-white"
-        transition-style="in:wipe:down"
-      >
-        Preguntas
-      </a>
-      <a
-        href="/about/"
-        class="block px-4 py-2 text-black hover:bg-gray-500 hover:text-white"
-        transition-style="in:wipe:down"
-      >
-        Nosotros
-      </a>
-    </div>
+      <li><a href="#inicio" class="block py-1 hover:text-gray-400">Inicio</a></li>
+      <li><a href="#nosotros" class="block py-1 hover:text-gray-400">Nosotros</a></li>
+      <li><a href="#servicios" class="block py-1 hover:text-gray-400">Servicios</a></li>
+      <li><a href="#contacto" class="block py-1 hover:text-gray-400">Contacto</a></li>
+    </ul>
   </nav>
-  
-<!--
+
   <script>
-  import { initializeNavigation } from '../../scripts/navigation';
-  document.addEventListener('DOMContentLoaded', initializeNavigation);
-</script>
-   -->
-
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleButton = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
   
-  <style>
-    @keyframes wipe-in-down {
-  from {
-    clip-path: inset(0 0 100% 0);
-  }
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-[transition-style="in:wipe:down"] {
-  animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-down both;
-}
-
-#fondo{
-  mask-image: linear-gradient(
-    black 90%,
-    transparent
-  );
-}
-</style>
-
+        if (toggleButton) {
+          toggleButton.addEventListener("click", () => {
+            mobileMenu?.classList.toggle("hidden");
+        });
+      }
+    });
+  </script>
