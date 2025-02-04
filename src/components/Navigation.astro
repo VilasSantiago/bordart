@@ -1,7 +1,7 @@
 ---
 ---
 
-<nav class="bg-yellow-400 text-black">
+<nav class="bg-yellow-400 text-black fixed top-0 left-0 w-full z-50 shadow-md transition-all duration-300">
     <div class="container mx-auto flex items-center justify-between px-4 py-2">
       <!-- Logo -->
         <a href="/" class="text-2xl font-bold flex flex-row items-center
@@ -61,8 +61,9 @@
             </li>
         </ul>
      </div>
-    
   </nav>
+  <!-- Espacio para que el contenido no quede oculto detras del nav -->
+  <div class="pt-16"></div>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
