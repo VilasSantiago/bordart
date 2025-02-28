@@ -1,6 +1,5 @@
 ---
 import '../styles/tailwind.css';
-
 ---
 
 <script>
@@ -37,21 +36,25 @@ import '../styles/tailwind.css';
     efectTyping1();
 </script>
 
-<section class="bg-white py-8 flex flex-col items-center h-aut0 md:h-screen">
-    <div class="bg-red-100 items-center justify-center max-w-6xl overflow-hidden text-xl md:text-6xl">
-        
-        <p id="text1" class="font-MiFuente md:translate-y-[-75px] font-bold md:text-6xl mt-0 md:items-center md:justify-center"></p>
-        <p id="text" class="font-MiFuente md:translate-y-[-50px] font-bold md:text-3xl mt-0"></p>
-       
+<section class="h-screen w-full flex flex-col items-center justify-center md:justify-between">
+    <!-- Texto 1 -->
+    <div class=" flex justify-center text-center md:pt-32 min-h-12">
+        <p id="text1" class="font-MiFuente font-bold text-6xl md:text-8xl"></p>
     </div>
-</section>
+    <!-- Texto 2 -->
+    <div class="flex justify-center text-center min-h-12 md:pt-40 md:pt-32">
+        <p id="text" class="font-MiFuente font-bold text-2xl md:text-5xl"></p>
+    </div>
+    <!-- Logo -->
+     <div class="md:mt-auto hidden md:block">
+        <img class="size-[448px] object-cover" 
+        src="/public/assets/bordart-logo-2.png" alt="">
+     </div>
+    
+</section> 
+
 
 <style>
-    .logo{
-        width: 60%;
-        object-fit: contain;
-    }
-
     p{
         font-family: 'MiFuente', sans-serif;
     }
