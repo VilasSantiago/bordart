@@ -1,11 +1,11 @@
 ---
-    
+import '../styles/tailwind.css';
 
 ---
 
 <script>
     const text1 = "Bordart";
-    const text = "'Donde los hilos cobran vida'";
+    const text = "¡Donde los hilos cobran vida!";
     var indice = 0;
     var termino = false;
 
@@ -37,11 +37,12 @@
     efectTyping1();
 </script>
 
-<section class="bg-white py-8 flex flex-col items-center">
-    <div class="flex flex-col items-center justify-center max-w-6xl overflow-hidden">
-        <img id="image" class="logo w-auto h-auto mb-0" src="/assets/bordart-logo-2.png" alt="">
-        <p id="text1" class="font-miFuente md:translate-y-[-75px] font-bold md:text-3xl mt-0"></p>
-        <p id="text" class=" md:translate-y-[-50px] font-bold md:text-3xl mt-0"></p>
+<section class="bg-white py-8 flex flex-col items-center h-aut0 md:h-screen">
+    <div class="bg-red-100 items-center justify-center max-w-6xl overflow-hidden text-xl md:text-6xl">
+        
+        <p id="text1" class="font-MiFuente md:translate-y-[-75px] font-bold md:text-6xl mt-0 md:items-center md:justify-center"></p>
+        <p id="text" class="font-MiFuente md:translate-y-[-50px] font-bold md:text-3xl mt-0"></p>
+       
     </div>
 </section>
 
@@ -50,16 +51,8 @@
         width: 60%;
         object-fit: contain;
     }
-    #text1{
-        font-family: ;
-    }
 
-    #text{
-        font-family: ;
+    p{
+        font-family: 'MiFuente', sans-serif;
     }
-
-@font-face{
-    font-family: tryFont;
-    src: url('/src/assets/Fonts/PWTornado.ttf');
-}
 </style>
