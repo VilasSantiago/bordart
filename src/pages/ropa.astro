@@ -10,60 +10,108 @@ import Footer from '../components/Footer.astro';
     <Navigation />
     <Hero />
 
-<div class="grid grid-cols-3 grid-rows-4 gap-5">
-    <div class="row-span-2">
-        <div class="box bg-gray-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer hover:bg-gray-200">
-            <a href="/products/">
-                <img src="/assets/buzo.webp" alt="" class="w-full h-48 object-contain overflow-hidden">
-                <div class="p-4 text-center">
-                    <h3 class="font-bold text-lg">Buzos</h3>
-                </div>
-            </a>
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Our Collections</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Discover our latest styles and find your perfect match</p>
         </div>
-    </div>
-    <div class="row-span-2 col-start-2 row-start-2">
-        <div class="box bg-gray-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer hover:bg-gray-200">
-            <a href="/products/">
-                <img src="/assets/buzo.webp" alt="" class="w-full h-48 object-contain overflow-hidden">
-                <div class="p-4 text-center">
-                    <h3 class="font-bold text-lg">Buzos</h3>
-                </div>
-            </a>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product Card 1 -->
+            <div class="product-card group">
+                <a href="/products/hoodies" class="block h-full">
+                    <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 shadow-md group-hover:shadow-xl transition-all duration-300">
+                        <img src="/assets/buzo.webp" alt="Hoodies collection" class="w-full h-64 object-contain p-4 transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 transform translate-y-0 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-lg text-gray-800">Hoodies</h3>
+                            <p class="text-sm text-gray-600 mt-1">Stay cozy and stylish</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card group">
+                <a href="/products/t-shirts" class="block h-full">
+                    <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 shadow-md group-hover:shadow-xl transition-all duration-300">
+                        <img src="/assets/buzo.webp" alt="T-shirts collection" class="w-full h-64 object-contain p-4 transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 transform translate-y-0 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-lg text-gray-800">T-Shirts</h3>
+                            <p class="text-sm text-gray-600 mt-1">Everyday comfort</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card group">
+                <a href="/products/jackets" class="block h-full">
+                    <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 shadow-md group-hover:shadow-xl transition-all duration-300">
+                        <img src="/assets/buzo.webp" alt="Jackets collection" class="w-full h-64 object-contain p-4 transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 transform translate-y-0 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-lg text-gray-800">Jackets</h3>
+                            <p class="text-sm text-gray-600 mt-1">For all seasons</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card group">
+                <a href="/products/pants" class="block h-full">
+                    <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 shadow-md group-hover:shadow-xl transition-all duration-300">
+                        <img src="/assets/buzo.webp" alt="Pants collection" class="w-full h-64 object-contain p-4 transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 transform translate-y-0 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-lg text-gray-800">Pants</h3>
+                            <p class="text-sm text-gray-600 mt-1">Perfect fit for you</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card group">
+                <a href="/products/accessories" class="block h-full">
+                    <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 shadow-md group-hover:shadow-xl transition-all duration-300">
+                        <img src="/assets/buzo.webp" alt="Accessories collection" class="w-full h-64 object-contain p-4 transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4 transform translate-y-0 group-hover:translate-y-0 transition-transform duration-300">
+                            <h3 class="font-bold text-lg text-gray-800">Accessories</h3>
+                            <p class="text-sm text-gray-600 mt-1">Complete your look</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- View All Card -->
+            <div class="product-card group">
+                <a href="/products" class="block h-full">
+                    <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 shadow-md group-hover:shadow-xl transition-all duration-300 flex items-center justify-center h-full">
+                        <div class="text-center p-8">
+                            <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gray-300 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800">View All Products</h3>
+                            <p class="text-sm text-gray-600 mt-1">Explore our full collection</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="row-span-2 col-start-1 row-start-3">
-        <div class="box bg-gray-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer hover:bg-gray-200">
-            <a href="/products/">
-                <img src="/assets/buzo.webp" alt="" class="w-full h-48 object-contain overflow-hidden">
-                <div class="p-4 text-center">
-                    <h3 class="font-bold text-lg">Buzos</h3>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="row-span-2 col-start-3 row-start-3">
-        <div class="box bg-gray-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer hover:bg-gray-200">
-            <a href="/products/">
-                <img src="/assets/buzo.webp" alt="" class="w-full h-48 object-contain overflow-hidden">
-                <div class="p-4 text-center">
-                    <h3 class="font-bold text-lg">Buzos</h3>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="row-span-2 col-start-3 row-start-1">
-        <div class="box bg-gray-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer hover:bg-gray-200">
-            <a href="/products/">
-                <img src="/assets/buzo.webp" alt="" class="w-full h-48 object-contain overflow-hidden">
-                <div class="p-4 text-center">
-                    <h3 class="font-bold text-lg">Buzos</h3>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
+    </section>
     
     <Drop />
     <Footer />
 </Layout>
-   
+
+<style>
+    .product-card {
+        @apply transition-all duration-300 hover:-translate-y-1;
+    }
+</style>
