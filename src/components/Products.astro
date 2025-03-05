@@ -19,12 +19,18 @@
         <!-- Contenedor de las cajas -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl px-4">
             <!-- Caja 1 -->
-            <div class="box bg-gray-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer hover:bg-gray-200">
+            <div class="group box bg-gray-100 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform hover:scale-110 transition duration-300 ease-in-out cursor-pointer hover:bg-gray-200 relative">
                 <a href="/products/">
                     <img src="/assets/remeraover.png" alt="" class="w-full h-48 object-contain overflow-hidden">
                     <div class="p-4 text-center">
                         <h3 class="font-bold text-lg">Remeras</h3>
                     </div>
+                </a>
+                <!-- Boton de aclaraciones -->
+                <a href="" class="absolute inset-x-0 bottom-4 flex justify-center">
+                    <button class="hidden md:block opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out bg-blue-500 text-white px-4 py-2 rouded-lg shadow-md hover:bg-blue-600">
+                        Aclaraciones
+                    </button>
                 </a>
             </div>
             <!-- Caja 2 -->
