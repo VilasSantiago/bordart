@@ -5,9 +5,9 @@
 <section id="footer" class="footer bg-yellow-100">
     <footer class="flex items-center justify-center flex-col py-6 px-4 max-w-6xl m-auto">
         <h3 class="font-bold text-3xl text-center">Tu consulta siempre es bienvenida</h3>
-        <div class="container grid grid-cols-2 md:grid-cols-3 items-center py-4 md:py-10 ">
+        <div class="container flex flex-nowrap justify-between items-center py-4 md:py-10 ">
 
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center col-start-1">
                 <a href="https://www.instagram.com/bordart_bb/">
                     <img class="h-16 w-16" src="/assets/instagram.svg" alt="">
                 </a>
@@ -16,9 +16,13 @@
                 </p>
             </div>
 
-            <img class="size-full opacity-55" src="/assets/bordart-logo-2.png" alt="">
+            <div>
+                <img class="hidden md:block opacity-30 object-cover h-96 w-96" 
+                src="/assets/bordart-logo-2.png" alt="">
+            </div>
+            
 
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center col-start-2 md:col-start-3">
                 <a href="">
                     <img class="h-16 w-16" src="/assets/whatsapp.svg" alt="">
                 </a>
