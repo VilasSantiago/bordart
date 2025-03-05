@@ -1,0 +1,27 @@
+---
+---
+<button id="scrollTopBtn" 
+class="hidden fixed bottom-6 right-6 bg-blue-500 text-withe p-3 rounded-full 
+shadow-lg hover:bg-blue-600 transition duration-300 z-50">
+↑
+</button>
+
+<script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", function(){
+        if(this.window.scrollY > 300){
+            scrollTopBtn?.classList.remove("hidden");
+            scrollTopBtn?.classList.add("flex");
+        }else{
+            scrollTopBtn?.classList.remove("flex");
+            scrollTopBtn?.classList.add("hidden");
+        }
+    });
+
+    scrollTopBtn?.addEventListener("click", function(){
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
