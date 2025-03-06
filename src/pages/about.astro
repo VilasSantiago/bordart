@@ -3,10 +3,14 @@ import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 import Navigation from "src/components/Navigation.astro";
 import Divider from "src/components/Divider.astro";
+import Button from "src/components/Button.astro";
 ---
 
 
 <Layout>
+    <div class="hidden md:block">
+        <Button />
+    </div>
    <Navigation />
     <section class="max-w-6xl mx-auto p-6"> 
         <div class="p-4 text-4xl font-bold flex flex-row justify-center">

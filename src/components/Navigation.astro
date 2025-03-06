@@ -29,13 +29,15 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state -->
-  <div class="md:hidden hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gradient-to-b from-amber-300 to-yellow-300">
-      <a href="/ropa/" class="mobile-nav-link">Drop</a>
-      <a href="/#products" class="mobile-nav-link">Productos</a>
-      <a href="/catalog/" class="mobile-nav-link">Catálogo</a>
-      <a href="/#questions" class="mobile-nav-link">Preguntas</a>
-      <a href="/about/" class="mobile-nav-link">Nosotros</a>
+  <div class="md:hidden mobile-menu-wrapper" id="mobile-menu-wrapper">
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gradient-to-b from-amber-300 to-yellow-300">
+        <a href="/ropa/" class="mobile-nav-link">Drop</a>
+        <a href="/#products" class="mobile-nav-link">Productos</a>
+        <a href="/catalog/" class="mobile-nav-link">Catálogo</a>
+        <a href="/#questions" class="mobile-nav-link">Preguntas</a>
+        <a href="/about/" class="mobile-nav-link">Nosotros</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -59,24 +61,47 @@
   .mobile-nav-link {
     @apply block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-gray-900 hover:bg-yellow-200 transition duration-300 ease-in-out;
   }
+
+  .mobile-menu-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .mobile-menu-wrapper.open {
+    max-height: 300px; /* Adjust this value based on your menu's height */
+    transition: max-height 0.5s ease-in;
+  }
+
+  .mobile-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .mobile-menu-wrapper.open .mobile-menu {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.getElementById("menu-toggle");
+    const mobileMenuWrapper = document.getElementById("mobile-menu-wrapper");
     const mobileMenu = document.getElementById("mobile-menu");
 
-    if (toggleButton && mobileMenu) {
+    if (toggleButton && mobileMenuWrapper && mobileMenu) {
       toggleButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        toggleButton.setAttribute("aria-expanded", mobileMenu.classList.contains("hidden") ? "false" : "true");
+        mobileMenuWrapper.classList.toggle("open");
+        toggleButton.setAttribute("aria-expanded", mobileMenuWrapper.classList.contains("open") ? "true" : "false");
       });
     }
 
     // Close mobile menu when clicking outside
     document.addEventListener("click", (event) => {
-      if (mobileMenu && toggleButton && !mobileMenu.contains(event.target as Node) && !toggleButton.contains(event.target as Node)) {
-        mobileMenu.classList.add("hidden");
+      if (mobileMenuWrapper && toggleButton && mobileMenu && !mobileMenu.contains(event.target as Node) && !toggleButton.contains(event.target as Node)) {
+        mobileMenuWrapper.classList.remove("open");
         toggleButton.setAttribute("aria-expanded", "false");
       }
     });
