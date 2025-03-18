@@ -10,6 +10,7 @@
         "target": "ESNext",
         "strict": true,
         "jsx": "preserve",
+        "jsxImportSource": "astro",
         "allowSyntheticDefaultImports": true,
         "skipLibCheck": true
     },
