@@ -1,5 +1,5 @@
 ---
-
+    import Divider from '../components/Divider.astro';
 ---
 
 <section id="footer" class="footer bg-yellow-50">
@@ -16,7 +16,6 @@
                     Bordart_BB
                 </p>
             </div>
-
             <div>
                 <img class="hidden md:block opacity-30 object-cover h-96 w-96" 
                 src="/assets/bordart-logo-2.png" alt="">
@@ -32,7 +31,9 @@
                 </p>
             </div>
         </div>
-        <div>
+
+        <div class="z-50">
+            <Divider />
             <span>© {new Date().getFullYear()} Bordart. Todos los derechos reservados.</span>
         </div>
     </footer>
