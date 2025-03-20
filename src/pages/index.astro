@@ -23,11 +23,15 @@ import TopBtn from '../components/Button.astro';
   <Hero/>
   <Drop />
   <Carousel />
-  <div class="">
-     <!-- Imagen de arriba a la izquierda -->
-     <div class="hidden absolute inset-0 lg:flex justify-left items-center pointer-events-none z-10">
-      <img class="opacity-30 size-64 translate-y-[750px] translate-x-[-100px]" src="/assets/logo-bordart.png" alt="Fondo">
-  </div>  
+  <!-- Imagen de arriba a la izquierda -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none z-0 translate-y-[400px]">
+    <div class="hidden lg:block absolute -left-32 top-1/2 opacity-20 animate-float-slow">
+      <img class="size-80" src="/assets/logo-bordart.png" alt="Background decoration">
+    </div>
+    <div class="hidden lg:block absolute -right-32 top-16 opacity-20 animate-float">
+      <img class="size-80" src="/assets/logo-bordart.png" alt="Background decoration">
+    </div>
+  </div>
   <Divider />
   <Products />
   <div class="bg-white">      
@@ -41,3 +45,26 @@ import TopBtn from '../components/Button.astro';
   <Footer />
   
 </Layout>
+
+<style>
+  /* Animation keyframes for floating elements */
+  @keyframes float {
+    0% { transform: translateY(0px) translateX(0px); }
+    50% { transform: translateY(-15px) translateX(10px); }
+    100% { transform: translateY(0px) translateX(0px); }
+  }
+  
+  @keyframes float-slow {
+    0% { transform: translateY(0px) translateX(0px); }
+    50% { transform: translateY(15px) translateX(-10px); }
+    100% { transform: translateY(0px) translateX(0px); }
+  }
+  
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .animate-float-slow {
+    animation: float-slow 12s ease-in-out infinite;
+  }
+</style>
