@@ -6,117 +6,119 @@ import Divider from "src/components/Divider.astro";
 import Button from "src/components/Button.astro";
 ---
 
-
-<Layout>
-    <div class="hidden md:block">
-        <Button />
-    </div>
-   <Navigation />
-    <section class="max-w-6xl mx-auto p-6"> 
-        <div class="p-4 text-4xl font-bold flex flex-row justify-center">
-            <h2>Que es BordArt?</h2>
-            
+<div class="bg-gradient-to-b from-white to-yellow-50 ">
+    <Layout >
+        <div class="hidden md:block">
+            <Button />
         </div>
-        <Divider />
-        <div class="flex flex-col md:flex-row justify-between items-center">
-            <!-- Textos -->
-            <div class="flex flex-col p-4">
-                <h2 class="text-3xl font-bold text-left px-2 py-4">
-                    Bordart
-                </h2>
-                <p class="font-semibold p-2 text-xl">
-                    En <i class="text-orange-500">Bordart</i>, nos apasiona transformar prendas de vestir
-                    y accesorios comunesen obras de arte personalizadas y unicas. Desde Bahia Blanca a todo 
-                    el pais, utilizamos nuestras maquinas de bordado y un toque creativo para dar vida
-                    a tus ideas y disenos.
-                </p>
-                <p class="font-semibold p-2 text-xl">
-                    Nuestra mision es ofrecer a nuestros clientes una experiencia de compra
-                    personalizada y memorable, donde cada prensa bordada cuente una historia
-                    y refleke la personalidad unica de su propietario. Nos esforzamos por superar
-                    las expectativas de nuestros clientes en cuanto a calidad, originalidad y 
-                    servicio al cliente.
-                </p>
-                <h3 class="text-3xl font-bold text-left px-2 py-4">Lo que nos hace unicos</h3>
-                <ul class="list-disc py-2 px-6">
-                    <li>
-                        <p class="text-xl font-semibold py-2">
-                            <u>Creatividad sin limites</u>: Transformamos tus idea en realidad
-                            desde disenos simples hasta elaboradas obras de arte bordadas.
+       <Navigation />
+        <section class="max-w-6xl mx-auto p-6 "> 
+            <div class="p-4 text-4xl font-bold flex flex-row justify-center">
+                <h2>Qué es BordArt?</h2>
+                
+            </div>
+            <Divider />
+            <div class="flex flex-col md:flex-row justify-between items-center ">
+                <!-- Textos -->
+                <div class="flex flex-col p-4">
+                    <h2 class="text-3xl font-bold text-left px-2 py-4">
+                        Bordart
+                    </h2>
+                    <p class="font-semibold p-2 text-xl">
+                        En <i class="text-orange-500">Bordart</i>, nos apasiona transformar prendas de vestir
+                        y accesorios comunesen obras de arte personalizadas y únicas. Desde Bahía Blanca a todo 
+                        el país, utilizamos nuestras máquinas de bordado y un toque creativo para dar vida
+                        a tus ideas y diseños.
+                    </p>
+                    <p class="font-semibold p-2 text-xl">
+                        Nuestra misión es ofrecer a nuestros clientes una experiencia de compra
+                        personalizada y memorable, donde cada prenda bordada cuente una historia
+                        y refleje la personalidad única de su propietario. Nos esforzamos por superar
+                        las expectativas de nuestros clientes en cuanto a calidad, originalidad y 
+                        servicio al cliente.
+                    </p>
+                    <h3 class="text-3xl font-bold text-left px-2 py-4">Lo que nos hace únicos</h3>
+                    <ul class="list-disc py-2 px-6">
+                        <li>
+                            <p class="text-xl font-semibold py-2">
+                                <u>Creatividad sin límites</u>: Transformamos tus idea en realidad
+                                desde diseños simples hasta elaboradas obras de arte bordadas.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="text-xl font-semibold py-2">
+                                <u>Calidad excepcional</u>: Utilizamos solo los mejores materiales
+                                y técnicas de bordado para garantizar resultados duraderos
+                                y de alta calidad.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="text-xl font-semibold py-2">
+                                <u>Servicio personalizado</u>: Trabajamos estrechamente con calidad
+                                cliente para enteder sus necesidades y garantizar que el
+                                producto final cumpla con sus expectativas.
+                            </p>
+                        </li>
+                    </ul>
+                    <h3 class="text-3xl px-2 py-4 font-bold text-left">Nuestros Personajes</h3>
+                    <div class="text-xl font-semibold">
+                        <p class="p-2">Conocé a nuestros personajes emblemáticos que personifican
+                            la esencia de nuestra marca.
                         </p>
-                    </li>
-                    <li>
-                        <p class="text-xl font-semibold py-2">
-                            <u>Calidad excepcional</u>: Utilizamos solo los mejores materiales
-                            y tecnicas de bordado para garantizar resultados duraderos
-                            y de alta calidad.
+                        <p class="p-2"> <t class="bg-yellow-300">
+                            Sonrisol:</t> el alma radiante de nuestro emprendimiento de bordados!
                         </p>
-                    </li>
-                    <li>
-                        <p class="text-xl font-semibold py-2">
-                            <u>Servicio personalizado</u>: Trabajamos estrechamente con calidad
-                            cliente para enteder sus necesidades y garantizar que el
-                            producto final cumpla con sus expectativas.
+                        <p class="p-2">
+                            Este es alegre y loco, con una sonrisa super contagiosa el cual es 
+                            el corazón y el alma de lo que hacemos. Con sus ojos llenos de chispa,
+                            Sonrisol irradia carisma y diversión en cada diseño que creamos.
                         </p>
-                    </li>
-                </ul>
-                <h3 class="text-3xl px-2 py-4 font-bold text-left">Nuestros Personajes</h3>
-                <div class="text-xl font-semibold">
-                    <p class="p-2">Conoce a nuestros personajes emblematicos que personifican
-                        la esencia de nuestra marca.
+                        <p class="p-2"><t class="bg-blue-300">Grumpy:</t>
+                             la contraparte gruñona de Sonrisol.
+                        </p>
+                        <p class="p-2">
+                            Esta luna azul con guantes, zapatos de payaso y su característico habano
+                            puede parecer algo antipática, pero tiene un encanto único. Descubrí el
+                            brillo de la luna junto a Grumpy y sus diseños 🚬
+                        </p>
+                    </div>
+                    <h3 class="text-3xl font-bold text-left px-2 py-4">Nuestra Historia</h3>
+                    <p class="text-xl font-semibold p-2">
+                        BORDART nació en 2023 de la mano de Dylan Dessous L'eglise, un apasionado del arte y la creación,
+                         con la visión de ofrecer productos personalizados y de alta calidad a clientes de todo el país. 
+                         Desde los primeros bordados hasta las máquinas más avanzadas que usamos hoy, ha sido un camino de aprendizaje 
+                         y evolución constante, superando adversidades y buscando innovar día a día.
                     </p>
-                    <p class="p-2"> <t class="bg-yellow-300">
-                        Sonrisol:</t> el alma radiante de nuestro emprendimiento de bordadoss!
+                    <p class="text-xl font-semibold p-2">
+                        Lo que comenzó como un proyecto personal se convirtió en una marca donde el arte y la personalización van de la mano.
+                         A pesar de los cambios y el crecimiento, la dedicación a la excelencia y la creatividad sigue siendo la misma.
                     </p>
-                    <p class="p-2">
-                        Este es alegre y loco, con una sonrisa super contagiosa el cual es 
-                        el corazon y el alma de lo que hacemos. Con sus ojos llenos de chispa,
-                        Sonrisol irradia carisma y diversion en cada diseno que creamos.
+                    <p class="text-xl font-semibold p-2">
+                        Hoy, BORDART es más que un emprendimiento; es un equipo comprometido con transformar prendas y accesorios en piezas únicas.
+                         Victoria, nuestra diseñadora de contenido y community manager, da vida a nuestra presencia digital y nos ayuda a conectar
+                          con quienes nos eligen. Tomás, diseñador de bordados, convierte ideas en puntadas con precisión y creatividad.
                     </p>
-                    <p class="p-2"><t class="bg-blue-300">Grumpy:</t>
-                         la contraparte grunona de Sonrisol.
+                    <p class="text-xl font-semibold p-2">
+                        También agradecemos a los emprendimientos que confiaron en nosotros y nos impulsaron a crecer, y a Santiago, 
+                        el programador detrás de nuestra página web, quien convirtió nuestra visión en un espacio digital donde podemos compartir 
+                        nuestro trabajo con el mundo.
                     </p>
-                    <p class="p-2">
-                        Esta luna azul con guantes, zapatos de payaso y su caracteristico habano
-                        puede parecer algo antipatica, pero tiene un encanto unico. Descubri el
-                        brillo de la luna junto a Grumpy y sus disenos 🚬
+                    <p class="text-xl font-semibold p-2">
+                        Cada puntada, cada diseño y cada prenda reflejan nuestra pasión por el bordado. Gracias por ser parte de este camino.
                     </p>
                 </div>
-                <h3 class="text-3xl font-bold text-left px-2 py-4">Nuestra Historia</h3>
-                <p class="text-xl font-semibold p-2">
-                    BORDART nació en 2023 de la mano de Dylan Dessous L'eglise, un apasionado del arte y la creación,
-                     con la visión de ofrecer productos personalizados y de alta calidad a clientes de todo el país. 
-                     Desde los primeros bordados hasta las máquinas más avanzadas que usamos hoy, ha sido un camino de aprendizaje 
-                     y evolución constante, superando adversidades y buscando innovar día a día.
-                </p>
-                <p class="text-xl font-semibold p-2">
-                    Lo que comenzó como un proyecto personal se convirtió en una marca donde el arte y la personalización van de la mano.
-                     A pesar de los cambios y el crecimiento, la dedicación a la excelencia y la creatividad sigue siendo la misma.
-                </p>
-                <p class="text-xl font-semibold p-2">
-                    Hoy, BORDART es más que un emprendimiento; es un equipo comprometido con transformar prendas y accesorios en piezas únicas.
-                     Victoria, nuestra diseñadora de contenido y community manager, da vida a nuestra presencia digital y nos ayuda a conectar
-                      con quienes nos eligen. Tomás, diseñador de bordados, convierte ideas en puntadas con precisión y creatividad.
-                </p>
-                <p class="text-xl font-semibold p-2">
-                    También agradecemos a los emprendimientos que confiaron en nosotros y nos impulsaron a crecer, y a Santiago, 
-                    el programador detrás de nuestra página web, quien convirtió nuestra visión en un espacio digital donde podemos compartir 
-                    nuestro trabajo con el mundo.
-                </p>
-                <p class="text-xl font-semibold p-2">
-                    Cada puntada, cada diseño y cada prenda reflejan nuestra pasión por el bordado. Gracias por ser parte de este camino.
-                </p>
+                <!-- Imagen -->
+                <div class="flex flex-col gap-8">
+                    <img class="py-4 hidden md:block" src="/assets/dibujo-sonrisol.png" alt="">
+                    <img class="py-4 hidden md:block" src="/assets/grumpy.png" alt="">
+                </div>
             </div>
-            <!-- Imagen -->
-            <div class="flex flex-col gap-8">
-                <img class="py-4 hidden md:block" src="/assets/dibujo-sonrisol.png" alt="">
-                <img class="py-4 hidden md:block" src="/assets/grumpy.png" alt="">
-            </div>
-        </div>
-    </section>
+        </section>
+        
+        <Divider />
+        <Footer />
+        
+    </Layout>
     
-    
-    <Footer />
-    
-</Layout>
+</div>
 
