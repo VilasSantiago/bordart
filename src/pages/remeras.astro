@@ -1,18 +1,25 @@
 ---
     import Divider from '../components/Divider.astro';
     import Footer from '../components/Footer.astro';
+    import Navigation from '../components/Navigation.astro';
+    import Layout from '../layouts/Layout.astro';
 ---
-<section id="remeras" class="flex flex-col items-center justify-center p-6 bg-gradient-to-b from-white to-yellow-50">
-    <h1 class="text-black font-bold text-6xl p-6">REMERAS</h1>
-    <div id="imagenes" class="max-w-6xl border-gray-500 border-2 rounded-lg shadow-lg overflow-hidden">
-        <img src="/assets/productos/producto-remera-1.jpeg" alt="">
-        <img src="/assets/productos/producto-remera-2.jpeg" alt="">
-        <img src="/assets/productos/producto-remera-3.jpeg" alt="">
-    </div>
+<Layout>
+    <Navigation />
+    <section id="remeras" class="flex flex-col items-center justify-center p-6 bg-gradient-to-b from-white to-yellow-50">
+        
+        <h1 class="text-black font-bold text-6xl p-6">REMERAS</h1>
+        <div id="imagenes" class="max-w-6xl border-gray-500 border-2 rounded-lg shadow-lg overflow-hidden">
+            <img src="/assets/productos/producto-remera-1.jpeg" alt="">
+            <img src="/assets/productos/producto-remera-2.jpeg" alt="">
+            <img src="/assets/productos/producto-remera-3.jpeg" alt="">
+        </div>
     
-</section>
-<Divider />
+    </section>
+    <Divider />
     <Footer />
+</Layout>
+
 
 
 
