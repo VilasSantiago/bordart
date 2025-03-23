@@ -1,0 +1,83 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <Navigation />
+  <section id="gorros" class="max-w-6xl flex flex-col items-center justify-center mx-auto p-6">
+    <h1 class="font-bold text-4xl p-6">GORROS</h1>
+
+    <div class="flex md:justify-between ">
+      <div class="carousel-container relative w-full max-w-lg mx-auto">
+        <img id="carousel-image" src="/assets/productos/producto-gorro-de-lana.jpeg" alt="Imagen del carrusel" class="w-full rounded-lg transition-opacity duration-300 ease-in-out"/>
+        
+        <!-- Botón Izquierda -->
+        <button id="prev-button" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black">
+          ◀
+        </button>
+        
+        <!-- Botón Derecha -->
+        <button id="next-button" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black">
+          ▶
+        </button>
+      </div>
+
+      <div id="textos" class="">
+        <h2 class="text-4xl font-bold p-6">GORROS DE LANA</h2>
+        <p class="text-xl p-6">Calidez y personalidad para el frío. Suaves, versátiles y perfectos para cualquier ocasión.</p>
+      </div>
+    </div>
+  </section>
+  <Footer /> 
+</Layout>
+
+<style>
+  .carousel-container img {
+    opacity: 1;
+  }
+</style>
+
+<!-- Script que se ejecuta en el cliente -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = [
+      "/assets/productos/producto-gorro-de-lana.jpeg",
+      "/assets/productos/producto-gorras-vintage.jpeg",
+      "/assets/productos/producto-pilusos.jpeg"
+    ];
+
+    let currentIndex = 0;
+
+    function showImage(index: number) {
+      const imgElement = document.getElementById("carousel-image");
+      if (imgElement) {
+        imgElement.style.opacity = "0"; // Inicia la transición
+        setTimeout(() => {
+          (imgElement as HTMLImageElement).src = images[index];
+          imgElement.style.opacity = "1"; // Termina la transición
+        }, 300);
+      }
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    const nextButton = document.getElementById("next-button");
+    if (nextButton) {
+      nextButton.addEventListener("click", nextImage);
+    }
+    const prevButton = document.getElementById("prev-button");
+    if (prevButton) {
+      prevButton.addEventListener("click", prevImage);
+    }
+  });
+</script>
