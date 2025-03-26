@@ -72,12 +72,14 @@ import Button from 'src/components/Button.astro';
             Catálogo de Bordados
         </h3>
 
-        <button class="border text-lg shadow-lg hover:bg-gray-700 max-w-34">
-            <a class="font-bold text-cyan-700 hover:text-white" 
-            href="https://www.canva.com/design/DAGU_JUNAQY/HgZJlDzI8OeJCZB51X4COA/view?utm_content=DAGU_JUNAQY&utm_campaign=designshare&utm_medium=link&utm_source=editor">
-            Lista de precios
+        <div class="flex flex-col mx-auto items-center justify-center mt-12 text-center">
+            <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black 
+            text-lg font-bold rounded-lg shadow-lg transition duration-300 in:whipe:left ">
+            <img id="cart" src="/assets/list.svg" alt="" class="w-6 h-6">
+                <span class="font-bold text-lg">Lista de Precios</span> 
+                
             </a>
-        </button>
+        </div>
     </div>
     <!-- Carousel 1 -->
      <div class="flex flex-col p-4">
