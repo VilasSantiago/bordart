@@ -7,6 +7,7 @@ import Button from 'src/components/Button.astro';
 ---
 
 <Layout>
+   <div class="bg-gradient-to-b from-white to-yellow-50 min-h-screen">
     <div class="hidden md:block">
         <Button />
     </div>
@@ -67,33 +68,39 @@ import Button from 'src/components/Button.astro';
     <Divider />
 
     <!-- Catalog: Bordados -->
-    <div class="flex flex-row p-4 gap-4 items-center justify-center md:flex-col">
+    <div class="flex flex-col p-4 items-center justify-center">
         <h3 class="font-bold text-4xl text-center">
             Catálogo de Bordados
         </h3>
 
         <div class="flex flex-col mx-auto items-center justify-center mt-12 text-center">
             <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black 
-            text-lg font-bold rounded-lg shadow-lg transition duration-300 in:whipe:left ">
-            <img id="cart" src="/assets/list.svg" alt="" class="w-6 h-6">
+            text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <img id="cart" src="/assets/list.svg" alt="" class="w-6 h-6">
                 <span class="font-bold text-lg">Lista de Precios</span> 
-                
             </a>
         </div>
     </div>
     <!-- Carousel 1 -->
-     <div class="flex flex-col p-4">
-        <div class="mb-2 flex flex-row gap-4 justify-center md:justify-start items-center m-auto">
-            <h2 class="font-bold text-center text-xl md:text-3xl md:text-left">
+    <div class="flex flex-col p-4 max-w-6xl mx-auto">
+
+        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
+            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
                 DISEÑOS BORDART
             </h2>
-            <button>
-                <a class="font-bold text-violet-900" 
-                href="https://www.canva.com/design/DAGcO6h6s24/MPXqgO_3734ImU233YViWw/view?utm_content=DAGcO6h6s24&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha77288a143#1">
-                    Ver mas diseños
-                </a>
+            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
+                <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
+                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <span class="font-bold text-lg">Ver más</span> 
+                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
+            </a>
             </button>
         </div>
+        
+        
+        
+        
+
         <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
             <div class="slide-track flex gap-3 ">
                 <div class="slide">
@@ -138,16 +145,17 @@ import Button from 'src/components/Button.astro';
      </div>
 
      <!-- Carousel 2 -->
-     <div class="flex flex-col items-center p-4">
-        <div class="mb-2 flex flex-row gap-4">
-            <h2 class="font-bold text-center text-xl md:text-3xl">
+     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
+        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
+            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
                 AMOR
             </h2>
-            <button>
-                <a class="font-bold text-violet-900" 
-                href="https://www.canva.com/design/DAGcO3izIpI/UXoLG4786b6vqlLud3DiLg/view?utm_content=DAGcO3izIpI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=heba01d7de6">
-                    Ver mas diseños
-                </a>
+            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
+                <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
+                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <span class="font-bold text-lg">Ver más</span> 
+                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
+            </a>
             </button>
         </div>
         <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
@@ -194,16 +202,17 @@ import Button from 'src/components/Button.astro';
      </div>
     
      <!-- Carousel 3 -->
-     <div class="flex flex-col items-center p-4">
-        <div class="mb-2 flex flex-row gap-4">
-            <h2 class="font-bold text-center text-xl md:text-3xl">
+     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
+        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
+            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
                 ARTE
             </h2>
-            <button>
-                <a class="font-bold text-violet-900 text-end" 
-                href="https://www.canva.com/design/DAGcO-rl358/at7J7ocorn4Ks9gN_MybGA/view?utm_content=DAGcO-rl358&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hfb77259e44">
-                    Ver mas diseños
-                </a>
+            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
+                <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
+                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <span class="font-bold text-lg">Ver más</span> 
+                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
+            </a>
             </button>
         </div>
         <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
@@ -250,16 +259,17 @@ import Button from 'src/components/Button.astro';
      </div>
 
      <!-- Carousel 4 -->
-     <div class="flex flex-col items-center p-4">
-        <div class="mb-2 flex flex-row gap-4">
-            <h2 class="font-bold text-center text-xl md:text-3xl">
+     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
+        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
+            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
                 DIBUJOS ANIMADOS
             </h2>
-            <button>
-                <a class="font-bold text-violet-900" 
-                href="https://www.canva.com/design/DAGcO4TBEg8/XzBf8PcAx1TZJ8P6yNrOxQ/view?utm_content=DAGcO4TBEg8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h86c1121a03">
-                    Ver mas diseños
-                </a>
+            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
+                <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
+                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <span class="font-bold text-lg">Ver más</span> 
+                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
+            </a>
             </button>
         </div>
         <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
@@ -306,16 +316,17 @@ import Button from 'src/components/Button.astro';
      </div>
 
      <!-- Carousel 5 -->
-     <div class="flex flex-col items-center p-4">
-        <div class="mb-2 flex flex-row gap-4">
-            <h2 class="font-bold text-center text-xl md:text-3xl">
+     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
+        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
+            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
                 MARCAS Y LOGOS
             </h2>
-            <button>
-                <a class="font-bold text-violet-900" 
-                href="https://www.canva.com/design/DAGcOzj8g8s/9TSlg_hxBSGTJG8w7KPfRQ/view?utm_content=DAGcOzj8g8s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h75f8886b6e">
-                    Ver mas diseños
-                </a>
+            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
+                <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
+                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <span class="font-bold text-lg">Ver más</span> 
+                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
+            </a>
             </button>
         </div>
         <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
@@ -362,16 +373,17 @@ import Button from 'src/components/Button.astro';
      </div>
 
      <!-- Carousel 6 -->
-     <div class="flex flex-col items-center p-4">
-        <div class="mb-2 flex flex-row gap-4">
-            <h2 class="font-bold text-center text-xl md:text-3xl">
-                MUSICA
+     <div class="flex flex-col items-center p- max-w-6xl mx-auto">
+        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
+            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                MÚSICA
             </h2>
-            <button>
-                <a class="font-bold text-violet-900" 
-                href="https://www.canva.com/design/DAGcO9ig2B0/oWGjkqM4nSoxU7HaRULk1w/view?utm_content=DAGcO9ig2B0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h85b28bd405">
-                    Ver mas diseños
-                </a>
+            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
+                <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
+                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <span class="font-bold text-lg">Ver más</span> 
+                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
+            </a>
             </button>
         </div>
         <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
@@ -418,16 +430,17 @@ import Button from 'src/components/Button.astro';
      </div>
 
      <!-- Carousel 7 -->
-     <div class="flex flex-col items-center p-4">
-        <div class="mb-2 flex flex-row gap-4">
-            <h2 class="font-bold text-center text-xl md:text-3xl">
+     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
+        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
+            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
                 ANIME
             </h2>
-            <button>
-                <a class="font-bold text-violet-900" 
-                href="https://www.canva.com/design/DAGcO6rYVxY/LuxM55Q3tJYuuz2Xs6B_NQ/view?utm_content=DAGcO6rYVxY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha5e8d83a3f">
-                    Ver mas diseños
-                </a>
+            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
+                <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
+                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <span class="font-bold text-lg">Ver más</span> 
+                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
+            </a>
             </button>
         </div>
         <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
@@ -474,16 +487,17 @@ import Button from 'src/components/Button.astro';
      </div>
 
      <!-- Carousel 8 -->
-     <div class="flex flex-col items-center p-4">
-        <div class="mb-2 flex flex-row gap-4">
-            <h2 class="font-bold text-center text-xl md:text-3xl">
+     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
+        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
+            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
                 NIKE x PERSONAJES
             </h2>
-            <button>
-                <a class="font-bold text-violet-900" 
-                href="https://www.canva.com/design/DAGcO4uAtXs/Zk4bhDzncFxDRWCLntG4Lg/view?utm_content=DAGcO4uAtXs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h136c53b143#1">
-                    Ver mas diseños
-                </a>
+            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
+                <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
+                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <span class="font-bold text-lg">Ver más</span> 
+                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
+            </a>
             </button>
         </div>
         <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
@@ -530,16 +544,17 @@ import Button from 'src/components/Button.astro';
      </div>
 
      <!-- Carousel 9 -->
-     <div class="flex flex-col items-center p-4">
-        <div class="mb-2 flex flex-row gap-4">
-            <h2 class="font-bold text-center text-xl md:text-3xl">
+     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
+        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
+            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
                 DEPORTES
             </h2>
-            <button>
-                <a class="font-bold text-violet-900" 
-                href="https://www.canva.com/design/DAGcOwa6TMs/ddMwlDUg36yWyoXuFVv9AQ/view?utm_content=DAGcOwa6TMs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5025fe742b">
-                    Ver mas diseños
-                </a>
+            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
+                <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
+                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <span class="font-bold text-lg">Ver más</span> 
+                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
+            </a>
             </button>
         </div>
         <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
@@ -587,16 +602,17 @@ import Button from 'src/components/Button.astro';
      </div>
 
      <!-- Carousel 10 -->
-     <div class="flex flex-col items-center p-4">
-        <div class="mb-2 flex flex-row gap-4">
-            <h2 class="font-bold text-center text-xl md:text-3xl">
+     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
+        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
+            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
                 FLORES
             </h2>
-            <button>
-                <a class="font-bold text-violet-900" 
-                href="https://www.canva.com/design/DAGcO9zWKJo/zSuSupYOIZpRWapioMArQg/view?utm_content=DAGcO9zWKJo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=haead08d502">
-                    Ver mas diseños
-                </a>
+            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
+                <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
+                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <span class="font-bold text-lg">Ver más</span> 
+                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
+            </a>
             </button>
         </div>
         <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
@@ -645,6 +661,24 @@ import Button from 'src/components/Button.astro';
      <Divider />
 
      <!-- Catalog: Pines -->
+     <div class="flex flex-col p-4 items-center justify-center">
+        <h3 class="font-bold text-4xl text-center">
+            Catálogo de Pines
+        </h3>
+
+        <div class="flex flex-col mx-auto items-center justify-center mt-12 text-center">
+            <a href="https://www.canva.com/design/DAGU_JUNAQY/HgZJlDzI8OeJCZB51X4COA/view?utm_content=DAGU_JUNAQY&utm_campaign=designshare&utm_medium=link&utm_source=editor" 
+            id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black 
+            text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <img id="cart" src="/assets/list.svg" alt="" class="w-6 h-6">
+                <span class="font-bold text-lg">Lista de Precios</span> 
+            </a>
+        </div>
+    </div>
+
+
+
+
     <div class="flex flex-row p-4 gap-4 items-center justify-center md:flex-col">
         <h3 class="font-bold text-4xl text-center">
             Catalogo de Pines
@@ -659,18 +693,27 @@ import Button from 'src/components/Button.astro';
     </div>
 
     <!-- Carousel 11 -->
-    <div class="flex flex-col items-center p-4 bg-gradient-to-b from-white to-yellow-50">
-        <div class="mb-2 flex flex-row gap-4 items-center justify-center max-w-6xl">
-            <h2 class="font-bold text-center text-xl md:text-3xl md:justify-end">
-                PINES
+    <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
+        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
+            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
+                AMOR
             </h2>
-            <button class="">
-                <a class="font-bold text-violet-900" 
-                href="https://www.canva.com/design/DAF1UlYs1g0/eMC1WO6zq4GNpVWML0L4mA/view?utm_content=DAF1UlYs1g0&utm_campaign=designshare&utm_medium=link&utm_source=editor">
-                    Ver mas diseños
-                </a>
+            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
+                <a href="/#como-comprar" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
+                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
+                <span class="font-bold text-lg">Ver más</span> 
+                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
+            </a>
             </button>
         </div>
+
+
+
+
+
+
+
+        
         <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
             <div class="slide-track flex gap-3 ">
                 <div class="slide w-[200px] h-[200px] flex-shrink-0">
@@ -718,6 +761,7 @@ import Button from 'src/components/Button.astro';
      </div>
      
     <Footer />
+   </div>
 </Layout>
 
 <style>
