@@ -1,0 +1,25 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import Divider from '../components/Divider.astro';
+import Questions from '../components/Questions.astro';
+import Buy from '../components/Buy.astro';
+---
+
+<Layout>
+    <Navigation/>
+    <section class="bg-gradient-to-b from-white to-yellow-50 w-full">
+        <div class="max-w-6xl flex flex-col mx-auto min-h-auto">
+        <Buy/>
+        <Questions/>
+        
+        </div>
+    </section>
+
+<div class="bg-yellow-50">
+    <Divider/>
+</div>
+<Footer/>
+</Layout>
