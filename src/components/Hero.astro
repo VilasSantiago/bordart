@@ -36,22 +36,21 @@ import '../styles/tailwind.css';
     efectTyping1();
 </script>
 
-<section class="md:h-screen h-auto w-full flex flex-col items-center justify-center md:justify-between min-h-64">
+<section class="md:h-screen h-auto w-full flex flex-col items-center justify-center md:justify-between max-h-[600px]">
     <!-- Texto 1 -->
-    <div class=" flex justify-center text-center md:pt-32 min-h-12 pt-12">
-        <p id="text1" class="font-MiFuente font-bold text-4xl md:text-8xl"></p>
+    <div class="flex justify-center text-center md:pt-32 min-h-2 pt-12 ">
+        <p id="text1" class="font-MiFuente font-bold text-4xl md:text-8xl min-h-[96px]"></p>
     </div>
     <!-- Texto 2 -->
-    <div class="flex justify-center text-center min-h-12 md:pt-32 p-8">
-        <p id="text" class="font-MiFuente font-bold text-lg md:text-5xl"></p>
+    <div class="flex justify-center text-center min-h-0 md:pt-32 p-8 ">
+        <p id="text" class="font-MiFuente font-bold text-lg md:text-5xl min-h-[64px]"></p>
     </div>
     <!-- Logo -->
-     <div class="md:mt-auto md:block">
-        <img class="size-[448px] object-cover" 
-        src="/assets/bordart-logo-2.png" alt="">
-     </div>
-    
-</section> 
+    <div class="md:mt-auto md:block ">
+        <img class="size-[448px] object-cover" src="/assets/bordart-logo-2.png" alt="">
+    </div>
+</section>
+
 
 
 <style>
