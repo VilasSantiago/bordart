@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import Divider from '../components/Divider.astro';
+import Products from '../components/Products.astro';
+---
+
+<Layout>
+    <Navigation></Navigation>
+    <section class="bg-gradient-to-b from-white to-yellow-50">
+        <div class="flex flex-col min-h-screen mx-auto">
+            <Products>  </Products>
+        </div>
+    </section>
+    <Button></Button>
+    <div class="bg-yellow-50">
+        <Divider></Divider>
+    </div>
+    <Footer></Footer>
+</Layout>
