@@ -7,744 +7,144 @@ import Button from 'src/components/Button.astro';
 ---
 
 <Layout>
-   <div class="bg-gradient-to-b from-white to-yellow-50 min-h-screen">
+   <div class="min-h-screen bg-gradient-to-b from-white via-yellow-50 to-yellow-100">
     <div class="hidden md:block">
         <Button />
     </div>
     <Navigation />
-    <!-- Explanation -->
-    <div class="flex flex-col items-center p-4 text-center">
-        <h2 class="text-3xl font-bold py-4">Aclaraciones</h2>
-        <ul class=" py-2 px-4">
-            <li class="p-1">
-                <p class="text-xl border-2 rounded-2xl text-center shadow-md px-4 py-2">
-                    Los diseños están expresados en ALTO x ANCHO
+    
+    <!-- Explanation Section -->
+    <section class="max-w-4xl mx-auto py-12 px-4">
+        <h2 class="text-4xl font-bold text-center mb-8 text-yellow-800">Aclaraciones</h2>
+        <div class="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-yellow-200 transform transition-all duration-300 hover:scale-105">
+                <p class="text-xl text-center">
+                    Los diseños están expresados en <span class="font-bold">ALTO x ANCHO</span>
                 </p>
-            </li>
-            <li class="p-1">
-                <p class="text-xl font-bold border-2 rounded-2xl text-center shadow-md px-4 py-2">
-                    Los círculos de colores indican el VALOR DEL DISEÑO. 
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-yellow-300 transform transition-all duration-300 hover:scale-105">
+                <p class="text-xl text-center font-bold">
+                    Los círculos de colores indican el <span class="text-yellow-600">VALOR DEL DISEÑO</span>. 
                     Podés revisarlo en la lista de precios
                 </p>
-            </li>
-            <li class="p-1">
-                <p class="text-xl border-2 rounded-2xl text-center shadow-md px-4 py-2">
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-yellow-200 transform transition-all duration-300 hover:scale-105">
+                <p class="text-xl text-center">
                     Los diseños del catálogo no pueden modificar mucho su tamaño porque pueden haber deformaciones
                 </p>
-            </li>
-        </ul>
-    </div>
+            </div>
+        </div>
+    </section>
     
-    <!-- Colors -->
-    <div class="grid grid-cols-3 gap-6 w-full max-w-8xl px-4 justify-center items-center p-4">
-
-        <!-- Green -->
-        <div class="w-16 mx-auto">
-            <p class="text-center font-bold ">Verde</p>
+    <!-- Colors Legend -->
+    <section class="max-w-3xl mx-auto py-8 px-4">
+        <div class="bg-white rounded-3xl shadow-xl p-8 mb-12">
+            <h3 class="text-2xl font-bold text-center mb-6 text-yellow-700">Indicadores de Precio</h3>
+            <div class="grid grid-cols-3 gap-6 items-center">
+                <!-- Color Labels -->
+                <div class="text-center">
+                    <p class="font-bold text-lg text-green-700">Verde</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-bold text-lg text-yellow-600">Amarillo</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-bold text-lg text-blue-700">Azul</p>
+                </div>
+                
+                <!-- Color Dots -->
+                <div class="flex justify-center transform transition hover:scale-110 duration-300">
+                    <img src="/assets/catalog/green-round.png" alt="Indicador verde" class="h-16 w-16 drop-shadow-md">
+                </div>
+                <div class="flex justify-center transform transition hover:scale-110 duration-300">
+                    <img src="/assets/catalog/yellow-round.png" alt="Indicador amarillo" class="h-16 w-16 drop-shadow-md">
+                </div>
+                <div class="flex justify-center transform transition hover:scale-110 duration-300">
+                    <img src="/assets/catalog/blue-round.png" alt="Indicador azul" class="h-16 w-16 drop-shadow-md">
+                </div>
+            </div>
         </div>
-        <!-- Yellow -->
-         <div class="w-16 mx-auto">
-            <p class="text-center font-bold ">Amarillo</p>
-         </div>
-        <!-- Blue -->
-        <div class="w-16 mx-auto">
-            <p class="text-center font-bold ">Azul</p>
-        </div>
-        
-        <!-- Green Dot -->
-        <div class="h-16 w-16 mx-auto">
-            <img src="/assets/catalog/green-round.png" alt="">
-        </div>
-        <!-- Yellow Dot -->
-         <div class="h-16 w-16 mx-auto">
-            <img class="" src="/assets/catalog/yellow-round.png" alt="">
-         </div>
-        <!-- Blue Dot -->
-         <div class="h-16 w-16 mx-auto">
-            <img src="/assets/catalog/blue-round.png" alt="">
-         </div>
-    </div>
+    </section>
 
     <Divider />
 
     <!-- Catalog: Bordados -->
-    <div class="flex flex-col p-4 items-center justify-center">
-        <h3 class="font-bold text-4xl text-center">
-            Catálogo de Bordados
-        </h3>
+    <section class="py-12 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-12 text-yellow-800 relative inline-block">
+                Catálogo de Bordados
+                <span class="absolute -bottom-3 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+            </h2>
 
-        <div class="flex flex-col mx-auto items-center justify-center mt-12 text-center">
-            <a href="https://www.canva.com/design/DAGU_JUNAQY/HgZJlDzI8OeJCZB51X4COA/view?utm_content=DAGU_JUNAQY&utm_campaign=designshare&utm_medium=link&utm_source=viewer" 
-            id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black 
-            text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <img id="cart" src="/assets/list.svg" alt="" class="w-6 h-6">
-                <span class="font-bold text-lg">Lista de Precios</span> 
-            </a>
+            <div class="mt-12 mb-16">
+                <a href="https://www.canva.com/design/DAGU_JUNAQY/HgZJlDzI8OeJCZB51X4COA/view?utm_content=DAGU_JUNAQY&utm_campaign=designshare&utm_medium=link&utm_source=viewer" 
+                class="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black 
+                text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                    <img src="/assets/list.svg" alt="Lista" class="w-6 h-6 group-hover:animate-pulse">
+                    <span class="font-bold text-xl">Lista de Precios</span> 
+                </a>
+            </div>
         </div>
-    </div>
-    <!-- Carousel 1 -->
-    <div class="flex flex-col p-4 max-w-6xl mx-auto">
+    </section>
 
+    <div class="flex flex-col p-4 max-w-6xl mx-auto relative">
+        <!-- Título y botón -->
         <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
             <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
                 COLECCIÓN BORDART
             </h2>
-            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
-                <a href="https://www.canva.com/design/DAGcO6h6s24/NdtldC2yVFiUg1_rHfa9rg/edit" 
-                id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
-                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <span class="font-bold text-lg">Ver más</span> 
-                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
-            </a>
-            </button>
         </div>
-        
-        
-        
-        
-
-        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
-            <div class="slide-track flex gap-3 ">
-                <div class="slide">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion6.jpeg" alt="">
-                </div>
-                <!-- repeat -->
-                <div class="slide ">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/coleccion-bordart/coleccion6.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-     </div>
-
-     <!-- Carousel 2 -->
-     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
-        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
-            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                AMOR
-            </h2>
-            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
-                <a href="https://www.canva.com/design/DAGcO3izIpI/sEhhlCCP6uLRpJ_CIzancg/edit" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
-                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <span class="font-bold text-lg">Ver más</span> 
-                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
-            </a>
-            </button>
-        </div>
-        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
-            <div class="slide-track flex gap-3 ">
-                <div class="slide ">
-                    <img src="/assets/catalog/amor/amor1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/amor/amor2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/amor/amor3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/amor/amor4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/amor/amor5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/amor/amor6.jpeg" alt="">
-                </div>
-                <!-- repeat -->
-                <div class="slide ">
-                    <img src="/assets/catalog/amor/amor1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/amor/amor2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/amor/amor3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/amor/amor4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/amor/amor5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/amor/amor6.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-     </div>
     
-     <!-- Carousel 3 -->
-     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
-        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
-            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                ARTE
-            </h2>
-            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
-                <a href="https://www.canva.com/design/DAGcO-rl358/8LkWWz622HyYd_Kctk2RSw/edit" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
-                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <span class="font-bold text-lg">Ver más</span> 
-                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
-            </a>
+        <!-- Slider con imágenes -->
+        <div class="relative w-full overflow-hidden">
+            <!-- Botón Izquierdo -->
+            <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full z-10">
+                &#10094;
             </button>
-        </div>
-        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
-            <div class="slide-track flex gap-3 ">
-                <div class="slide ">
-                    <img src="/assets/catalog/arte/arte1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/arte/arte2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/arte/arte3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/arte/arte4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/arte/arte5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/arte/arte6.jpeg" alt="">
-                </div>
-                <!-- repeat -->
-                <div class="slide ">
-                    <img src="/assets/catalog/arte/arte1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/arte/arte2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/arte/arte3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/arte/arte4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/arte/arte5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/arte/arte6.jpeg" alt="">
-                </div>
+    
+            <!-- Contenedor del carrusel -->
+            <div id="carousel" class="flex transition-transform duration-500 ease-in-out gap-4">
+                <img class="w-full md:w-1/4 object-cover" src="/assets/catalog/coleccion-bordart/coleccion1.jpeg" alt="">
+                <img class="w-full md:w-1/4 object-cover" src="/assets/catalog/coleccion-bordart/coleccion2.jpeg" alt="">
+                <img class="w-full md:w-1/4 object-cover" src="/assets/catalog/coleccion-bordart/coleccion3.jpeg" alt="">
+                <img class="w-full md:w-1/4 object-cover" src="/assets/catalog/coleccion-bordart/coleccion4.jpeg" alt="">
+                <img class="w-full md:w-1/4 object-fit" src="/assets/catalog/coleccion-bordart/coleccion5.jpeg" alt="">
+                <img class="w-full md:w-1/4 object-cover" src="/assets/catalog/coleccion-bordart/coleccion6.jpeg" alt="">
             </div>
-        </div>
-     </div>
-
-     <!-- Carousel 4 -->
-     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
-        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
-            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                DIBUJOS ANIMADOS
-            </h2>
-            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
-                <a href="https://www.canva.com/design/DAGcO4TBEg8/1Gv3L4npa3x11lGtL4to5g/edit" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
-                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <span class="font-bold text-lg">Ver más</span> 
-                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
-            </a>
+    
+            <!-- Botón Derecho -->
+            <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full z-10">
+                &#10095;
             </button>
-        </div>
-        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
-            <div class="slide-track flex gap-3 ">
-                <div class="slide ">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados6.jpeg" alt="">
-                </div>
-                <!-- repeat -->
-                <div class="slide ">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/dibujos-animados/dibujos-animados6.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-     </div>
-
-     <!-- Carousel 5 -->
-     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
-        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
-            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                MARCAS Y LOGOS
-            </h2>
-            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
-                <a href="https://www.canva.com/design/DAGcOzj8g8s/CC4RVyha1CPwNTBswHs21g/edit" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
-                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <span class="font-bold text-lg">Ver más</span> 
-                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
-            </a>
-            </button>
-        </div>
-        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
-            <div class="slide-track flex gap-3 ">
-                <div class="slide ">
-                    <img src="/assets/catalog/marcas-y-logos/marcas1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/marcas-y-logos/marcas2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/marcas-y-logos/marcas3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/marcas-y-logos/marcas4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/marcas-y-logos/marcas5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/marcas-y-logos/marcas6.jpeg" alt="">
-                </div>
-                <!-- repeat -->
-                <div class="slide ">
-                    <img src="/assets/catalog/marcas-y-logos/marcas1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/marcas-y-logos/marcas2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/marcas-y-logos/marcas3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/marcas-y-logos/marcas4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/marcas-y-logos/marcas5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/marcas-y-logos/marcas6.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-     </div>
-
-     <!-- Carousel 6 -->
-     <div class="flex flex-col items-center p- max-w-6xl mx-auto">
-        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
-            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                MÚSICA
-            </h2>
-            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
-                <a href="https://www.canva.com/design/DAGcO9ig2B0/GhJl03Jo9LXtDWfrf_VReQ/edit" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
-                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <span class="font-bold text-lg">Ver más</span> 
-                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
-            </a>
-            </button>
-        </div>
-        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
-            <div class="slide-track flex gap-3 ">
-                <div class="slide ">
-                    <img src="/assets/catalog/musica/musica1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/musica/musica2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/musica/musica3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/musica/musica4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/musica/musica5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/musica/musica6.jpeg" alt="">
-                </div>
-                <!-- repeat -->
-                <div class="slide ">
-                    <img src="/assets/catalog/musica/musica1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/musica/musica2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/musica/musica3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/musica/musica4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/musica/musica5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/musica/musica6.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-     </div>
-
-     <!-- Carousel 7 -->
-     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
-        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
-            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                ANIME
-            </h2>
-            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
-                <a href="https://www.canva.com/design/DAGcO6rYVxY/Q4oPwfY77werMphPIENwKg/edit" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
-                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <span class="font-bold text-lg">Ver más</span> 
-                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
-            </a>
-            </button>
-        </div>
-        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
-            <div class="slide-track flex gap-3 ">
-                <div class="slide ">
-                    <img src="/assets/catalog/anime/anime1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/anime/anime2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/anime/anime3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/anime/anime4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/anime/anime5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/anime/anime6.jpeg" alt="">
-                </div>
-                <!-- repeat -->
-                <div class="slide ">
-                    <img src="/assets/catalog/anime/anime1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/anime/anime2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/anime/anime3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/anime/anime4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/anime/anime5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/anime/anime6.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-     </div>
-
-     <!-- Carousel 8 -->
-     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
-        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
-            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                NIKE x PERSONAJES
-            </h2>
-            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
-                <a href="https://www.canva.com/design/DAGcO4uAtXs/U_zDeiCjayHk7jGZlVVEEA/edit" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
-                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <span class="font-bold text-lg">Ver más</span> 
-                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
-            </a>
-            </button>
-        </div>
-        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
-            <div class="slide-track flex gap-3 ">
-                <div class="slide ">
-                    <img src="/assets/catalog/nike-personajes/nike1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/nike-personajes/nike2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/nike-personajes/nike3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/nike-personajes/nike4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/nike-personajes/nike5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/nike-personajes/nike6.jpeg" alt="">
-                </div>
-                <!-- repeat -->
-                <div class="slide ">
-                    <img src="/assets/catalog/nike-personajes/nike1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/nike-personajes/nike2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/nike-personajes/nike3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/nike-personajes/nike4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/nike-personajes/nike5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/nike-personajes/nike6.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-     </div>
-
-     <!-- Carousel 9 -->
-     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
-        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
-            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                DEPORTES
-            </h2>
-            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
-                <a href="https://www.canva.com/design/DAGcOwa6TMs/tbibz7fCnnqHDqVZVnVEjA/edit" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
-                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <span class="font-bold text-lg">Ver más</span> 
-                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
-            </a>
-            </button>
-        </div>
-        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
-            <div class="slide-track flex gap-3 ">
-                <div class="slide ">
-                    <img src="/assets/catalog/deportes/deportes1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/deportes/deportes2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/deportes/deportes3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/deportes/deportes4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/deportes/deportes5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/deportes/deportes6.jpeg" alt="">
-                </div>
-                
-                <!-- repeat -->
-                <div class="slide ">
-                    <img src="/assets/catalog/deportes/deportes1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/deportes/deportes2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/deportes/deportes3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/deportes/deportes4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/deportes/deportes5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/deportes/deportes6.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-     </div>
-
-     <!-- Carousel 10 -->
-     <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
-        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
-            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                FLORES
-            </h2>
-            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
-                <a href="https://www.canva.com/design/DAGcO9zWKJo/4FqXf902Ez9XtdqOf_vm9A/edit" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
-                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <span class="font-bold text-lg">Ver más</span> 
-                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
-            </a>
-            </button>
-        </div>
-        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
-            <div class="slide-track flex gap-3 ">
-                <div class="slide ">
-                    <img src="/assets/catalog/flores/flores1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/flores/flores2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/flores/flores3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/flores/flores4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/flores/flores5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/flores/flores6.jpeg" alt="">
-                </div>
-                <!-- repeat -->
-                <div class="slide ">
-                    <img src="/assets/catalog/flores/flores1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/flores/flores2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/flores/flores3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/flores/flores4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/flores/flores5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/assets/catalog/flores/flores6.jpeg" alt="">
-                </div>
-            </div>
-        </div>
-     </div>
-
-     <Divider />
-
-     <!-- Catalog: Pines -->
-     <div class="flex flex-col p-4 items-center justify-center">
-        <h3 class="font-bold text-4xl text-center">
-            Catálogo de Pines
-        </h3>
-
-        <div class="flex flex-col mx-auto items-center justify-center mt-12 text-center">
-            <a href="https://www.canva.com/design/DAGU_JUNAQY/HgZJlDzI8OeJCZB51X4COA/view?utm_content=DAGU_JUNAQY&utm_campaign=designshare&utm_medium=link&utm_source=editor" 
-            id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black 
-            text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <img id="cart" src="/assets/list.svg" alt="" class="w-6 h-6">
-                <span class="font-bold text-lg">Lista de Precios</span> 
-            </a>
         </div>
     </div>
-
-    <!-- Carousel 11 -->
-    <div class="flex flex-col items-center p-4 max-w-6xl mx-auto">
-        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
-            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                PINES
-            </h2>
-            <button class="flex items-center gap-2 mx-auto md:mx-0 md:ml-auto">
-                <a href="https://www.canva.com/design/DAF1UlYs1g0/eMC1WO6zq4GNpVWML0L4mA/view?utm_content=DAF1UlYs1g0&utm_campaign=designshare&utm_medium=link&utm_source=editor" id="comprar" class="group flex items-center gap-2 px-6 py-3 bg-yellow-200 text-black 
-                    text-lg font-bold rounded-lg shadow-lg hover:scale-110 transition-all duration-300">
-                <span class="font-bold text-lg">Ver más</span> 
-                <img id="cart" src="/assets/mas.svg" alt="" class="w-6 h-6">
-            </a>
-            </button>
-        </div>
-
-
-
-
-
-
-
-        
-        <div class="slider p-8 w-[100%] h-auto m-auto overflow-hidden max-w-6xl">
-            <div class="slide-track flex gap-3 ">
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-1.jpeg" alt="">
-                </div>
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-2.jpeg" alt="">
-                </div>
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-3.jpeg" alt="">
-                </div>
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-4.jpeg" alt="">
-                </div>
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-5.jpeg" alt="">
-                </div>
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-6.jpeg" alt="">
-                </div>
-                <!-- repeat -->
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-1.jpeg" alt="">
-                </div>
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-2.jpeg" alt="">
-                </div>
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-3.jpeg" alt="">
-                </div>
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-4.jpeg" alt="">
-                </div>
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-5.jpeg" alt="">
-                </div>
-                <div class="slide w-[200px] h-[200px] flex-shrink-0">
-                    <img src="/assets/catalog/pines/pines-6.jpeg" alt="">
-                </div>
+    
+   
+    <!-- PINES Section -->
+    <section class="py-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                <h2 class="font-bold text-4xl text-yellow-800 relative">
+                    PINES
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+                </h2>
+                
+                <a href="https://www.canva.com/design/DAF1UlYs1g0/eMC1WO6zq4GNpVWML0L4mA/view?utm_content=DAF1UlYs1g0&utm_campaign=designshare&utm_medium=link&utm_source=editor" 
+                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
+                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="font-bold text-lg">Ver más</span> 
+                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
+                </a>
             </div>
         </div>
-     </div>
-     <div class="bg-yellow-50">
+    </section>
+     
+    <div class="bg-yellow-50 pt-12">
         <Divider />
-     </div>
+    </div>
      
     <Footer />
    </div>
@@ -762,28 +162,49 @@ import Button from 'src/components/Button.astro';
         }
     }
 
-    .slider .slide-track{
+   .slider .slide-track{
         width: calc(200px * 12);
         animation: scroll 20s linear infinite;
         -webkit-animation: scroll 20s linear infinite;
     }
-
-    .slide img{
-        width: 200px;
-        height: 200px;
-        object-fit: fit;
-    }
-
-    .slider .slide img{
-        width: 100%;
-        height: 100%;
-        border-radius: 10%;
-    }
-
-    .slide{
-        height: 8rem;
-        width: 8rem;
-        
-    }
 </style>
-   
+
+<script>
+    const carousel = document.getElementById("carousel");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let index = 0;
+    const totalImages = carousel ? carousel.children.length : 0;
+    const itemsPerView = window.innerWidth >= 768 ? 4 : 1; // 4 en md, 1 en sm
+    const step = 100 / totalImages * itemsPerView; // Movimiento en %
+
+    function updateCarousel() {
+        if (carousel) {
+            carousel.style.transform = `translateX(-${index * step}%)`;
+        }
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+            if (index < totalImages / itemsPerView - 1) {
+                index++;
+                updateCarousel();
+            }
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+            if (index > 0) {
+                index--;
+                updateCarousel();
+            }
+        });
+    }
+
+    window.addEventListener("resize", () => {
+        index = 0; // Reiniciar al cambiar tamaño de pantalla
+        updateCarousel();
+    });
+</script>
