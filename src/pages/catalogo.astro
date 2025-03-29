@@ -8,14 +8,24 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
 ---
 <script>
     import Splide from "@splidejs/splide";
+    import { AutoScroll} from '@splidejs/splide-extension-auto-scroll';
   
     document.addEventListener("DOMContentLoaded", () => {
       // Inicialización del primer Splide
-      new Splide("#splide-1", {
-        type: "loop",
-        perPage: 2,
+    new Splide("#splide-1", {
+        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
+        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
         autoplay: true,  // Activar autoplay
-      }).mount();
+        interval: 2000,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
+        breakpoints: {
+            768: {
+                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
+                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
+                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
+                focus: "center",  // Centra la imagen seleccionada
+            },
+        },
+    }).mount();
       
       new Splide("#splide-2", {
         type: "loop",
