@@ -4,7 +4,25 @@ import Layout from '../layouts/Layout.astro';
 import Divider from '../components/Divider.astro';
 import Navigation from 'src/components/Navigation.astro';
 import Button from 'src/components/Button.astro';
+
+import "@splidejs/splide/css"; // Importa los estilos de Splide
 ---
+
+<script>
+    import Splide from "@splidejs/splide";
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      new Splide(".splide", {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        rewind: true,
+      }).mount();
+    });
+
+ 
+  </script>
+
 
 <Layout>
    <div class="min-h-screen bg-gradient-to-b from-white via-yellow-50 to-yellow-100">
@@ -85,39 +103,42 @@ import Button from 'src/components/Button.astro';
                 </a>
             </div>
         </div>
-    </section>
+    </section> 
 
-    <div class="flex flex-col p-4 max-w-6xl mx-auto relative">
-        <!-- Título y botón -->
-        <div class="mb-2 flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center w-full relative">
-            <h2 class="font-bold text-center text-3xl md:text-3xl md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-                COLECCIÓN BORDART
-            </h2>
-        </div>
-    
-        <!-- Slider con imágenes -->
-        <div class="relative w-full overflow-hidden">
-            <!-- Botón Izquierdo -->
-            <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full z-10">
-                &#10094;
-            </button>
-    
-            <!-- Contenedor del carrusel -->
-            <div id="carousel" class="flex transition-transform duration-500 ease-in-out gap-4">
-                <img class="w-full md:w-1/4 object-cover" src="/assets/catalog/coleccion-bordart/coleccion1.jpeg" alt="">
-                <img class="w-full md:w-1/4 object-cover" src="/assets/catalog/coleccion-bordart/coleccion2.jpeg" alt="">
-                <img class="w-full md:w-1/4 object-cover" src="/assets/catalog/coleccion-bordart/coleccion3.jpeg" alt="">
-                <img class="w-full md:w-1/4 object-cover" src="/assets/catalog/coleccion-bordart/coleccion4.jpeg" alt="">
-                <img class="w-full md:w-1/4 object-fit" src="/assets/catalog/coleccion-bordart/coleccion5.jpeg" alt="">
-                <img class="w-full md:w-1/4 object-cover" src="/assets/catalog/coleccion-bordart/coleccion6.jpeg" alt="">
+    <section class="py-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                <h2 class="font-bold text-4xl text-yellow-800 relative">
+                    Colección Bordart
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+                </h2>
+                
+                <a href="https://www.canva.com/design/DAF1UlYs1g0/eMC1WO6zq4GNpVWML0L4mA/view?utm_content=DAF1UlYs1g0&utm_campaign=designshare&utm_medium=link&utm_source=editor" 
+                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
+                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="font-bold text-lg">Ver más</span> 
+                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
+                </a>
             </div>
-    
-            <!-- Botón Derecho -->
-            <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full z-10">
-                &#10095;
-            </button>
         </div>
-    </div>
+
+        <div class="splide max-w-6xl mx-auto ">
+            <div class="splide__track">
+              <ul class="splide__list gap-4">
+                <li class="splide__slide"><img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion1.jpeg" alt="Imagen 1" /></li>
+                <li class="splide__slide"><img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion2.jpeg" alt="Imagen 2" /></li>
+                <li class="splide__slide"><img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion3.jpeg" alt="Imagen 3" /></li>
+                <li class="splide__slide"><img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion4.jpeg" alt="Imagen 4" /></li>
+                <li class="splide__slide"><img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion5.jpeg" alt="Imagen 5" /></li>
+                <li class="splide__slide"><img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion6.jpeg" alt="Imagen 6" /></li>
+              </ul>
+            </div>
+          </div>
+    </section>
+    
     
    
     <!-- PINES Section -->
@@ -207,4 +228,13 @@ import Button from 'src/components/Button.astro';
         index = 0; // Reiniciar al cambiar tamaño de pantalla
         updateCarousel();
     });
+</script>
+
+<script lang="js"> 
+    var splide = new Splide( '.splide', {
+  perPage: 3,
+  rewind : true,
+} );
+
+splide.mount();
 </script>
