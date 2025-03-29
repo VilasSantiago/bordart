@@ -4,28 +4,83 @@ import Layout from '../layouts/Layout.astro';
 import Divider from '../components/Divider.astro';
 import Navigation from 'src/components/Navigation.astro';
 import Button from 'src/components/Button.astro';
-
 import "@splidejs/splide/css"; // Importa los estilos de Splide
 ---
-
 <script>
     import Splide from "@splidejs/splide";
   
     document.addEventListener("DOMContentLoaded", () => {
-      new Splide(".splide", {
-        type: 'loop',
-        perPage: 3,
-        perMove: 1,
-        rewind: true,
+      // Inicialización del primer Splide
+      new Splide("#splide-1", {
+        type: "loop",
+        perPage: 2,
+        autoplay: true,  // Activar autoplay
+      }).mount();
+      
+      new Splide("#splide-2", {
+        type: "loop",
+        perPage: 2,
+        autoplay: true,  // Activar autoplay
+      }).mount();
+
+      new Splide("#splide-3", {
+        type: "loop",
+        perPage: 2,
+        autoplay: true,  // Activar autoplay
+      }).mount();
+
+      new Splide("#splide-4", {
+        type: "loop",
+        perPage: 2,
+        autoplay: true,  // Activar autoplay
+      }).mount();
+
+      new Splide("#splide-5", {
+        type: "loop",
+        perPage: 2,
+        autoplay: true,  // Activar autoplay
+      }).mount();
+
+      new Splide("#splide-6", {
+        type: "loop",
+        perPage: 2,
+        autoplay: true,  // Activar autoplay
+      }).mount();
+
+      new Splide("#splide-7", {
+        type: "loop",
+        perPage: 2,
+        autoplay: true,  // Activar autoplay
+      }).mount();
+
+      new Splide("#splide-8", {
+        type: "loop",
+        perPage: 2,
+        autoplay: true,  // Activar autoplay
+      }).mount();
+
+      new Splide("#splide-9", {
+        type: "loop",
+        perPage: 2,
+        autoplay: true,  // Activar autoplay
+      }).mount();
+
+      new Splide("#splide-10", {
+        type: "loop",
+        perPage: 2,
+        autoplay: true,  // Activar autoplay
+      }).mount();
+
+      new Splide("#splide-11", {
+        type: "loop",
+        perPage: 2,
+        autoplay: true,  // Activar autoplay
       }).mount();
     });
-
- 
-  </script>
-
+</script>
 
 <Layout>
-   <div class="min-h-screen bg-gradient-to-b from-white via-yellow-50 to-yellow-100">
+<div class="min-h-screen bg-gradient-to-b from-white via-yellow-50 to-yellow-50">
     <div class="hidden md:block">
         <Button />
     </div>
@@ -69,7 +124,6 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
                 <div class="text-center">
                     <p class="font-bold text-lg text-blue-700">Azul</p>
                 </div>
-                
                 <!-- Color Dots -->
                 <div class="flex justify-center transform transition hover:scale-110 duration-300">
                     <img src="/assets/catalog/green-round.png" alt="Indicador verde" class="h-16 w-16 drop-shadow-md">
@@ -83,7 +137,6 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
             </div>
         </div>
     </section>
-
     <Divider />
 
     <!-- Catalog: Bordados -->
@@ -105,6 +158,7 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
         </div>
     </section> 
 
+    <!-- Coleccion Bordart Section -->
     <section class="py-8 px-4 max-w-6xl mx-auto">
         <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
@@ -124,10 +178,455 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
                 </a>
             </div>
         </div>
-        
+        <!-- Carrousel 1 -->
+        <div class="splide max-w-6xl mx-auto" id="splide-1">
+            <div class="splide__track">
+              <ul class="splide__list gap-4">
+                <li class="splide__slide h-64 ">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-1.png" alt="Imagen 1" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-2.png" alt="Imagen 2" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-3.png" alt="Imagen 3" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-4.png" alt="Imagen 4" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-5.png" alt="Imagen 5" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-6.png" alt="Imagen 6" />
+                </li>
+              </ul>
+            </div>
+        </div>
     </section>
-    
-    
+
+    <!-- Musica Section -->
+    <section class="py-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                <h2 class="font-bold text-4xl text-yellow-800 relative">
+                    Música
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+                </h2>
+                
+                <a href="https://www.canva.com/design/DAGcO9ig2B0/GhJl03Jo9LXtDWfrf_VReQ/edit" 
+                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
+                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="font-bold text-lg">Ver más</span> 
+                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
+                </a>
+            </div>
+        </div>
+        <!-- Carrousel  -->
+        <div class="splide max-w-6xl mx-auto" id="splide-2">
+            <div class="splide__track">
+              <ul class="splide__list gap-4">
+                <li class="splide__slide h-64 ">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-1.png" alt="Imagen 1" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-2.png" alt="Imagen 2" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-3.png" alt="Imagen 3" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-4.png" alt="Imagen 4" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-5.png" alt="Imagen 5" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-6.png" alt="Imagen 6" />
+                </li>
+              </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arte Section -->
+    <section class="py-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                <h2 class="font-bold text-4xl text-yellow-800 relative">
+                    ---
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+                </h2>
+                
+                <a href="" 
+                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
+                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="font-bold text-lg">Ver más</span> 
+                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
+                </a>
+            </div>
+        </div>
+        <!-- Carrousel  -->
+        <div class="splide max-w-6xl mx-auto" id="splide-">
+            <div class="splide__track">
+              <ul class="splide__list gap-4">
+                <li class="splide__slide h-64 ">
+                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 1" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 2" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 3" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 4" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 5" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 6" />
+                </li>
+              </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amor Section -->
+    <section class="py-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                <h2 class="font-bold text-4xl text-yellow-800 relative">
+                    ---
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+                </h2>
+                
+                <a href="" 
+                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
+                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="font-bold text-lg">Ver más</span> 
+                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
+                </a>
+            </div>
+        </div>
+        <!-- Carrousel  -->
+        <div class="splide max-w-6xl mx-auto" id="splide-">
+            <div class="splide__track">
+              <ul class="splide__list gap-4">
+                <li class="splide__slide h-64 ">
+                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 1" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 2" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 3" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 4" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 5" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 6" />
+                </li>
+              </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anime Section -->
+    <section class="py-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                <h2 class="font-bold text-4xl text-yellow-800 relative">
+                    ---
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+                </h2>
+                
+                <a href="" 
+                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
+                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="font-bold text-lg">Ver más</span> 
+                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
+                </a>
+            </div>
+        </div>
+        <!-- Carrousel  -->
+        <div class="splide max-w-6xl mx-auto" id="splide-">
+            <div class="splide__track">
+              <ul class="splide__list gap-4">
+                <li class="splide__slide h-64 ">
+                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 1" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 2" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 3" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 4" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 5" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 6" />
+                </li>
+              </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dibujos Animados Section -->
+    <section class="py-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                <h2 class="font-bold text-4xl text-yellow-800 relative">
+                    ---
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+                </h2>
+                
+                <a href="" 
+                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
+                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="font-bold text-lg">Ver más</span> 
+                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
+                </a>
+            </div>
+        </div>
+        <!-- Carrousel  -->
+        <div class="splide max-w-6xl mx-auto" id="splide-">
+            <div class="splide__track">
+              <ul class="splide__list gap-4">
+                <li class="splide__slide h-64 ">
+                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 1" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 2" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 3" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 4" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 5" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 6" />
+                </li>
+              </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nike X Personajes Section -->
+    <section class="py-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                <h2 class="font-bold text-4xl text-yellow-800 relative">
+                    ---
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+                </h2>
+                
+                <a href="" 
+                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
+                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="font-bold text-lg">Ver más</span> 
+                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
+                </a>
+            </div>
+        </div>
+        <!-- Carrousel  -->
+        <div class="splide max-w-6xl mx-auto" id="splide-">
+            <div class="splide__track">
+              <ul class="splide__list gap-4">
+                <li class="splide__slide h-64 ">
+                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 1" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 2" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 3" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 4" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 5" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 6" />
+                </li>
+              </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marcas y Logos Section -->
+    <section class="py-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                <h2 class="font-bold text-4xl text-yellow-800 relative">
+                    ---
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+                </h2>
+                
+                <a href="" 
+                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
+                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="font-bold text-lg">Ver más</span> 
+                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
+                </a>
+            </div>
+        </div>
+        <!-- Carrousel  -->
+        <div class="splide max-w-6xl mx-auto" id="splide-">
+            <div class="splide__track">
+              <ul class="splide__list gap-4">
+                <li class="splide__slide h-64 ">
+                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 1" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 2" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 3" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 4" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 5" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 6" />
+                </li>
+              </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deportes Section -->
+    <section class="py-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                <h2 class="font-bold text-4xl text-yellow-800 relative">
+                    ---
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+                </h2>
+                
+                <a href="" 
+                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
+                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="font-bold text-lg">Ver más</span> 
+                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
+                </a>
+            </div>
+        </div>
+        <!-- Carrousel  -->
+        <div class="splide max-w-6xl mx-auto" id="splide-">
+            <div class="splide__track">
+              <ul class="splide__list gap-4">
+                <li class="splide__slide h-64 ">
+                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 1" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 2" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 3" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 4" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 5" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 6" />
+                </li>
+              </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flores Section -->
+    <section class="py-8 px-4 max-w-6xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
+            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
+                <h2 class="font-bold text-4xl text-yellow-800 relative">
+                    ---
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
+                </h2>
+                
+                <a href="" 
+                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
+                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="font-bold text-lg">Ver más</span> 
+                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
+                </a>
+            </div>
+        </div>
+        <!-- Carrousel  -->
+        <div class="splide max-w-6xl mx-auto" id="splide-">
+            <div class="splide__track">
+              <ul class="splide__list gap-4">
+                <li class="splide__slide h-64 ">
+                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 1" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 2" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 3" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 4" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 5" />
+                </li>
+                <li class="splide__slide h-64">
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/" alt="Imagen 6" />
+                </li>
+              </ul>
+            </div>
+        </div>
+    </section>
    
     <!-- PINES Section -->
     <section class="py-8 px-4 max-w-6xl mx-auto">
@@ -137,7 +636,7 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
             
             <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
                 <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    PINES
+                    Pines
                     <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
                 </h2>
                 
@@ -151,104 +650,35 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
         </div>
 
         <!-- Carrousel 11 -->
-        <div class="splide max-w-6xl mx-auto">
+        <div class="splide max-w-6xl mx-auto" id="splide-11">
             <div class="splide__track">
               <ul class="splide__list gap-4">
                 <li class="splide__slide h-64 ">
-                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/pines/pines-1.png" alt="Imagen 1" />
+                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion1.jpeg" alt="Imagen 1" />
                 </li>
                 <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-2.png" alt="Imagen 2" />
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion2.jpeg" alt="Imagen 2" />
                 </li>
                 <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-3.png" alt="Imagen 3" />
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion3.jpeg" alt="Imagen 3" />
                 </li>
                 <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-4.png" alt="Imagen 4" />
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion4.jpeg" alt="Imagen 4" />
                 </li>
                 <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-5.png" alt="Imagen 5" />
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion5.jpeg" alt="Imagen 5" />
                 </li>
                 <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-6.png" alt="Imagen 6" />
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion6.jpeg" alt="Imagen 6" />
                 </li>
               </ul>
             </div>
         </div>
     </section>
      
-    <div class="bg-yellow-50 pt-12">
-        <Divider />
-    </div>
-     
-    <Footer />
-   </div>
+        <div class="bg-yellow-50 pt-12">
+            <Divider />
+        </div>
+        <Footer />
+</div>
 </Layout>
-
-<style>
-    @keyframes scroll{
-        0%{
-            transform: translateX(0);
-            -webkit-animation: translateX(0);
-        }
-        100%{
-            transform: translateX(calc(-200px * 6));
-            -webkit-animation: translateX(calc(-200px * 6));
-        }
-    }
-
-   .slider .slide-track{
-        width: calc(200px * 12);
-        animation: scroll 20s linear infinite;
-        -webkit-animation: scroll 20s linear infinite;
-    }
-</style>
-
-<script>
-    const carousel = document.getElementById("carousel");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-
-    let index = 0;
-    const totalImages = carousel ? carousel.children.length : 0;
-    const itemsPerView = window.innerWidth >= 768 ? 4 : 1; // 4 en md, 1 en sm
-    const step = 100 / totalImages * itemsPerView; // Movimiento en %
-
-    function updateCarousel() {
-        if (carousel) {
-            carousel.style.transform = `translateX(-${index * step}%)`;
-        }
-    }
-
-    if (nextBtn) {
-        nextBtn.addEventListener("click", () => {
-            if (index < totalImages / itemsPerView - 1) {
-                index++;
-                updateCarousel();
-            }
-        });
-    }
-
-    if (prevBtn) {
-        prevBtn.addEventListener("click", () => {
-            if (index > 0) {
-                index--;
-                updateCarousel();
-            }
-        });
-    }
-
-    window.addEventListener("resize", () => {
-        index = 0; // Reiniciar al cambiar tamaño de pantalla
-        updateCarousel();
-    });
-</script>
-
-<script lang="js"> 
-    var splide = new Splide( '.splide', {
-  perPage: 3,
-  rewind : true,
-} );
-
-splide.mount();
-</script>
