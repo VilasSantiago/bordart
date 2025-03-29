@@ -16,13 +16,14 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
         type: "loop",  // Tipo de carrusel (loop, fade, etc.)
         perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
         autoplay: true,  // Activar autoplay
-        interval: 2000,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
+        interval: 1500,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
         breakpoints: {
             768: {
                 perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
                 type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
                 drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",  // Centra la imagen seleccionada
+                focus: "center",
+                interval: 1000,  // Centra la imagen seleccionada
             },
         },
     }).mount();
@@ -95,6 +96,9 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
         <Button />
     </div>
     <Navigation />
+
+   
+      
     
     <!-- Explanation Section -->
     <section class="max-w-4xl mx-auto py-12 px-4">
@@ -212,7 +216,11 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
                 </li>
               </ul>
             </div>
+            <div class="splide__arrows opacity-30 md:opacity-100 hover:opacity-80">
+                
+              </div>
         </div>
+        
     </section>
 
     <!-- Musica Section -->
@@ -664,22 +672,22 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
             <div class="splide__track">
               <ul class="splide__list gap-4">
                 <li class="splide__slide h-64 ">
-                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion1.jpeg" alt="Imagen 1" />
+                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/pines/pines-1.png" alt="Imagen 1" />
                 </li>
                 <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion2.jpeg" alt="Imagen 2" />
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-2.png" alt="Imagen 2" />
                 </li>
                 <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion3.jpeg" alt="Imagen 3" />
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-3.png" alt="Imagen 3" />
                 </li>
                 <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion4.jpeg" alt="Imagen 4" />
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-4.png" alt="Imagen 4" />
                 </li>
                 <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion5.jpeg" alt="Imagen 5" />
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-5.png" alt="Imagen 5" />
                 </li>
                 <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion6.jpeg" alt="Imagen 6" />
+                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-6.png" alt="Imagen 6" />
                 </li>
               </ul>
             </div>
