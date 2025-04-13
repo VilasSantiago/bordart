@@ -1,0 +1,114 @@
+---
+import Hero from '../components/Hero.astro';
+import Layout from '../layouts/Layout.astro';
+import Navigation from 'src/components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Divider from 'src/components/Divider.astro';
+---
+<Layout>
+    <Navigation/>
+    <section class="px-4 py-10 bg-gradient-to-b from-white to-yellow-50">
+        <div class="max-w-6xl flex flex-col md:flex-row gap-6 mx-auto">
+          
+            <!-- Miniaturas + imagen principal -->
+            <div class="w-full md:w-1/2 flex flex-col md:flex-row gap-4">
+            
+                <!-- Miniaturas -->
+                <div class="flex md:flex-col gap-2 justify-center">
+                    <img src="/assets/productos/producto-buzo-1.jpeg" alt="Miniatura 1" class="w-20 h-20 object-cover cursor-pointer border border-gray-500 rounded hover:scale-105 transition" onclick="setImage(this)">
+                    <img src="/assets/productos/producto-buzo-2.jpeg" alt="Miniatura 2" class="w-20 h-20 object-cover cursor-pointer border border-gray-500 rounded hover:scale-105 transition" onclick="setImage(this)">
+                    <img src="/assets/productos/producto-buzo-3.jpeg" alt="Miniatura 3" class="w-20 h-20 object-cover cursor-pointer border border-gray-500 rounded hover:scale-105 transition" onclick="setImage(this)">
+                </div>
+      
+                <!-- Imagen principal -->
+                <div class="flex-1">
+                    <img id="mainImage" src="/assets/productos/producto-buzo-1.jpeg" alt="Producto" class="aspect-[1] w-full object-cover rounded-lg shadow-md border border-gray-500">
+                </div>
+            </div>
+      
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                <!-- Información del producto -->
+                <div class="flex flex-col p-4 gap-6">
+                <div>
+                    <h2 class="text-3xl font-bold">Remera</h2>
+                    <span class="text-3xl font-bold">Bordada Caos</span>
+                    <p class="text-xl text-gray-700 mt-4">$99.999 <span class="text-sm text-gray-500">ARS</span></p>
+                </div>
+      
+                <!-- Talles -->
+                <div>
+                    <h3 class="text-md text-gray-500 mb-1 ">Talle</h3>
+                    <div class="flex gap-2">
+                        <span class="border border-black px-3 py-1 rounded hover:scale-105 transition cursor-pointer">S</span>
+                        <span class="border border-black px-3 py-1 rounded hover:scale-105 transition cursor-pointer">M</span>
+                        <span class="border border-black px-3 py-1 rounded hover:scale-105 transition cursor-pointer">L</span>
+                    </div>
+                </div>
+      
+                <!-- Colores -->
+                <div>
+                    <h3 class="text-sm text-gray-500 mb-1">Color</h3>
+                    <div class="flex gap-2">
+                        <span class="w-6 h-6 rounded-full border border-gray-500 bg-black hover:scale-110 transition cursor-pointer"></span>
+                        <span class="w-6 h-6 rounded-full border border-gray-500 bg-white hover:scale-110 transition cursor-pointer"></span>
+                        <span class="w-6 h-6 rounded-full border border-gray-500 bg-red-600 hover:scale-110 transition cursor-pointer"></span>
+                    </div>
+                </div>
+
+                <!-- Como Comprar -->
+                <div class="flex flex-col items-start justify-center">
+                    <a href="/#como-comprar" id="comprar" class="group relative flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-500 hover:shadow-xl">
+                        <span class="font-bold text-lg z-10">Comprar</span>
+                        <img id="cart" src="/assets/cart.svg" alt="" class="w-8 h-8 z-10 transition-all duration-300 group-hover:invert group-hover:brightness-0">
+                        <span class="absolute inset-0 bg-yellow-400 z-0"></span> <!-- Span que se animará -->
+                    </a>
+                </div>
+
+                </div>
+            </div>
+          
+        </div>
+      
+        <!-- Tabla de talles -->
+        <div class="mt-10 flex flex-col items-center justify-start text-start">
+            <img src="/assets/productos/talles-buzos.jpeg" alt="Tabla de talles" class="rounded-lg shadow-md object-cover w-96 h-auto">
+        </div>
+    </section>
+      
+    <script lang="js">
+        function setImage(el) {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = el.src;
+        }
+    </script>
+      
+    <div class="bg-yellow-50">
+        <Divider></Divider>
+    </div>
+    <Footer/>
+</Layout>
+
+<style>
+     @keyframes wipe-in-left {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+#comprar {
+    position: relative;
+    overflow: hidden; /* Importante para asegurar que el efecto clip-path se vea */
+}
+
+#comprar:hover .absolute {
+    animation: wipe-in-left 0.8s cubic-bezier(.25, 1, .30, 1) forwards;
+    background-color: rgb(161 98 7 / var(--tw-bg-opacity, 1));
+}
+
+#comprar:hover {
+    color: white;
+}
+</style>
