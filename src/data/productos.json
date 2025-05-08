@@ -1,0 +1,126 @@
+[
+    {
+      "id": "remera-made-in",
+      "nombre": "Remera 'made in'",
+      "descripcion": "made in",
+      "precio": 29000,
+      "imagen": [
+        "/assets/drop/remera-made-in-1.webp",
+        "/assets/drop/remera-made-in-2.webp",
+        "/assets/drop/remera-made-in-3.webp"
+      ],
+      "colores": ["black", "white", "red-600"],
+      "talles": ["S", "M", "L"],
+      "tablaTalles": "/assets/productos/talles-buzos.jpeg"
+    },
+    {
+      "id": "remera-bordart",
+      "nombre": "Remera Bordart",
+      "descripcion": "bordart",
+      "precio": 29000,
+      "imagen": [
+        "/assets/drop/remera-bordart-1.webp",
+        "/assets/drop/remera-bordart-2.webp"
+      ],
+      "colores": ["black", "white", "red-600"],
+      "talles": ["S", "M", "L"],
+      "tablaTalles": "/assets/productos/talles-buzos.jpeg"
+    },
+    {
+      "id": "remera-maria",
+      "nombre": "Remera María",
+      "descripcion": "maria",
+      "precio": 29000,
+      "imagen": [
+        "/assets/drop/remera-maria-1.webp",
+        "/assets/drop/remera-maria-2.webp",
+        "/assets/drop/remera-maria-3.webp"
+      ],
+      "colores": ["black", "white", "red-600"],
+      "talles": ["S", "M", "L"],
+      "tablaTalles": "/assets/productos/talles-buzos.jpeg"
+    },
+    {
+      "id": "remera-sonrisol",
+      "nombre": "Remera Sonrisol",
+      "descripcion": "sonrisol",
+      "precio": 29000,
+      "imagen": [
+        "/assets/drop/remera-sonrisol-1.webp",
+        "/assets/drop/remera-sonrisol-2.webp",
+        "/assets/drop/remera-sonrisol-3.webp"
+      ],
+      "colores": ["black", "white", "red-600"],
+      "talles": ["S", "M", "L"],
+      "tablaTalles": "/assets/productos/talles-buzos.jpeg"
+    },
+    {
+      "id": "buzo-universe-bordart",
+      "nombre": "Buzo Universe Bordart",
+      "descripcion": "universe bordart",
+      "precio": 59000,
+      "imagen": [
+        "/assets/drop/buzo-universe-bordart-1.webp",
+        "/assets/drop/buzo-universe-bordart-2.webp",
+        "/assets/drop/buzo-universe-bordart-3.webp"
+      ],
+      "colores": ["black", "white", "red-600"],
+      "talles": ["S", "M", "L"],
+      "tablaTalles": "/assets/productos/talles-buzos.jpeg"
+    },
+    {
+      "id": "totebag-01",
+      "nombre": "Totebag #01",
+      "descripcion": "made in",
+      "precio": 13000,
+      "imagen": [
+        "/assets/drop/totebag-1.webp",
+        "/assets/drop/totebag-2.webp",
+        "/assets/drop/totebag-3.webp"
+      ],
+      "colores": ["black", "white", "red-600"],
+      "talles": ["S", "M", "L"],
+      "tablaTalles": "/assets/productos/talles-buzos.jpeg"
+    },
+    {
+      "id": "gorrito-bordart",
+      "nombre": "Gorrito Bordart",
+      "descripcion": "made in",
+      "precio": 29000,
+      "imagen": [
+        "/assets/drop/gorrito-bordart-1.webp",
+        "/assets/drop/gorrito-bordart-2.webp",
+        "/assets/drop/gorrito-bordart-3.webp"
+      ],
+      "colores": ["black", "white", "red-600"],
+      "talles": ["S", "M", "L"],
+      "tablaTalles": "/assets/productos/talles-buzos.jpeg"
+    },
+    {
+      "id": "gorrito-sonrisol",
+      "nombre": "Gorrito Sonrisol",
+      "descripcion": "made in",
+      "precio": 13000,
+      "imagen": [
+        "/assets/drop/gorrito-sonrisol-1.webp",
+        "/assets/drop/gorrito-sonrisol-2.webp",
+        "/assets/drop/gorrito-sonrisol-3.webp"
+      ],
+      "colores": ["black", "white", "red-600"],
+      "talles": ["S", "M", "L"],
+      "tablaTalles": "/assets/productos/talles-buzos.jpeg"
+    },
+    {
+      "id": "cuadritos",
+      "nombre": "Cuadritos",
+      "descripcion": "made in",
+      "precio": 15000,
+      "imagen": [
+        "/assets/drop/cuadritos-1.webp",
+        "/assets/drop/cuadritos-2.webp"
+      ],
+      "colores": ["black", "white", "red-600"],
+      "talles": ["S", "M", "L"],
+      "tablaTalles": "/assets/productos/talles-buzos.jpeg"
+    }
+  ]

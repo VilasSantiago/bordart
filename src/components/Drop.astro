@@ -2,7 +2,7 @@
 
 ---
 <script>
-const drop = new Date('2025-05-10 00:00:00');
+const drop = new Date('2025-05-10 19:00:00');
 
 function upDateCountdown(){
     const now = new Date();
@@ -15,18 +15,20 @@ function upDateCountdown(){
 
     const timeOver = (days < 0) && (minutes <0) && (hours < 0) && (seconds < 0);
     if(timeOver){
-        console.log('SE TERMINO EL CONTADOR');
-        clearInterval(countdownInterval);
+    console.log('SE TERMINO EL CONTADOR');
+    clearInterval(countdownInterval);
 
-        
-        const comingSoon = document.querySelector('.coming-soon');
-        const openDrop = document.querySelector('.container-end');
-        if (comingSoon instanceof HTMLElement && openDrop instanceof HTMLElement) {
+    // 🔥 Emitimos evento global
+    document.dispatchEvent(new CustomEvent("drop-finalizado"));
+
+    const comingSoon = document.querySelector('.coming-soon');
+    const openDrop = document.querySelector('.container-end');
+    if (comingSoon instanceof HTMLElement && openDrop instanceof HTMLElement) {
         comingSoon.style.display = 'none';
         openDrop.style.display = 'flex';
-        }
-           
     }
+}
+
 
     document.getElementById('days')!.textContent = days.toString().padStart(2, '0');
     document.getElementById('hours')!.textContent = hours.toString().padStart(2, '0');
