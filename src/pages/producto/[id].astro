@@ -55,15 +55,22 @@ import Divider from '../../components/Divider.astro';
             </div>
       
             <!-- Colores -->
-            <div>
-              <h3 class="text-sm text-gray-500 mb-1">Color</h3>
-              <div class="flex gap-2">
-                <span class="w-6 h-6 rounded-full border border-gray-500 bg-black hover:scale-110 transition cursor-pointer"></span>
-                <span class="w-6 h-6 rounded-full border border-gray-500 bg-white hover:scale-110 transition cursor-pointer"></span>
-                <span class="w-6 h-6 rounded-full border border-gray-500 bg-red-600 hover:scale-110 transition cursor-pointer"></span>
+            {producto.colores && producto.colores.length > 0 && (
+              <div>
+                <h3 class="text-sm text-gray-500 mb-1">Colores</h3>
+                <div class="flex gap-2">
+                  {producto.colores.map((color) => (
+                  <span
+                 class="w-6 h-6 rounded-full border border-gray-500 hover:scale-110 transition cursor-pointer"
+                    style={`background-color: ${color};`}
+                    title={color}
+                  ></span>
+                  ))}
               </div>
             </div>
-      
+          )}
+
+            
             <!-- Comprar -->
             <div class="flex flex-col items-start justify-center">
               <a href="/preguntas" id="comprar" class="group relative flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-500 hover:shadow-xl">
@@ -74,6 +81,24 @@ import Divider from '../../components/Divider.astro';
             </div>
           </div>
         </div>
+
+        <!-- Sección de tablas de talles -->
+        {producto.tablaTalles && producto.tablaTalles.length > 0 && (
+          <div class="mt-12 text-center">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 inline-block relative">
+              Tablas de Talles
+              <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-amber-400 rounded-full"></div>
+            </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
+            {producto.tablaTalles.map((tabla, index) => (
+              <div class="bg-white p-6 rounded-lg shadow-md border border-amber-100">
+                <img src={tabla} alt={`Tabla de talles ${index + 1}`} class="rounded-lg shadow-md" />
+              </div>
+            ))}
+          </div>
+        </div>
+        )}
+
       </section>
       
       
