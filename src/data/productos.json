@@ -9,8 +9,12 @@
         "/assets/drop/remera-made-in-2.webp",
         "/assets/drop/remera-made-in-3.webp"
       ],
-      "colores": ["black", "gray", "oklch(90.1% 0.076 70.697)"],
-      "talles": ["S", "M", "L"],
+      "variantes": [
+        { "talle": "S", "colores": ["gray"] },
+        { "talle": "L", "colores": ["black", "oklch(90.1% 0.076 70.697)"] }
+      ],
+      "colores": ["gray", "gray", "oklch(90.1% 0.076 70.697)"],
+      "talles": ["S over", "L"],
       "tablaTalles": [
         "/assets/drop/talles-remeron.jpeg",
         "/assets/drop/talles-remeron-fit.jpeg"
@@ -24,6 +28,10 @@
       "imagen": [
         "/assets/drop/remera-bordart-1.webp",
         "/assets/drop/remera-bordart-2.webp"
+      ],
+      "variantes": [
+        { "talle": "M", "colores": ["black"] },
+        { "talle": "XL", "colores": ["black"] }
       ],
       "colores": ["black", "oklch(90.1% 0.076 70.697)"],
       "talles": ["S", "M", "L"],
@@ -42,6 +50,10 @@
         "/assets/drop/remera-maria-2.webp",
         "/assets/drop/remera-maria-3.webp"
       ],
+      "variantes": [
+        { "talle": "XS", "colores": ["oklch(90.1% 0.076 70.697)"] },
+        { "talle": "XL", "colores": ["oklch(90.1% 0.076 70.697)"] }
+      ],
       "colores": ["white", "oklch(90.1% 0.076 70.697)"],
       "talles": ["S", "M", "L"],
       "tablaTalles": [
@@ -59,6 +71,11 @@
         "/assets/drop/remera-sonrisol-2.webp",
         "/assets/drop/remera-sonrisol-3.webp"
       ],
+      "variantes": [
+        { "talle": "M", "colores": ["black", "oklch(90.1% 0.076 70.697)"] },
+        { "talle": "L", "colores": ["gray"] },
+        { "talle": "XL", "colores": ["gray"] }
+      ],
       "colores": ["black", "oklch(90.1% 0.076 70.697)", "gray"],
       "talles": ["S", "M", "L"],
       "tablaTalles": [
@@ -70,7 +87,7 @@
       "id": "buzo-universe-bordart",
       "nombre": "Buzo Universe Bordart",
       "descripcion": "",
-      "precio": 59000,
+      "precio": "SOLD OUT",
       "imagen": [
         "/assets/drop/buzo-universe-bordart-1.webp",
         "/assets/drop/buzo-universe-bordart-2.webp",
@@ -100,7 +117,7 @@
       "id": "gorrito-bordart",
       "nombre": "Gorrito Bordart",
       "descripcion": "",
-      "precio": 13000,
+      "precio": "SOLD OUT",
       "imagen": [
         "/assets/drop/gorrito-bordart-1.webp",
         "/assets/drop/gorrito-bordart-2.webp",
@@ -113,7 +130,7 @@
       "id": "gorrito-sonrisol",
       "nombre": "Gorrito Sonrisol",
       "descripcion": "",
-      "precio": 13000,
+      "precio": "SOLD OUT",
       "imagen": [
         "/assets/drop/gorrito-sonrisol-1.webp",
         "/assets/drop/gorrito-sonrisol-2.webp",
@@ -126,7 +143,7 @@
       "id": "cuadritos",
       "nombre": "Cuadritos",
       "descripcion": "",
-      "precio": 15000,
+      "precio": "SOLD OUT",
       "imagen": [
         "/assets/drop/cuadritos-1.webp",
         "/assets/drop/cuadritos-2.webp"

@@ -7,77 +7,83 @@ import Footer from '../../components/Footer.astro';
 import Divider from '../../components/Divider.astro';
 
 import productos from '../../data/productos.json';
-
-
 ---
+
 <Layout>
-    <Navigation />
-    
-    <section id="productos" class="px-4 bg-gradient-to-b from-white to-yellow-50">
-        <div class="h-screen grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-0 max-w-4xl mx-auto p-4">
-          <!-- Imagen principal con texto superpuesto -->
-          <div class="relative col-span-1 sm:col-span-2">
-            <img
-              src="/assets/drop/drop01.webp"
-              alt="Foto principal"
-              class="w-full h-full object-cover"
-            />
-            <div class="absolute inset-0 flex flex-col justify-center items-center bg-black/25 text-white text-center md:flex-wrap md:items-start md:px-44">
-              <span class="text-3xl font-bold tracking-wide">BORDART</span>
-              <span class="text-lg font-medium">DROP #01</span>
-            </div>
-          </div>
-      
-          <!-- Dos imágenes abajo -->
-          <div class="">
-            <img
-              src="/assets/drop/drop02.webp"
-              alt="Foto izquierda"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="">
-            <img
-              src="/assets/drop/drop03.webp"
-              alt="Foto derecha"
-              class="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-        <!--- textos -->
-        <div class="max-w-4xl mx-auto flex flex-col items-center justify-center text-center gap-4 p-4">
-          <h2 class="font-bold text-4xl ">Caos Bordado.</h2>
-          <h3 class="font-bold text-3xl md:text-4xl text-gray-900">Este es el comienzo.</h3>
-          <h3 class="font-bold text-2xl md:text-4xl text-gray-800 whitespace-nowrap">Donde los hilos cobran vida.</h3>
-        </div>
+  <Navigation />
 
-        <div class="max-w-4xl mx-auto p-4 ">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {productos.map(producto => (
-              <div class="border rounded-lg overflow-hidden shado-md hover:shadow-xl transition">
-                <a href={`/producto/${producto.id}`}>
-                  <img src={producto.imagen[0]} alt={producto.nombre} class="w-full h-64 object-cover">
-
-                  <div class="p-4 text-center">
-                    <h3 class="text-xl font-semibold">{producto.nombre}</h3>
-                    <p class="text-gray-500">${producto.precio.toLocaleString()} <span class="text-sm text-gray-500">ARS</span></p>
-                  </div>
-                </a>
-              </div>
-            ))}
-          </div>
+  <section id="productos" class="px-4 bg-gradient-to-b from-white to-yellow-50">
+    <div class="h-screen grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-0 max-w-4xl mx-auto p-4">
+      <!-- Imagen principal con texto superpuesto -->
+      <div class="relative col-span-1 sm:col-span-2">
+        <img
+          src="/assets/drop/drop01.webp"
+          alt="Foto principal"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 flex flex-col justify-center items-center bg-black/25 text-white text-center md:flex-wrap md:items-start md:px-44">
+          <span class="text-3xl font-bold tracking-wide">BORDART</span>
+          <span class="text-lg font-medium">DROP #01</span>
         </div>
-        
-        <div class="flex flex-col items-center justify-center text-center gap-4 p-4">
-          <h3 class="text-3xl md:text-4xl font-bold">Bienvenidx al primer capítulo del universo BORDART.</h3>
-        </div>
-
-      </section>
-    
-      <div class="bg-yellow-50">
-        <Divider/>
       </div>
-    <Footer />
+
+      <!-- Dos imágenes abajo -->
+      <div class="">
+        <img
+          src="/assets/drop/drop02.webp"
+          alt="Foto izquierda"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="">
+        <img
+          src="/assets/drop/drop03.webp"
+          alt="Foto derecha"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
+    <!--- textos -->
+    <div class="max-w-4xl mx-auto flex flex-col items-center justify-center text-center gap-4 p-4">
+      <h2 class="font-bold text-4xl ">Caos Bordado.</h2>
+      <h3 class="font-bold text-3xl md:text-4xl text-gray-900">Este es el comienzo.</h3>
+      <h3 class="font-bold text-2xl md:text-4xl text-gray-800 whitespace-nowrap">Donde los hilos cobran vida.</h3>
+    </div>
+
+    <!-- Productos -->
+    <div class="max-w-4xl mx-auto p-4 ">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {productos.map(producto => (
+          <div class="border rounded-lg overflow-hidden shado-md hover:shadow-xl transition">
+            <a href={`/producto/${producto.id}`}>
+              <img src={producto.imagen[0]} alt={producto.nombre} class="w-full h-64 object-cover" />
+
+              <div class="p-4 text-center">
+                <h3 class="text-xl font-semibold">{producto.nombre}</h3>
+                {typeof producto.precio === 'number' ? (
+                  <p class="text-gray-500">
+                    ${producto.precio.toLocaleString()} <span class="text-sm text-gray-500">ARS</span>
+                  </p>
+                ) : (
+                  <p class="text-red-500 font-semibold">{producto.precio}</p>
+                )}
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center text-center gap-4 p-4">
+      <h3 class="text-3xl md:text-4xl font-bold">Bienvenidx al primer capítulo del universo BORDART.</h3>
+    </div>
+  </section>
+
+  <div class="bg-yellow-50">
+    <Divider />
+  </div>
+  <Footer />
 </Layout>
 
 <script>
