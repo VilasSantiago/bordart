@@ -1,27 +1,12 @@
 ---
 ---
-<button id="scrollTopBtn" 
-class="hidden fixed bottom-6 right-6 bg-yellow-400 text-withe p-3 rounded-full 
-shadow-lg hover:bg-blue-600 transition duration-300 z-50">
-↑
-</button>
-
-<script>
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-    window.addEventListener("scroll", function(){
-        if(this.window.scrollY > 300){
-            scrollTopBtn?.classList.remove("hidden");
-            scrollTopBtn?.classList.add("flex");
-        }else{
-            scrollTopBtn?.classList.remove("flex");
-            scrollTopBtn?.classList.add("hidden");
-        }
-    });
-
-    scrollTopBtn?.addEventListener("click", function(){
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-</script>
+<a 
+    href="https://api.whatsapp.com/send?phone=5492915050471" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    id="whatsappBtn" 
+    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full 
+    shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center
+    transform hover:scale-110">
+    <img src="/assets/whatsapp-color.svg" alt="WhatsApp" class="w-8 h-8">
+</a>

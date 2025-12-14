@@ -4,192 +4,8 @@ import Layout from '../layouts/Layout.astro';
 import Divider from '../components/Divider.astro';
 import Navigation from 'src/components/Navigation.astro';
 import Button from 'src/components/Button.astro';
-import "@splidejs/splide/css"; // Importa los estilos de Splide
+import "@splidejs/splide/css";
 ---
-<script>
-    import Splide from "@splidejs/splide";
-    import { AutoScroll} from '@splidejs/splide-extension-auto-scroll';
-  
-    document.addEventListener("DOMContentLoaded", () => {
-      // Inicialización del primer Splide
-    new Splide("#splide-1", {
-        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
-        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
-        autoplay: true,  // Activar autoplay
-        interval: 2000,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
-        breakpoints: {
-            768: {
-                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
-                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
-                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",
-                interval: 2000,  // Centra la imagen seleccionada
-            },
-        },
-    }).mount();
-      
-    new Splide("#splide-2", {
-        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
-        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
-        autoplay: true,  // Activar autoplay
-        interval: 1500,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
-        breakpoints: {
-            768: {
-                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
-                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
-                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",
-                interval: 1000,  // Centra la imagen seleccionada
-            },
-        },
-    }).mount();
-
-    new Splide("#splide-3", {
-        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
-        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
-        autoplay: true,  // Activar autoplay
-        interval: 1500,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
-        breakpoints: {
-            768: {
-                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
-                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
-                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",
-                interval: 1000,  // Centra la imagen seleccionada
-            },
-        },
-    }).mount();
-
-    new Splide("#splide-4", {
-        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
-        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
-        autoplay: true,  // Activar autoplay
-        interval: 1500,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
-        breakpoints: {
-            768: {
-                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
-                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
-                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",
-                interval: 1000,  // Centra la imagen seleccionada
-            },
-        },
-    }).mount();
-
-    new Splide("#splide-5", {
-        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
-        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
-        autoplay: true,  // Activar autoplay
-        interval: 1500,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
-        breakpoints: {
-            768: {
-                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
-                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
-                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",
-                interval: 1000,  // Centra la imagen seleccionada
-            },
-        },
-    }).mount();
-
-    new Splide("#splide-6", {
-        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
-        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
-        autoplay: true,  // Activar autoplay
-        interval: 1500,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
-        breakpoints: {
-            768: {
-                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
-                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
-                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",
-                interval: 1000,  // Centra la imagen seleccionada
-            },
-        },
-    }).mount();
-
-    new Splide("#splide-7", {
-        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
-        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
-        autoplay: true,  // Activar autoplay
-        interval: 1500,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
-        breakpoints: {
-            768: {
-                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
-                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
-                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",
-                interval: 1000,  // Centra la imagen seleccionada
-            },
-        },
-    }).mount();
-
-    new Splide("#splide-8", {
-        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
-        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
-        autoplay: true,  // Activar autoplay
-        interval: 1500,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
-        breakpoints: {
-            768: {
-                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
-                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
-                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",
-                interval: 1000,  // Centra la imagen seleccionada
-            },
-        },
-    }).mount();
-
-    new Splide("#splide-9", {
-        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
-        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
-        autoplay: true,  // Activar autoplay
-        interval: 1500,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
-        breakpoints: {
-            768: {
-                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
-                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
-                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",
-                interval: 1000,  // Centra la imagen seleccionada
-            },
-        },
-    }).mount();
-
-    new Splide("#splide-10", {
-        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
-        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
-        autoplay: true,  // Activar autoplay
-        interval: 1500,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
-        breakpoints: {
-            768: {
-                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
-                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
-                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",
-                interval: 1000,  // Centra la imagen seleccionada
-            },
-        },
-    }).mount();
-
-    new Splide("#splide-11", {
-        type: "loop",  // Tipo de carrusel (loop, fade, etc.)
-        perPage: 2,    // Muestra 2 imágenes por página en pantallas grandes
-        autoplay: true,  // Activar autoplay
-        interval: 1500,  // Duración entre transiciones en milisegundos (2000 ms = 2 segundos)
-        breakpoints: {
-            768: {
-                perPage: 1,   // Muestra 1 imagen en pantallas pequeñas
-                type: "loop",  // Mantén el tipo 'loop' para pantallas pequeñas también
-                drag: "free",  // Habilita el arrastre libre en pantallas pequeñas
-                focus: "center",
-                interval: 1000,  // Centra la imagen seleccionada
-            },
-        },
-    }).mount();
-
-    });
-</script>
 
 <Layout>
 <div class="min-h-screen bg-gradient-to-b from-white via-yellow-50 to-yellow-50">
@@ -198,633 +14,850 @@ import "@splidejs/splide/css"; // Importa los estilos de Splide
     </div>
     <Navigation />
 
-    <!-- Explanation Section -->
-    <section class="max-w-4xl mx-auto py-12 px-4">
-        <h2 class="text-4xl font-bold text-center mb-8 text-yellow-800">Aclaraciones</h2>
-        <div class="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
-            <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-yellow-200 transform transition-all duration-300 hover:scale-105">
-                <p class="text-xl text-center">
-                    Los diseños están expresados en <span class="font-bold">ALTO x ANCHO</span>
-                </p>
+    <!-- Main Container with Sidebar -->
+    <div class="flex flex-col md:flex-row max-w-7xl mx-auto">
+        <!-- Sidebar -->
+        <aside class="w-full md:w-64 bg-white shadow-lg md:sticky md:top-16 md:h-[calc(100vh-4rem)] md:overflow-y-auto z-40">
+            <div class="p-4">
+                <h2 class="text-2xl font-bold text-yellow-800 mb-6 px-2">Categorías</h2>
+                <nav class="space-y-2">
+                    <button 
+                        data-category="coleccion-bordart"
+                        class="category-btn w-full text-left px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-yellow-100 active-category bg-yellow-200 text-yellow-900">
+                        Colección Bordart
+                    </button>
+                    <button 
+                        data-category="argentina"
+                        class="category-btn w-full text-left px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-yellow-100 text-gray-700">
+                        Argentina
+                    </button>
+                    <button 
+                        data-category="pelis-series"
+                        class="category-btn w-full text-left px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-yellow-100 text-gray-700">
+                        Pelis y series
+                    </button>
+                    <button 
+                        data-category="musica"
+                        class="category-btn w-full text-left px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-yellow-100 text-gray-700">
+                        Música
+                    </button>
+                    <button 
+                        data-category="arte"
+                        class="category-btn w-full text-left px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-yellow-100 text-gray-700">
+                        Arte
+                    </button>
+                    <button 
+                        data-category="amor"
+                        class="category-btn w-full text-left px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-yellow-100 text-gray-700">
+                        Amor
+                    </button>
+                    <button 
+                        data-category="anime"
+                        class="category-btn w-full text-left px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-yellow-100 text-gray-700">
+                        Anime
+                    </button>
+                    <button 
+                        data-category="dibujos-animados"
+                        class="category-btn w-full text-left px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-yellow-100 text-gray-700">
+                        Dibujos Animados
+                    </button>
+                    <button 
+                        data-category="nike-personajes"
+                        class="category-btn w-full text-left px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-yellow-100 text-gray-700">
+                        Nike x Personajes
+                    </button>
+                </nav>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-yellow-300 transform transition-all duration-300 hover:scale-105">
-                <p class="text-xl text-center font-bold">
-                    Los círculos de colores indican el <span class="text-yellow-600">VALOR DEL DISEÑO</span>. 
-                    Podés revisarlo en la lista de precios
-                </p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-yellow-200 transform transition-all duration-300 hover:scale-105">
-                <p class="text-xl text-center">
-                    Los diseños del catálogo no pueden modificar mucho su tamaño porque pueden haber deformaciones
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Colors Legend -->
-    <section class="max-w-3xl mx-auto py-8 px-4">
-        <div class="bg-white rounded-3xl shadow-xl p-8 mb-12">
-            <h3 class="text-2xl font-bold text-center mb-6 text-yellow-700">Indicadores de Precio</h3>
-            <div class="grid grid-cols-3 gap-6 items-center">
-                <!-- Color Labels -->
-                <div class="text-center">
-                    <p class="font-bold text-lg text-green-700">Verde</p>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-4 md:p-8">
+            <!-- Header Section -->
+            <section class="max-w-4xl mx-auto py-8 px-4">
+                <!-- Sistema de Valoración -->
+                <div class="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-3xl shadow-xl p-8 mb-8 border-2 border-yellow-200">
+                    <h3 class="text-3xl font-bold text-center mb-6 text-yellow-800">Sistema de Valoración</h3>
+                    <p class="text-lg text-center text-gray-700 mb-8">
+                        Cada prenda tiene un valor que depende de la <strong class="text-yellow-700">complejidad del diseño</strong> que elijas. 
+                        Te explicamos cómo funciona:
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <!-- Diseño Simple -->
+                        <div class="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-200 hover:shadow-xl transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-2xl font-bold text-green-700">Diseño Simple</h4>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Diseños con <strong>formas básicas, líneas simples y pocos detalles</strong>. 
+                                Son perfectos para un look minimalista y elegante.
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500 font-bold mt-1">•</span>
+                                    <span>Formas geométricas simples</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500 font-bold mt-1">•</span>
+                                    <span>Líneas y trazos básicos</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500 font-bold mt-1">•</span>
+                                    <span>Pocos elementos decorativos</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Diseño Complejo -->
+                        <div class="bg-white rounded-2xl p-6 shadow-lg border-2 border-orange-200 hover:shadow-xl transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-2xl font-bold text-orange-700">Diseño Complejo</h4>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed mb-3">
+                                Diseños con <strong>múltiples elementos, detalles elaborados y mayor complejidad visual</strong>. 
+                                Ideales para hacer una declaración de estilo única.
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-orange-500 font-bold mt-1">•</span>
+                                    <span>Múltiples elementos y capas</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-orange-500 font-bold mt-1">•</span>
+                                    <span>Detalles elaborados y texturas</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-orange-500 font-bold mt-1">•</span>
+                                    <span>Composiciones más trabajadas</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 border-2 border-yellow-300">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-yellow-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-lg font-semibold text-gray-800 mb-2">¿Cómo saber qué valor tiene mi diseño?</p>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Cada prenda en el catálogo indica si corresponde a un <strong class="text-green-700">diseño simple</strong> o 
+                                    <strong class="text-orange-700">diseño complejo</strong>. El valor final de tu prenda será el precio base de la prenda 
+                                    más el valor correspondiente según la complejidad del diseño que elijas. 
+                                    <strong class="text-yellow-700">Consultá la lista de precios para ver los valores exactos.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <p class="font-bold text-lg text-yellow-600">Amarillo</p>
-                </div>
-                <div class="text-center">
-                    <p class="font-bold text-lg text-blue-700">Azul</p>
-                </div>
-                <!-- Color Dots -->
-                <div class="flex justify-center transform transition hover:scale-110 duration-300">
-                    <img src="/assets/catalog/green-round.png" alt="Indicador verde" class="h-16 w-16 drop-shadow-md">
-                </div>
-                <div class="flex justify-center transform transition hover:scale-110 duration-300">
-                    <img src="/assets/catalog/yellow-round.png" alt="Indicador amarillo" class="h-16 w-16 drop-shadow-md">
-                </div>
-                <div class="flex justify-center transform transition hover:scale-110 duration-300">
-                    <img src="/assets/catalog/blue-round.png" alt="Indicador azul" class="h-16 w-16 drop-shadow-md">
-                </div>
-            </div>
-        </div>
-    </section>
-    <Divider />
+            </section>
 
-    <!-- Catalog: Bordados -->
-    <section class="py-12 px-4">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-5xl font-bold mb-12 text-yellow-800 relative inline-block">
-                Catálogo de Bordados
-                <span class="absolute -bottom-3 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-            </h2>
-
-            <div class="mt-12 mb-16">
-                <a href="https://www.canva.com/design/DAGU_JUNAQY/HgZJlDzI8OeJCZB51X4COA/view?utm_content=DAGU_JUNAQY&utm_campaign=designshare&utm_medium=link&utm_source=viewer" 
-                class="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black 
-                text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
-                    <img src="/assets/list.svg" alt="Lista" class="w-6 h-6 group-hover:animate-pulse">
-                    <span class="font-bold text-xl">Lista de Precios</span> 
-                </a>
-            </div>
-        </div>
-    </section> 
-
-    <!-- Coleccion Bordart Section -->
-    <section class="py-8 px-4 max-w-6xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    Colección Bordart
-                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-                </h2>
-                
-                <a href="https://www.canva.com/design/DAGcO6h6s24/NdtldC2yVFiUg1_rHfa9rg/edit" 
-                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
-                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <span class="font-bold text-lg">Ver más</span> 
-                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
-                </a>
-            </div>
-        </div>
-        <!-- Carrousel 1 -->
-        <div class="splide max-w-6xl mx-auto" id="splide-1">
-            <div class="splide__track">
-              <ul class="splide__list gap-4">
-                <li class="splide__slide h-64 ">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-1.png" alt="Imagen 1" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-2.png" alt="Imagen 2" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-3.png" alt="Imagen 3" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-4.png" alt="Imagen 4" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-5.png" alt="Imagen 5" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/coleccion-bordart/coleccion-bordart-6.png" alt="Imagen 6" />
-                </li>
-              </ul>
-            </div>
-            <div class="splide__arrows opacity-0 md:opacity-100 hover:opacity-80">
-                
-            </div>
-        </div>
-        
-    </section>
-
-    <!-- Musica Section -->
-    <section class="py-8 px-4 max-w-6xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    Música
-                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-                </h2>
-                
-                <a href="https://www.canva.com/design/DAGcO9ig2B0/GhJl03Jo9LXtDWfrf_VReQ/edit" 
-                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
-                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <span class="font-bold text-lg">Ver más</span> 
-                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
-                </a>
-            </div>
-        </div>
-        <!-- Carrousel  -->
-        <div class="splide max-w-6xl mx-auto" id="splide-2">
-            <div class="splide__track">
-              <ul class="splide__list gap-4">
-                <li class="splide__slide h-64 ">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-1.png" alt="Imagen 1" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-2.png" alt="Imagen 2" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-3.png" alt="Imagen 3" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-4.png" alt="Imagen 4" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-5.png" alt="Imagen 5" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/musica/musica-6.png" alt="Imagen 6" />
-                </li>
-              </ul>
-            </div>
-            <div class="splide__arrows opacity-0 md:opacity-100 hover:opacity-80">
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Arte Section -->
-    <section class="py-8 px-4 max-w-6xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    Arte
-                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-                </h2>
-                
-                <a href="https://www.canva.com/design/DAGcO-rl358/8LkWWz622HyYd_Kctk2RSw/edit" 
-                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
-                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <span class="font-bold text-lg">Ver más</span> 
-                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
-                </a>
-            </div>
-        </div>
-        <!-- Carrousel  -->
-        <div class="splide max-w-6xl mx-auto" id="splide-3">
-            <div class="splide__track">
-              <ul class="splide__list gap-4">
-                <li class="splide__slide h-64 ">
-                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/arte/arte-1.png" alt="Imagen 1" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/arte/arte-2.png" alt="Imagen 2" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/arte/arte-3.png" alt="Imagen 3" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/arte/arte-4.png" alt="Imagen 4" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/arte/arte-5.png" alt="Imagen 5" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/arte/arte-6.png" alt="Imagen 6" />
-                </li>
-              </ul>
-            </div>
-            <div class="splide__arrows opacity-0 md:opacity-100 hover:opacity-80">
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Amor Section -->
-    <section class="py-8 px-4 max-w-6xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    Amor
-                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-                </h2>
-                
-                <a href="https://www.canva.com/design/DAGcO3izIpI/sEhhlCCP6uLRpJ_CIzancg/edit" 
-                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
-                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <span class="font-bold text-lg">Ver más</span> 
-                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
-                </a>
-            </div>
-        </div>
-        <!-- Carrousel  -->
-        <div class="splide max-w-6xl mx-auto" id="splide-4">
-            <div class="splide__track">
-              <ul class="splide__list gap-4">
-                <li class="splide__slide h-64 ">
-                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/amor/amor-1.png" alt="Imagen 1" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/amor/amor-2.png" alt="Imagen 2" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/amor/amor-3.png" alt="Imagen 3" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/amor/amor-4.png" alt="Imagen 4" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/amor/amor-5.png" alt="Imagen 5" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/amor/amor-6.png" alt="Imagen 6" />
-                </li>
-              </ul>
-            </div>
-            <div class="splide__arrows opacity-0 md:opacity-100 hover:opacity-80">
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Anime Section -->
-    <section class="py-8 px-4 max-w-6xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    Anime
-                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-                </h2>
-                
-                <a href="https://www.canva.com/design/DAGcO6rYVxY/Q4oPwfY77werMphPIENwKg/edit" 
-                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
-                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <span class="font-bold text-lg">Ver más</span> 
-                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
-                </a>
-            </div>
-        </div>
-        <!-- Carrousel  -->
-        <div class="splide max-w-6xl mx-auto" id="splide-5">
-            <div class="splide__track">
-              <ul class="splide__list gap-4">
-                <li class="splide__slide h-64 ">
-                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/anime/anime-1.png" alt="Imagen 1" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/anime/anime-2.png" alt="Imagen 2" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/anime/anime-3.png" alt="Imagen 3" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/anime/anime-4.png" alt="Imagen 4" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/anime/anime-5.png" alt="Imagen 5" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/anime/anime-6.png" alt="Imagen 6" />
-                </li>
-              </ul>
-            </div>
-            <div class="splide__arrows opacity-0 md:opacity-100 hover:opacity-80">
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Dibujos Animados Section -->
-    <section class="py-8 px-4 max-w-6xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    Dibujos Animados
-                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-                </h2>
-                
-                <a href="https://www.canva.com/design/DAGcO4TBEg8/1Gv3L4npa3x11lGtL4to5g/edit" 
-                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
-                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <span class="font-bold text-lg">Ver más</span> 
-                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
-                </a>
-            </div>
-        </div>
-        <!-- Carrousel  -->
-        <div class="splide max-w-6xl mx-auto" id="splide-6">
-            <div class="splide__track">
-              <ul class="splide__list gap-4">
-                <li class="splide__slide h-64 ">
-                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/dibujos-animados/dibujos-animados-1.png" alt="Imagen 1" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/dibujos-animados/dibujos-animados-2.png" alt="Imagen 2" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/dibujos-animados/dibujos-animados-3.png" alt="Imagen 3" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/dibujos-animados/dibujos-animados-4.png" alt="Imagen 4" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/dibujos-animados/dibujos-animados-5.png" alt="Imagen 5" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/dibujos-animados/dibujos-animados-6.png" alt="Imagen 6" />
-                </li>
-              </ul>
-            </div>
-            <div class="splide__arrows opacity-0 md:opacity-100 hover:opacity-80">
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Nike X Personajes Section -->
-    <section class="py-8 px-4 max-w-6xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    Nike x Personajes
-                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-                </h2>
-                
-                <a href="https://www.canva.com/design/DAGcO4uAtXs/U_zDeiCjayHk7jGZlVVEEA/edit" 
-                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
-                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <span class="font-bold text-lg">Ver más</span> 
-                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
-                </a>
-            </div>
-        </div>
-        <!-- Carrousel  -->
-        <div class="splide max-w-6xl mx-auto" id="splide-7">
-            <div class="splide__track">
-              <ul class="splide__list gap-4 mx-auto">
-                <li class="splide__slide h-64 ">
-                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/nike-personajes/nike-personajes-1.png" alt="Imagen 1" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/nike-personajes/nike-personajes-2.png" alt="Imagen 2" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/nike-personajes/nike-personajes-3.png" alt="Imagen 3" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/nike-personajes/nike-personajes-4.png" alt="Imagen 4" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/nike-personajes/nike-personajes-5.png" alt="Imagen 5" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-[90%] h-64 object-contain rounded-lg" src="/assets/catalog/nike-personajes/nike-personajes-6.png" alt="Imagen 6" />
-                </li>
-              </ul>
-            </div>
-            <div class="splide__arrows opacity-0 md:opacity-100 hover:opacity-80">
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Marcas y Logos Section -->
-    <section class="py-8 px-4 max-w-6xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    Marcas y Logos
-                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-                </h2>
-                
-                <a href="https://www.canva.com/design/DAGcOzj8g8s/CC4RVyha1CPwNTBswHs21g/edit" 
-                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
-                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <span class="font-bold text-lg">Ver más</span> 
-                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
-                </a>
-            </div>
-        </div>
-        <!-- Carrousel  -->
-        <div class="splide max-w-6xl mx-auto" id="splide-8">
-            <div class="splide__track">
-              <ul class="splide__list gap-4 mx-auto]">
-                <li class="splide__slide h-56 justify-center items-center flex ">
-                    <img class="w-[70%] h-56 object-contain rounded-lg" src="/assets/catalog/marcas-y-logos/marcas-1.png" alt="Imagen 1" />
-                </li>
-                <li class="splide__slide h-56 justify-center items-center flex ">
-                    <img class="w-[70%] h-56 object-contain rounded-lg" src="/assets/catalog/marcas-y-logos/marcas-2.png" alt="Imagen 2" />
-                </li>
-                <li class="splide__slide h-56 justify-center items-center flex ">
-                    <img class="w-[70%] h-56 object-contain rounded-lg" src="/assets/catalog/marcas-y-logos/marcas-3.png" alt="Imagen 3" />
-                </li>
-                <li class="splide__slide h-56 justify-center items-center flex ">
-                    <img class="w-[70%] h-56 object-contain rounded-lg" src="/assets/catalog/marcas-y-logos/marcas-4.png" alt="Imagen 4" />
-                </li>
-                <li class="splide__slide h-56 justify-center items-center flex">
-                    <img class="w-[70%] h-56 object-contain rounded-lg" src="/assets/catalog/marcas-y-logos/marcas-5.png" alt="Imagen 5" />
-                </li>
-                <li class="splide__slide h-56 justify-center items-center flex">
-                    <img class="w-[70%] h-56 object-contain rounded-lg" src="/assets/catalog/marcas-y-logos/marcas-6.png" alt="Imagen 6" />
-                </li>
-              </ul>
-            </div>
-            <div class="splide__arrows opacity-0 md:opacity-100 hover:opacity-80">
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Deportes Section -->
-    <section class="py-8 px-4 max-w-6xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    Deportes
-                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-                </h2>
-                
-                <a href="https://www.canva.com/design/DAGcOwa6TMs/tbibz7fCnnqHDqVZVnVEjA/edit" 
-                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
-                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <span class="font-bold text-lg">Ver más</span> 
-                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
-                </a>
-            </div>
-        </div>
-        <!-- Carrousel  -->
-        <div class="splide max-w-6xl mx-auto" id="splide-9">
-            <div class="splide__track">
-              <ul class="splide__list gap-4">
-                <li class="splide__slide h-64 ">
-                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/deportes/deportes-1.png" alt="Imagen 1" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/deportes/deportes-3.png" alt="Imagen 2" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/deportes/deportes-2.png" alt="Imagen 3" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/deportes/deportes-4.png" alt="Imagen 4" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/deportes/deportes-5.png" alt="Imagen 5" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/deportes/deportes-6.png" alt="Imagen 6" />
-                </li>
-              </ul>
-            </div>
-            <div class="splide__arrows opacity-0 md:opacity-100 hover:opacity-80">
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Flores Section -->
-    <section class="py-8 px-4 max-w-6xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    Flores
-                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-                </h2>
-                
-                <a href="https://www.canva.com/design/DAGcO9zWKJo/4FqXf902Ez9XtdqOf_vm9A/edit" 
-                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
-                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <span class="font-bold text-lg">Ver más</span> 
-                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
-                </a>
-            </div>
-        </div>
-        <!-- Carrousel  -->
-        <div class="splide max-w-6xl mx-auto" id="splide-10">
-            <div class="splide__track">
-              <ul class="splide__list gap-4">
-                <li class="splide__slide h-64 ">
-                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/flores/flores-1.png" alt="Imagen 1" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/flores/flores-2.png" alt="Imagen 2" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/flores/flores-3.png" alt="Imagen 3" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/flores/flores-4.png" alt="Imagen 4" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/flores/flores-5.png" alt="Imagen 5" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/flores/flores-6.png" alt="Imagen 6" />
-                </li>
-              </ul>
-            </div>
-            <div class="splide__arrows opacity-0 md:opacity-100 hover:opacity-80">
-                
-            </div>
-        </div>
-    </section>
-   
-    <!-- PINES Section -->
-    <section class="py-8 px-4 max-w-6xl mx-auto">
-        <div class="bg-white rounded-3xl shadow-lg p-8 mb-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-100 rounded-full -mr-16 -mt-16 z-0"></div>
-            <div class="absolute bottom-0 left-0 w-24 h-24 bg-yellow-100 rounded-full -ml-12 -mb-12 z-0"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 justify-between items-center w-full">
-                <h2 class="font-bold text-4xl text-yellow-800 relative">
-                    Pines
-                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-yellow-400 rounded-full"></span>
-                </h2>
-                
-                <a href="https://www.canva.com/design/DAF1UlYs1g0/eMC1WO6zq4GNpVWML0L4mA/view?utm_content=DAF1UlYs1g0&utm_campaign=designshare&utm_medium=link&utm_source=editor" 
-                   class="group flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-200 to-yellow-300 text-black 
-                   font-bold rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <span class="font-bold text-lg">Ver más</span> 
-                    <img src="/assets/mas.svg" alt="Ver más" class="w-6 h-6 group-hover:rotate-90 transition-transform duration-300">
-                </a>
-            </div>
-        </div>
-
-        <!-- Carrousel 11 -->
-        <div class="splide max-w-6xl mx-auto" id="splide-11">
-            <div class="splide__track">
-              <ul class="splide__list gap-4">
-                <li class="splide__slide h-64 ">
-                    <img class="w-full h-full object-contain rounded-lg" src="/assets/catalog/pines/pines-1.png" alt="Imagen 1" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-2.png" alt="Imagen 2" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-3.png" alt="Imagen 3" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-4.png" alt="Imagen 4" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-5.png" alt="Imagen 5" />
-                </li>
-                <li class="splide__slide h-64">
-                    <img class="w-full h-64 object-contain rounded-lg" src="/assets/catalog/pines/pines-6.png" alt="Imagen 6" />
-                </li>
-              </ul>
-            </div>
-            <div class="splide__arrows opacity-0 md:opacity-100 hover:opacity-80">
-                
-            </div>
-        </div>
-    </section>
-     
-        <div class="bg-yellow-50 pt-12">
             <Divider />
-        </div>
-        <Footer />
+
+            <!-- Category Content Sections -->
+            <div id="category-content" class="max-w-6xl mx-auto">
+                <!-- Content will be dynamically shown based on selected category -->
+                <div class="text-center py-12">
+                    <p class="text-xl text-gray-600">Selecciona una categoría del menú para ver los diseños</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="bg-yellow-50 pt-12">
+        <Divider />
+    </div>
+    <Footer />
 </div>
 </Layout>
+
+<script>
+    import Splide from "@splidejs/splide";
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        // Category navigation
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const categoryContent = document.getElementById('category-content');
+        
+        // Show first category by default
+        showCategory('coleccion-bordart');
+        
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                
+                // Update active state
+                categoryButtons.forEach(btn => {
+                    btn.classList.remove('active-category', 'bg-yellow-200', 'text-yellow-900');
+                    btn.classList.add('text-gray-700');
+                });
+                button.classList.add('active-category', 'bg-yellow-200', 'text-yellow-900');
+                button.classList.remove('text-gray-700');
+                
+                // Show selected category
+                showCategory(category);
+            });
+        });
+        
+        function showCategory(category) {
+            if (category === 'coleccion-bordart') {
+                categoryContent.innerHTML = `
+                    <div class="py-8">
+                        <h2 class="text-4xl font-bold text-center mb-12 text-yellow-800">Colección Bordart</h2>
+                        
+                        <!-- Diseños Simples -->
+                        <div class="mb-16">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-green-700">Diseños Simples</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/coleccion-bordart/simple.jpeg" alt="Diseño Simple 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/coleccion-bordart/simple2.jpeg" alt="Diseño Simple 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/coleccion-bordart/simple3.jpeg" alt="Diseño Simple 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/coleccion-bordart/simple4.jpeg" alt="Diseño Simple 4" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diseños Complejos -->
+                        <div class="mb-8">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-orange-700">Diseños Complejos</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/coleccion-bordart/complejo.jpeg" alt="Diseño Complejo 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/coleccion-bordart/complejo2.jpeg" alt="Diseño Complejo 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/coleccion-bordart/complejo3.jpeg" alt="Diseño Complejo 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/coleccion-bordart/complejo4.jpeg" alt="Diseño Complejo 4" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (category === 'argentina') {
+                categoryContent.innerHTML = `
+                    <div class="py-8">
+                        <h2 class="text-4xl font-bold text-center mb-12 text-yellow-800">Argentina</h2>
+                        
+                        <!-- Diseños Simples -->
+                        <div class="mb-16">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-green-700">Diseños Simples</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/argentina/simple.jpeg" alt="Diseño Simple 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/argentina/simple1.jpeg" alt="Diseño Simple 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/argentina/simple2.jpeg" alt="Diseño Simple 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/argentina/simple4.jpeg" alt="Diseño Simple 4" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diseños Complejos -->
+                        <div class="mb-8">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-orange-700">Diseños Complejos</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/argentina/complejo.jpeg" alt="Diseño Complejo 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/argentina/complejo1.jpeg" alt="Diseño Complejo 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/argentina/complejo2.jpeg" alt="Diseño Complejo 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/argentina/complejo3.jpeg" alt="Diseño Complejo 4" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (category === 'musica') {
+                categoryContent.innerHTML = `
+                    <div class="py-8">
+                        <h2 class="text-4xl font-bold text-center mb-12 text-yellow-800">Música</h2>
+                        
+                        <!-- Diseños Simples -->
+                        <div class="mb-16">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-green-700">Diseños Simples</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/simple.jpeg" alt="Diseño Simple 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/simple1.jpeg" alt="Diseño Simple 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/simple2.jpeg" alt="Diseño Simple 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/simple3.jpeg" alt="Diseño Simple 4" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/simple4.jpeg" alt="Diseño Simple 5" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/simple6.jpeg" alt="Diseño Simple 6" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/simple7.jpeg" alt="Diseño Simple 7" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/simple8.jpeg" alt="Diseño Simple 8" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/simple9.jpeg" alt="Diseño Simple 9" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diseños Complejos -->
+                        <div class="mb-8">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-orange-700">Diseños Complejos</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/complejo.jpeg" alt="Diseño Complejo 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/complejo1.jpeg" alt="Diseño Complejo 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/complejo2.jpeg" alt="Diseño Complejo 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/complejo3.jpeg" alt="Diseño Complejo 4" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/complejo4.jpeg" alt="Diseño Complejo 5" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/musica/complejo5.jpeg" alt="Diseño Complejo 6" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (category === 'arte') {
+                categoryContent.innerHTML = `
+                    <div class="py-8">
+                        <h2 class="text-4xl font-bold text-center mb-12 text-yellow-800">Arte</h2>
+                        
+                        <!-- Diseños Simples -->
+                        <div class="mb-16">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-green-700">Diseños Simples</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/arte/simple.jpeg" alt="Diseño Simple 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/arte/simple1.jpeg" alt="Diseño Simple 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/arte/simple2.jpeg" alt="Diseño Simple 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/arte/simple3.jpeg" alt="Diseño Simple 4" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/arte/simple4.jpeg" alt="Diseño Simple 5" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/arte/simple5.jpeg" alt="Diseño Simple 6" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diseños Complejos -->
+                        <div class="mb-8">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-orange-700">Diseños Complejos</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/arte/complejo.jpeg" alt="Diseño Complejo 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/arte/complejo1.jpeg" alt="Diseño Complejo 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/arte/complejo2.jpeg" alt="Diseño Complejo 3" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (category === 'amor') {
+                categoryContent.innerHTML = `
+                    <div class="py-8">
+                        <h2 class="text-4xl font-bold text-center mb-12 text-yellow-800">Amor</h2>
+                        
+                        <!-- Diseños Simples -->
+                        <div class="mb-16">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-green-700">Diseños Simples</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/simple.jpeg" alt="Diseño Simple 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/simple1.jpeg" alt="Diseño Simple 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/simple2.jpeg" alt="Diseño Simple 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/simple3.jpeg" alt="Diseño Simple 4" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/simple4.jpeg" alt="Diseño Simple 5" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/simple5.jpeg" alt="Diseño Simple 6" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/simple6.jpeg" alt="Diseño Simple 7" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/simple7.jpeg" alt="Diseño Simple 8" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diseños Complejos -->
+                        <div class="mb-8">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-orange-700">Diseños Complejos</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/complejo.jpeg" alt="Diseño Complejo 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/complejo1.jpeg" alt="Diseño Complejo 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/complejo2.jpeg" alt="Diseño Complejo 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/amor/complejo3.jpeg" alt="Diseño Complejo 4" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (category === 'dibujos-animados') {
+                categoryContent.innerHTML = `
+                    <div class="py-8">
+                        <h2 class="text-4xl font-bold text-center mb-12 text-yellow-800">Dibujos Animados</h2>
+                        
+                        <!-- Diseños Simples -->
+                        <div class="mb-16">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-green-700">Diseños Simples</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/simple.jpeg" alt="Diseño Simple 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/simple1.jpeg" alt="Diseño Simple 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/simple2.jpeg" alt="Diseño Simple 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/simple3.jpeg" alt="Diseño Simple 4" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/simple4.jpeg" alt="Diseño Simple 5" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/simple5.jpeg" alt="Diseño Simple 6" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/simple6.jpeg" alt="Diseño Simple 7" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/simple7.jpeg" alt="Diseño Simple 8" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/simple8.jpeg" alt="Diseño Simple 9" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diseños Complejos -->
+                        <div class="mb-8">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-orange-700">Diseños Complejos</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/complejo.jpeg" alt="Diseño Complejo 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/complejo1.jpeg" alt="Diseño Complejo 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/complejo2.jpeg" alt="Diseño Complejo 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/dibujos-animados/complejo4.jpeg" alt="Diseño Complejo 4" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (category === 'anime') {
+                categoryContent.innerHTML = `
+                    <div class="py-8">
+                        <h2 class="text-4xl font-bold text-center mb-12 text-yellow-800">Anime</h2>
+                        
+                        <!-- Diseños Simples -->
+                        <div class="mb-16">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-green-700">Diseños Simples</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/simple.jpeg" alt="Diseño Simple 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/simple1.jpeg" alt="Diseño Simple 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/simple2.jpeg" alt="Diseño Simple 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/simple3.jpeg" alt="Diseño Simple 4" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/simple4.jpeg" alt="Diseño Simple 5" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/simple5.jpeg" alt="Diseño Simple 6" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/simple6.jpeg" alt="Diseño Simple 7" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diseños Complejos -->
+                        <div class="mb-8">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-orange-700">Diseños Complejos</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/complejo.jpeg" alt="Diseño Complejo 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/complejo1.jpeg" alt="Diseño Complejo 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/complejo2.jpeg" alt="Diseño Complejo 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/complejo3.jpeg" alt="Diseño Complejo 4" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/complejo4.jpeg" alt="Diseño Complejo 5" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/complejo5.jpeg" alt="Diseño Complejo 6" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/complejo6.jpeg" alt="Diseño Complejo 7" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/complejo7.jpeg" alt="Diseño Complejo 8" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/complejo8.jpeg" alt="Diseño Complejo 9" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/anime/complejo9.jpeg" alt="Diseño Complejo 10" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (category === 'nike-personajes') {
+                categoryContent.innerHTML = `
+                    <div class="py-8">
+                        <h2 class="text-4xl font-bold text-center mb-12 text-yellow-800">Nike x Personajes</h2>
+                        
+                        <!-- Diseños Complejos -->
+                        <div class="mb-8">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-orange-700">Diseños Complejos</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo.jpeg" alt="Diseño Complejo 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo1.jpeg" alt="Diseño Complejo 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo2.jpeg" alt="Diseño Complejo 3" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo3.jpeg" alt="Diseño Complejo 4" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo4.jpeg" alt="Diseño Complejo 5" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo5.jpeg" alt="Diseño Complejo 6" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo6.jpeg" alt="Diseño Complejo 7" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo7.jpeg" alt="Diseño Complejo 8" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo8.jpeg" alt="Diseño Complejo 9" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo9.jpeg" alt="Diseño Complejo 10" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo10.jpeg" alt="Diseño Complejo 11" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo11.jpeg" alt="Diseño Complejo 12" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo12.jpeg" alt="Diseño Complejo 13" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo13.jpeg" alt="Diseño Complejo 14" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo14.jpeg" alt="Diseño Complejo 15" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/nike-personajes/complejo15.jpeg" alt="Diseño Complejo 16" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (category === 'pelis-series') {
+                categoryContent.innerHTML = `
+                    <div class="py-8">
+                        <h2 class="text-4xl font-bold text-center mb-12 text-yellow-800">Pelis y Series</h2>
+                        
+                        <!-- Diseños Simples -->
+                        <div class="mb-16">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-green-700">Diseños Simples</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/pelis-y-series/simple.jpeg" alt="Diseño Simple 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/pelis-y-series/simple1.jpeg" alt="Diseño Simple 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/pelis-y-series/simple2.jpeg" alt="Diseño Simple 3" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diseños Complejos -->
+                        <div class="mb-8">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-3xl font-bold text-orange-700">Diseños Complejos</h3>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/pelis-y-series/complejo.jpeg" alt="Diseño Complejo 1" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/pelis-y-series/complejo3.jpeg" alt="Diseño Complejo 2" class="w-full h-auto object-cover">
+                                </div>
+                                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <img src="/assets/catalog/pelis-y-series/complejo4.jpeg" alt="Diseño Complejo 3" class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                categoryContent.innerHTML = `
+                    <div class="text-center py-12">
+                        <h3 class="text-3xl font-bold text-yellow-800 mb-4">${getCategoryName(category)}</h3>
+                        <p class="text-xl text-gray-600">Contenido de ${getCategoryName(category)}</p>
+                    </div>
+                `;
+            }
+        }
+        
+        function getCategoryName(category) {
+            const names = {
+                'coleccion-bordart': 'Colección Bordart',
+                'argentina': 'Argentina',
+                'pelis-series': 'Pelis y series',
+                'musica': 'Música',
+                'arte': 'Arte',
+                'amor': 'Amor',
+                'anime': 'Anime',
+                'dibujos-animados': 'Dibujos Animados',
+                'nike-personajes': 'Nike x Personajes'
+            };
+            return names[category] || category;
+        }
+    });
+</script>
+
+<style>
+    .category-btn {
+        cursor: pointer;
+    }
+    
+    .category-btn.active-category {
+        background-color: rgb(254 240 138);
+        color: rgb(113 63 18);
+    }
+    
+    @media (max-width: 768px) {
+        aside {
+            position: relative;
+            height: auto;
+        }
+    }
+</style>

@@ -4,19 +4,29 @@
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center space-x-3 group transition duration-300 ease-in-out transform hover:scale-105">
-        <img class="h-10 w-auto" src="/assets/logo-bordart.png" alt="BordArt Logo">
-        <span class="text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 group-hover:from-gray-700 group-hover:to-gray-900 transition-all duration-300">BORDART</span>
+      <a href="/" class="flex items-center space-x-3 group transition duration-300 ease-in-out">
+        <img class="h-10 w-auto logo-rotate" src="/assets/logo-bordart.png" alt="BordArt Logo">
+        <span class="text-2xl font-MiFuente font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 group-hover:from-gray-700 group-hover:to-gray-900 transition-all duration-300">BORDART</span>
       </a>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href="/producto/ropa" class="nav-link">Drop</a>
-        <a href="/productos" class="nav-link">Productos</a>
-        <a href="/catalogo" class="nav-link">Catálogo</a>
-        <a href="/preguntas" class="nav-link">Precios</a>
-        <a href="/preguntas" class="nav-link">Preguntas</a>
-        <a href="/nosotros" class="nav-link">Nosotros</a>
+        <a href="/producto/ropa" class="nav-link">DROP</a>
+        <a href="/productos" class="nav-link">PRODUCTOS</a>
+        <div class="relative dropdown-container">
+          <button class="nav-link dropdown-toggle flex items-center gap-1" id="bordados-toggle">
+            BORDADOS
+            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-amber-100 opacity-0 invisible transform translate-y-2 transition-all duration-300 z-50">
+            <a href="/catalogo" class="dropdown-item block px-4 py-3 text-gray-800 hover:bg-amber-50 transition-colors duration-200 first:rounded-t-lg">Catálogo</a>
+            <a href="/personalizados" class="dropdown-item block px-4 py-3 text-gray-800 hover:bg-amber-50 transition-colors duration-200 last:rounded-b-lg">Personalizados</a>
+          </div>
+        </div>
+        <a href="/preguntas" class="nav-link">PREGUNTAS</a>
+        <a href="/nosotros" class="nav-link">NOSOTROS</a>
       </div>
 
       <!-- Mobile menu button -->
@@ -37,8 +47,18 @@
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gradient-to-b from-amber-300 to-yellow-300">
         <a href="/producto/ropa" class="mobile-nav-link">Drop</a>
         <a href="/productos" class="mobile-nav-link">Productos</a>
-        <a href="/catalogo" class="mobile-nav-link">Catálogo</a>
-        <a href="/preguntas" class="mobile-nav-link">Precios</a>
+        <div>
+          <button class="mobile-nav-link w-full text-left flex items-center justify-between" id="mobile-bordados-toggle">
+            Bordados
+            <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="mobile-dropdown hidden pl-4 pt-1 space-y-1" id="mobile-bordados-menu">
+            <a href="/catalogo" class="mobile-nav-link block">Catálogo</a>
+            <a href="/personalizados" class="mobile-nav-link block">Personalizados</a>
+          </div>
+        </div>
         <a href="/preguntas" class="mobile-nav-link">Preguntas</a>
         <a href="/nosotros" class="mobile-nav-link">Nosotros</a>
       </div>
@@ -49,21 +69,69 @@
 <!-- Spacer to prevent content from being hidden behind the fixed navbar -->
 <div class="h-16"></div>
 
-<style>
+<style is:global>
   .nav-link {
-    @apply font-bold text-gray-800 hover:text-gray-900 px-3 py-2 rounded-md text-base transition duration-300 ease-in-out relative overflow-hidden;
+    font-weight: 800;
+    color: rgb(31, 41, 55);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    font-family: 'MiFuente', sans-serif !important;
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.3) !important;
+    text-stroke: 0.5px rgba(0, 0, 0, 0.3) !important;
+    text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .nav-link:hover {
+    color: rgb(17, 24, 39);
   }
 
   .nav-link::after {
-    @apply content-[''] absolute bottom-0 left-0 w-full h-0.5 bg-gray-900 transform scale-x-0 origin-bottom-right transition-transform duration-300 ease-in-out;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: rgb(17, 24, 39);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
   }
 
   .nav-link:hover::after {
-    @apply transform scale-x-100 origin-bottom-left;
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 
   .mobile-nav-link {
-    @apply block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-gray-900 hover:bg-yellow-200 transition duration-300 ease-in-out;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 800;
+    color: rgb(31, 41, 55);
+    transition: all 0.3s ease-in-out;
+    font-family: 'MiFuente', sans-serif !important;
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.3) !important;
+    text-stroke: 0.5px rgba(0, 0, 0, 0.3) !important;
+    text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .mobile-nav-link:hover {
+    color: rgb(17, 24, 39);
+    background-color: rgb(254, 240, 138);
+  }
+
+  nav span {
+    font-family: 'MiFuente', sans-serif !important;
+    font-weight: 800 !important;
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.3) !important;
+    text-stroke: 0.5px rgba(0, 0, 0, 0.3) !important;
+    text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.2) !important;
   }
 
   .mobile-menu-wrapper {
@@ -73,7 +141,7 @@
   }
 
   .mobile-menu-wrapper.open {
-    max-height: 300px; /* Adjust this value based on your menu's height */
+    max-height: 300px;
     transition: max-height 0.5s ease-in;
   }
 
@@ -87,6 +155,41 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Dropdown styles */
+  .dropdown-container {
+    position: relative;
+  }
+
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+
+  .dropdown-container:hover .dropdown-menu,
+  .dropdown-container:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-container:hover .dropdown-toggle svg,
+  .dropdown-container:focus-within .dropdown-toggle svg {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-item {
+    font-family: 'MiFuente', sans-serif !important;
+    font-weight: 600;
+  }
+
+  .logo-rotate {
+    transition: transform 0.6s ease-in-out;
+    transform-origin: center;
+  }
+
+  .group:hover .logo-rotate {
+    transform: rotate(360deg);
+  }
 </style>
 
 <script>
@@ -94,11 +197,24 @@
     const toggleButton = document.getElementById("menu-toggle");
     const mobileMenuWrapper = document.getElementById("mobile-menu-wrapper");
     const mobileMenu = document.getElementById("mobile-menu");
+    const mobileBordadosToggle = document.getElementById("mobile-bordados-toggle");
+    const mobileBordadosMenu = document.getElementById("mobile-bordados-menu");
 
     if (toggleButton && mobileMenuWrapper && mobileMenu) {
       toggleButton.addEventListener("click", () => {
         mobileMenuWrapper.classList.toggle("open");
         toggleButton.setAttribute("aria-expanded", mobileMenuWrapper.classList.contains("open") ? "true" : "false");
+      });
+    }
+
+    // Mobile dropdown toggle
+    if (mobileBordadosToggle && mobileBordadosMenu) {
+      mobileBordadosToggle.addEventListener("click", () => {
+        mobileBordadosMenu.classList.toggle("hidden");
+        const svg = mobileBordadosToggle.querySelector("svg");
+        if (svg) {
+          svg.style.transform = mobileBordadosMenu.classList.contains("hidden") ? "rotate(0deg)" : "rotate(180deg)";
+        }
       });
     }
 

@@ -1,8 +1,6 @@
 ---
-import Hero from '../../components/Hero.astro';
 import Layout from '../../layouts/Layout.astro';
 import Navigation from '../../components/Navigation.astro';
-import Drop from '../../components/Drop.astro';
 import Footer from '../../components/Footer.astro';
 import Divider from '../../components/Divider.astro';
 
@@ -11,6 +9,11 @@ import productos from '../../data/productos.json';
 
 <Layout>
   <Navigation />
+
+  <!-- Franja negra con texto de escritura -->
+  <div class="typing-banner fixed top-16 left-0 w-full bg-black z-40 flex items-center justify-center">
+    <p id="typing-text" class="font-MiFuente font-bold text-xl md:text-3xl text-white py-6"></p>
+  </div>
 
   <section id="productos" class="px-4 bg-gradient-to-b from-white to-yellow-50">
     <div class="h-screen grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-0 max-w-4xl mx-auto p-4">
@@ -21,9 +24,11 @@ import productos from '../../data/productos.json';
           alt="Foto principal"
           class="w-full h-full object-cover"
         />
-        <div class="absolute inset-0 flex flex-col justify-center items-center bg-black/25 text-white text-center md:flex-wrap md:items-start md:px-44">
-          <span class="text-3xl font-bold tracking-wide">BORDART</span>
-          <span class="text-lg font-medium">DROP #01</span>
+        <div class="absolute inset-0 flex flex-col justify-center items-center bg-black/25 text-white text-center">
+          <div class="flex flex-col items-center md:items-start md:px-44">
+            <span class="text-3xl font-bold tracking-wide">BORDART</span>
+            <span class="text-lg font-medium">DROP #01</span>
+          </div>
         </div>
       </div>
 
@@ -86,12 +91,50 @@ import productos from '../../data/productos.json';
   <Footer />
 </Layout>
 
-<script>
-  document.addEventListener("drop-finalizado", () => {
-    const drop = document.getElementById("drop-container");
-    const productos = document.getElementById("productos");
+<script is:inline>
+  // Efecto de escritura para "Proximamente capitulo 2..."
+  (function() {
+    const typingText = "Proximamente capitulo 2...";
+    let typingIndex = 0;
 
-    if (drop) drop.classList.add("hidden");
-    if (productos) productos.classList.remove("hidden");
-  });
+    function startTyping() {
+      const textElement = document.getElementById('typing-text');
+      if (textElement && typingIndex <= typingText.length - 1) {
+        textElement.innerHTML += typingText.charAt(typingIndex);
+        typingIndex++;
+        setTimeout(startTyping, 100);
+      }
+    }
+
+    // Iniciar el efecto cuando la página cargue
+    if (document.readyState === 'loading') {
+      document.addEventListener("DOMContentLoaded", startTyping);
+    } else {
+      // Si el DOM ya está cargado, ejecutar inmediatamente
+      startTyping();
+    }
+  })();
 </script>
+
+<style>
+  .typing-banner {
+    min-height: 100px;
+    padding: 25px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  #typing-text {
+    font-family: 'MiFuente', sans-serif;
+    color: white !important;
+    text-align: center;
+    margin: 0;
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.3);
+    text-stroke: 0.5px rgba(255, 255, 255, 0.3);
+    text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Ajustar el contenido para que no quede debajo de la franja y navbar */
+  section#productos {
+    margin-top: 164px; /* 64px (navbar) + 100px (franja) */
+  }
+</style>

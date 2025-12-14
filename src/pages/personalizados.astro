@@ -1,0 +1,128 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Divider from '../components/Divider.astro';
+---
+
+<Layout title="Bordados Personalizados | BordArt">
+    <Navigation />
+    <section class="p-8 bg-gradient-to-b from-white to-yellow-50 min-h-screen">
+        <div class="max-w-6xl mx-auto">
+            <!-- Título principal -->
+            <div class="text-center mb-12 mt-8">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Bordados Personalizados</span>
+                </h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-400 mx-auto rounded-full mb-6"></div>
+                <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
+                    Hacemos realidad tu diseño único. Trabajamos juntxs para crear el bordado perfecto que refleje tu estilo.
+                </p>
+            </div>
+
+            <!-- Información principal -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <!-- Card 1: Precio -->
+                <div class="bg-white rounded-2xl shadow-lg border border-amber-100 p-6 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-orange-400 flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Precio Personalizado</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                El valor de tu bordado se calcula según el <strong class="text-amber-600">tamaño del diseño</strong> y su <strong class="text-amber-600">complejidad</strong>. Diseños más grandes o con más detalles tendrán un precio diferente. Consultanos y te damos un presupuesto sin compromiso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Tiempo de elaboración -->
+                <div class="bg-white rounded-2xl shadow-lg border border-orange-100 p-6 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Tiempo de Elaboración</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Cada bordado personalizado requiere tiempo y dedicación. El proceso completo toma entre <strong class="text-orange-600">10 a 15 días hábiles</strong> desde que confirmamos tu pedido. Te mantenemos al tanto del proceso y te avisamos cuando esté listo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Prendas -->
+                <div class="bg-white rounded-2xl shadow-lg border border-yellow-100 p-6 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-amber-400 flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Prendas Propias o Nuestras</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Podés traer tu propia prenda para personalizar o elegir una de nuestro catálogo. <strong class="text-yellow-600">Ambas opciones son válidas</strong>. Si traés tu prenda, asegurate de que esté limpia y en buen estado. Si elegís una nuestra, te ayudamos a seleccionar la mejor opción.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Sin cambios -->
+                <div class="bg-white rounded-2xl shadow-lg border border-red-100 p-6 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-red-400 to-orange-400 flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Productos Hechos a Pedido</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Todos nuestros productos son <strong class="text-red-600">hechos especialmente para vos</strong>, por lo que <strong class="text-red-600">no aceptamos cambios ni devoluciones</strong>. Por eso es importante que estés seguro de tu elección antes de confirmar el pedido.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recomendación importante -->
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl shadow-lg border border-amber-200 p-8 mb-12">
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-md">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Recomendación Importante</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Antes de realizar tu compra, te recomendamos <strong class="text-amber-700">revisar cuidadosamente la tabla de talles y medidas</strong> disponible en cada producto. Esto te ayudará a asegurar que el ajuste sea perfecto y que tu prenda personalizada quede exactamente como la soñaste.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de contacto -->
+            <div class="text-center">
+                <p class="text-xl text-gray-700 mb-6">¿Tenés una idea en mente? ¡Hablemos!</p>
+                <a href="https://api.whatsapp.com/send?phone=5492915050471&text=Hola%21%20Me%20interesa%20hacer%20un%20bordado%20personalizado." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-1.123-2.009-1.262-.251-.139-.434-.163-.606.05-.173.213-.671.815-.822.98-.151.165-.302.183-.553.05-.25-.133-1.06-.392-2.02-1.25-.746-.666-1.25-1.488-1.396-1.739-.146-.25-.016-.385.11-.51.113-.12.251-.302.377-.453.125-.15.167-.25.251-.416.084-.166.042-.312-.021-.51-.063-.198-.554-1.336-.759-1.832-.2-.48-.404-.415-.554-.425-.15-.01-.321-.01-.492-.01s-.377.01-.574.05c-.198.04-.377.198-.528.39-.151.193-.587.574-.587 1.4 0 .825.601 1.625.685 1.738.084.113 1.183 1.8 2.86 2.548 1.677.748 2.86.873 3.338.975.477.102.901.085 1.238-.051.337-.136 1.46-.6 1.666-.792.206-.193.344-.136.584.08.24.216.923.81 1.083.975.16.165.272.248.46.425.19.178.378.39.151.64-.226.25-.447.216-.84.075-.393-.14-1.66-.612-1.896-.68-.236-.068-.408-.05-.554.15-.146.2-.565.68-.692.82-.127.139-.255.163-.472.05-.217-.113-.917-.338-1.748-1.078-.646-.577-1.083-1.29-1.21-1.508-.127-.217-.014-.335.095-.453.109-.118.24-.302.36-.453.12-.15.192-.25.24-.416.05-.166.025-.312-.05-.51-.075-.198-.554-1.336-.759-1.832-.2-.48-.404-.415-.554-.425-.15-.01-.321-.01-.492-.01s-.377.01-.574.05z"/>
+                    </svg>
+                    <span>Consultar por Bordado Personalizado</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="bg-yellow-50">
+        <Divider />
+    </div>
+    <Footer />
+</Layout>
+

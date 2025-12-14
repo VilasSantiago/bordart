@@ -20,42 +20,102 @@ import Layout from '../layouts/Layout.astro';
                 <img src="/assets/productos/producto-remera-2.jpeg" alt="Remera diseño 3" class="hover:shadow-lg transition-all duration-500">
             </div>
 
-            <div class="mt-12 text-center">
-                <h2 class="text-2xl md:text-3xl font-semibold mb-6 inline-block relative">
-                    Opciones
-                    <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-amber-400 rounded-full"></div>
-                </h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-amber-100">
-                        <div class="text-3xl mb-3">👕</div>
-                        <h3 class="font-medium text-lg mb-2">Estilo Clásico</h3>
-                        <p class="text-gray-600">Ajuste tradicional con el toque único de nuestros bordados.</p>
-                    </div>
+            <!-- Sección de Opciones y Colores lado a lado -->
+            <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Opciones -->
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 inline-block relative">
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Opciones</span>
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full"></div>
+                    </h2>
                     
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-amber-100">
-                        <div class="text-3xl mb-3">🔥</div>
-                        <h3 class="font-medium text-lg mb-2">Estilo Oversize</h3>
-                        <p class="text-gray-600">Estilo relajado y bordados con personalidad.</p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="option-card group relative bg-gradient-to-br from-white to-amber-50/30 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-amber-100/50 overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-200/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="icon-wrapper mb-4 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-400 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-xl mb-2 text-gray-800 group-hover:text-amber-700 transition-colors duration-300">Estilo Clásico</h3>
+                                <p class="text-gray-600 leading-relaxed text-sm">Ajuste tradicional con el toque único de nuestros bordados artesanales.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="option-card group relative bg-gradient-to-br from-white to-orange-50/30 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-orange-100/50 overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-200/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative z-10">
+                                <div class="icon-wrapper mb-4 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-400 to-amber-500 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-bold text-xl mb-2 text-gray-800 group-hover:text-orange-700 transition-colors duration-300">Estilo Oversize</h3>
+                                <p class="text-gray-600 leading-relaxed text-sm">Estilo relajado y bordados con personalidad que destacan en cada diseño.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colores Disponibles -->
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 inline-block relative">
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-orange-500">Colores Disponibles</span>
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full"></div>
+                    </h2>
+                    <div class="flex justify-center mt-8">
+                        <div class="color-container group relative w-full max-w-md rounded-2xl bg-gradient-to-br from-white to-gray-50 border-2 border-gray-200 shadow-xl hover:shadow-2xl p-8 transition-all duration-500 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-amber-50/0 to-orange-50/0 group-hover:from-amber-50/30 group-hover:to-orange-50/20 transition-all duration-500"></div>
+                            <div class="relative z-10 flex flex-row justify-center items-center gap-8">
+                                <div class="color-option flex flex-col items-center justify-center cursor-pointer">
+                                    <div class="w-24 h-24 rounded-full bg-white border-2 border-gray-300 shadow-lg mb-3 group-hover:scale-110 transition-all duration-300"></div>
+                                    <span class="text-sm font-bold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">Blanco</span>
+                                </div>
+                                <div class="color-option flex flex-col items-center justify-center cursor-pointer">
+                                    <div class="w-24 h-24 rounded-full bg-black border-2 border-gray-600 shadow-lg mb-3 group-hover:scale-110 transition-all duration-300"></div>
+                                    <span class="text-sm font-bold text-gray-700 group-hover:text-gray-900 transition-colors duration-300">Negro</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Sección de colores -->
+            <!-- Sección de Precios -->
             <div class="mt-12 text-center">
                 <h2 class="text-2xl md:text-3xl font-semibold mb-6 inline-block relative">
-                    Colores Disponibles
+                    Precios
                     <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-amber-400 rounded-full"></div>
                 </h2>
-                <div class="flex justify-center gap-6 mt-8">
-                    <div class="w-24 h-24 rounded-full bg-white border-2 border-gray-400 shadow-md flex items-center justify-center text-lg
-                     font-medium hover:bg-black hover:text-white transition-colors duration-300">
-                        Blanco
-                    </div>
-                    <div class="w-24 h-24 rounded-full bg-black text-white border-2 border-gray-400 shadow-md flex items-center 
-                    justify-center text-lg font-medium hover:bg-white hover:text-black transition-colors duration-300">
-                        Negro
-                    </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <!-- Precio Diseño Simple -->
+                    <a href="/catalogo" class="bg-gradient-to-br from-white to-green-50 rounded-2xl shadow-lg border-2 border-green-200 p-6 hover:shadow-xl transition-all duration-300 cursor-pointer block">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-green-700">Diseño Simple</h3>
+                        </div>
+                        <p class="text-4xl font-bold text-gray-800 mb-2">$27.000</p>
+                        <p class="text-sm text-gray-600">ARS</p>
+                    </a>
+
+                    <!-- Precio Diseño Complejo -->
+                    <a href="/catalogo" class="bg-gradient-to-br from-white to-orange-50 rounded-2xl shadow-lg border-2 border-orange-200 p-6 hover:shadow-xl transition-all duration-300 cursor-pointer block">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-orange-700">Diseño Complejo</h3>
+                        </div>
+                        <p class="text-4xl font-bold text-gray-800 mb-2">$31.000</p>
+                        <p class="text-sm text-gray-600">ARS</p>
+                    </a>
                 </div>
             </div>
 
@@ -76,9 +136,10 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
             </div>
+
             <!-- Como Comprar -->
             <div class="flex flex-col mx-auto items-center justify-center mt-12 text-center">
-                <a href="/#como-comprar" id="comprar" class="group relative flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-500 hover:shadow-xl">
+                <a href="https://api.whatsapp.com/send?phone=5492915050471&text=Hola%21%20Me%20interesa%20comprar%20una%20remera." target="_blank" rel="noopener noreferrer" id="comprar" class="group relative flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-500 hover:shadow-xl">
                     <span class="font-bold text-lg z-10">Comprar</span>
                     <img id="cart" src="/assets/cart.svg" alt="" class="w-8 h-8 z-10 transition-all duration-300 group-hover:invert group-hover:brightness-0">
                     <span class="absolute inset-0 bg-yellow-400 z-0"></span> <!-- Span que se animará -->

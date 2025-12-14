@@ -29,7 +29,7 @@ import TopBtn from "../components/Button.astro";
                 </h2>
                 <div class="flex justify-center gap-6 mt-8">
                     <p class="text-2xl">
-                        Confeccionado en frisa rústica (75% algodón, 25% poliéster), nuestro buzo oversize es el equilibrio perfecto 
+                        Confeccionado en frisa (75% algodón, 25% poliéster), nuestro buzo oversize es el equilibrio perfecto 
                         entre abrigo y estilo. Su corte amplio y tapa costura en el cuello lo hacen ideal para cualquier ocasión, desde 
                         un look relajado hasta un bordado que lo haga único.
                     </p>
@@ -42,12 +42,54 @@ import TopBtn from "../components/Button.astro";
                     <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-amber-400 rounded-full"></div>
                 </h2>
                 <div class="flex justify-center gap-6 mt-8">
-                    <div class="w-24 h-24 rounded-full bg-black text-white border-2 border-gray-400 shadow-md flex items-center 
-                    justify-center text-lg font-medium hover:bg-white hover:text-black transition-colors duration-300">
+                    <div class="color-option-black w-24 h-24 rounded-full bg-black text-white border-2 border-gray-400 shadow-md flex items-center 
+                    justify-center text-lg font-medium transition-all duration-300 cursor-pointer">
                         Negro
+                    </div>
+                    <div class="color-option-crudo w-24 h-24 rounded-full bg-[#D4C4A8] text-gray-800 border-2 border-gray-400 shadow-md flex items-center 
+                    justify-center text-lg font-medium transition-all duration-300 cursor-pointer">
+                        Crudo
                     </div>
                 </div>
             </div>
+
+            <!-- Sección de Precios -->
+            <div class="mt-12 text-center">
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 inline-block relative">
+                    Precios
+                    <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-amber-400 rounded-full"></div>
+                </h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <!-- Precio Diseño Simple -->
+                    <a href="/catalogo" class="bg-gradient-to-br from-white to-green-50 rounded-2xl shadow-lg border-2 border-green-200 p-6 hover:shadow-xl transition-all duration-300 cursor-pointer block">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-green-700">Diseño Simple</h3>
+                        </div>
+                        <p class="text-4xl font-bold text-gray-800 mb-2">$49.000</p>
+                        <p class="text-sm text-gray-600">ARS</p>
+                    </a>
+
+                    <!-- Precio Diseño Complejo -->
+                    <a href="/catalogo" class="bg-gradient-to-br from-white to-orange-50 rounded-2xl shadow-lg border-2 border-orange-200 p-6 hover:shadow-xl transition-all duration-300 cursor-pointer block">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-orange-700">Diseño Complejo</h3>
+                        </div>
+                        <p class="text-4xl font-bold text-gray-800 mb-2">$55.000</p>
+                        <p class="text-sm text-gray-600">ARS</p>
+                    </a>
+                </div>
+            </div>
+
             <!-- Tabla de Talles -->
             <div class="mt-12 text-center">
                 <h2 class="text-2xl md:text-3xl font-semibold mb-6 inline-block relative">
@@ -65,7 +107,7 @@ import TopBtn from "../components/Button.astro";
 
             <!-- Como Comprar -->
             <div class="flex flex-col mx-auto items-center justify-center mt-12 text-center">
-                <a href="/#como-comprar" id="comprar" class="group relative flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-500 hover:shadow-xl">
+                <a href="https://api.whatsapp.com/send?phone=5492915050471&text=Hola%21%20Me%20interesa%20comprar%20un%20buzo." target="_blank" rel="noopener noreferrer" id="comprar" class="group relative flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-500 hover:shadow-xl">
                     <span class="font-bold text-lg z-10">Comprar</span>
                     <img id="cart" src="/assets/cart.svg" alt="" class="w-8 h-8 z-10 transition-all duration-300 group-hover:invert group-hover:brightness-0">
                     <span class="absolute inset-0 bg-yellow-400 z-0"></span> <!-- Span que se animará -->
@@ -133,6 +175,64 @@ import TopBtn from "../components/Button.astro";
 
 #comprar:hover {
     color: white;
+}
+
+.color-option-black {
+    position: relative;
+    overflow: hidden;
+}
+
+.color-option-black::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.color-option-black:hover::before {
+    width: 120%;
+    height: 120%;
+}
+
+.color-option-black:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 0 3px rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.color-option-crudo {
+    position: relative;
+    overflow: hidden;
+}
+
+.color-option-crudo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.color-option-crudo:hover::before {
+    width: 120%;
+    height: 120%;
+}
+
+.color-option-crudo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
 </style>

@@ -3,7 +3,7 @@
       "id": "remera-made-in",
       "nombre": "Remera 'made in'",
       "descripcion": [],
-      "precio": 29000,
+      "precio": "SOLD OUT",
       "imagen": [
         "/assets/drop/remera-made-in-1.webp",
         "/assets/drop/remera-made-in-2.webp",
@@ -24,7 +24,7 @@
       "id": "remera-bordart",
       "nombre": "Remera Bordart",
       "descripcion": "",
-      "precio": 29000,
+      "precio": "SOLD OUT",
       "imagen": [
         "/assets/drop/remera-bordart-1.webp",
         "/assets/drop/remera-bordart-2.webp"
@@ -44,7 +44,7 @@
       "id": "remera-maria",
       "nombre": "Remera María",
       "descripcion": "",
-      "precio": 29000,
+      "precio": "SOLD OUT",
       "imagen": [
         "/assets/drop/remera-maria-1.webp",
         "/assets/drop/remera-maria-2.webp",
@@ -65,7 +65,7 @@
       "id": "remera-sonrisol",
       "nombre": "Remera Sonrisol",
       "descripcion": "",
-      "precio": 29000,
+      "precio": "SOLD OUT",
       "imagen": [
         "/assets/drop/remera-sonrisol-1.webp",
         "/assets/drop/remera-sonrisol-2.webp",
@@ -104,7 +104,7 @@
       "id": "totebag-01",
       "nombre": "Totebag #01",
       "descripcion": "",
-      "precio": 13000,
+      "precio": "SOLD OUT",
       "imagen": [
         "/assets/drop/totebag-1.webp",
         "/assets/drop/totebag-2.webp",

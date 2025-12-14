@@ -21,27 +21,111 @@ import TopBtn from "../components/Button.astro";
                 <img src="/assets/productos/producto-parches-2.jpeg" alt="Remera diseño 2" class="hover:shadow-lg transition-all duration-500 object-contain w-full h-auto">
                 <img src="/assets/productos/producto-parches-3.jpeg" alt="Remera diseño 3" class="hover:shadow-lg transition-all duration-500 object-contain w-full h-auto">
             </div>
-            <!-- Opciones de Colores -->
+            <!-- Descripción de Parches -->
             <div class="mt-12 text-center">
                 <h2 class="text-3xl md:text-4xl font-semibold mb-6 inline-block relative">
-                    Parches
+                    Parches Bordados
                     <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-amber-400 rounded-full"></div>
                 </h2>
-                <div class="justify-center gap-6 mt-8 flex flex-col">
-                    <p class="text-2xl"> Nuestros parches bordados son la manera perfecta de agregar personalidad a cualquier 
-                        prenda o accesorio. Hechos con hilos de alta calidad y un nivel de detalle que resalta cada diseño. Disponemos 
-                        de tres opciones:
-                    </p>
-                    <p class="text-2xl">✅ Parches convencionales: Se pueden coser en cualquier superficie</p>
-                    <p class="text-2xl">🔥 Parches termo adhesivos: Ideales para aplicar con una plancha en telas, sin necesidad de costura.</p>
-                    <p class="text-2xl">⚡ Parches con abrojo (velcro): Perfectos para cambiar de diseño fácilmente, ideales para uniformes, mochilas y accesorios.</p>
-                    <p class="text-2xl">Personaliza el tuyo y dale un toque único a tu estilo.</p>
+                <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed">
+                    Agregá personalidad única a tus prendas y accesorios con nuestros parches bordados artesanales. 
+                    Hechos con hilos de alta calidad y un nivel de detalle excepcional que resalta cada diseño.
+                </p>
+                
+                <!-- Cards de Tipos de Parches -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-12">
+                    <!-- Parche Convencional -->
+                    <div class="group bg-gradient-to-br from-white to-amber-50/30 p-6 rounded-2xl shadow-lg border border-amber-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-orange-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Convencionales</h3>
+                        <p class="text-gray-700 leading-relaxed text-center">
+                            Se pueden coser en cualquier superficie. La opción clásica para una aplicación permanente y duradera.
+                        </p>
+                    </div>
+
+                    <!-- Parche Termo Adhesivo -->
+                    <div class="group bg-gradient-to-br from-white to-orange-50/30 p-6 rounded-2xl shadow-lg border border-orange-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-red-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Termo Adhesivos</h3>
+                        <p class="text-gray-700 leading-relaxed text-center">
+                            Ideales para aplicar con plancha en telas, sin necesidad de costura. Rápido, fácil y sin complicaciones.
+                        </p>
+                    </div>
+
+                    <!-- Parche con Abrojo -->
+                    <div class="group bg-gradient-to-br from-white to-yellow-50/30 p-6 rounded-2xl shadow-lg border border-yellow-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Con Abrojo (Velcro)</h3>
+                        <p class="text-gray-700 leading-relaxed text-center">
+                            Perfectos para cambiar de diseño fácilmente. Ideales para uniformes, mochilas y accesorios que necesitan versatilidad.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-xl md:text-2xl font-semibold text-gray-800 mt-12 max-w-3xl mx-auto">
+                    Personalizá el tuyo y dale un toque único a tu estilo ✨
+                </p>
+            </div>
+
+            <!-- Sección de Precios -->
+            <div class="mt-12 text-center">
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 inline-block relative">
+                    Precios
+                    <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-amber-400 rounded-full"></div>
+                </h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <!-- Precio Diseño Simple -->
+                    <a href="/catalogo" class="bg-gradient-to-br from-white to-green-50 rounded-2xl shadow-lg border-2 border-green-200 p-6 hover:shadow-xl transition-all duration-300 cursor-pointer block">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-md">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-green-700">Diseño Simple</h3>
+                        </div>
+                        <p class="text-4xl font-bold text-gray-800 mb-2">$10.000</p>
+                        <p class="text-sm text-gray-600">ARS</p>
+                    </a>
+
+                    <!-- Precio Diseño Complejo -->
+                    <a href="/catalogo" class="bg-gradient-to-br from-white to-orange-50 rounded-2xl shadow-lg border-2 border-orange-200 p-6 hover:shadow-xl transition-all duration-300 cursor-pointer block">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-md">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-orange-700">Diseño Complejo</h3>
+                        </div>
+                        <p class="text-4xl font-bold text-gray-800 mb-2">$15.000</p>
+                        <p class="text-sm text-gray-600">ARS</p>
+                    </a>
                 </div>
             </div>
 
             <!-- Como Comprar -->
             <div class="flex flex-col mx-auto items-center justify-center mt-12 text-center">
-                <a href="/#como-comprar" id="comprar" class="group relative flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-500 hover:shadow-xl">
+                <a href="https://api.whatsapp.com/send?phone=5492915050471&text=Hola%21%20Me%20interesa%20comprar%20parches." target="_blank" rel="noopener noreferrer" id="comprar" class="group relative flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-500 hover:shadow-xl">
                     <span class="font-bold text-lg z-10">Comprar</span>
                     <img id="cart" src="/assets/cart.svg" alt="" class="w-8 h-8 z-10 transition-all duration-300 group-hover:invert group-hover:brightness-0">
                     <span class="absolute inset-0 bg-yellow-400 z-0"></span> <!-- Span que se animará -->

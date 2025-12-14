@@ -8,3 +8,14 @@
     font-weight: normal;
     font-style: normal;
   }
+
+/* Estilos globales para la navegación - siempre se aplican */
+.nav-link,
+.mobile-nav-link,
+nav span {
+  font-family: 'MiFuente', sans-serif !important;
+  font-weight: 800 !important;
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.3) !important;
+  text-stroke: 0.5px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.2) !important;
+}

@@ -12,7 +12,7 @@ import TopBtn from "../components/Button.astro";
         <div class="max-w-6xl w-full mx-auto">
             <!-- Imagenes -->
             <h1 class="text-4xl md:text-6xl font-bold text-center mb-8 relative">
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-700 to-amber-500">GORROS</span>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-700 to-amber-500">GORRAS</span>
                 <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-amber-500 rounded-full"></div>
             </h1>
             
@@ -32,31 +32,75 @@ import TopBtn from "../components/Button.astro";
                     </p>
                 </div>
             </div>
-            <div class="mt-12 text-center">
-                <h2 class="text-2xl md:text-3xl font-semibold mb-6 inline-block relative">
-                    Gorros de Lana
-                    <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-amber-400 rounded-full"></div>
-                </h2>
-                <div class="flex justify-center gap-6 mt-8">
-                    <p class="text-2xl"> Calidez y personalidad para el frío. Suaves, versátiles y perfectos para cualquier ocasión.
-                    </p>
-                </div>
-            </div>
-            <div class="mt-12 text-center">
-                <h2 class="text-2xl md:text-3xl font-semibold mb-6 inline-block relative">
-                    Pilusos
-                    <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-amber-400 rounded-full"></div>
-                </h2>
-                <div class="flex justify-center gap-6 mt-8">
-                    <p class="text-2xl"> Estilo y actitud en un solo accesorio. Ligeros, cómodos y listos para completar cualquier outfit.
-                    </p>
-                </div>
-            </div>
             
+            <!-- Colores Disponibles -->
+            <div class="mt-12 text-center">
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 inline-block relative">
+                    Colores Disponibles
+                    <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-amber-400 rounded-full"></div>
+                </h2>
+                <div class="flex flex-wrap justify-center gap-4 mt-8 max-w-4xl mx-auto">
+                    <div class="w-20 h-20 rounded-full bg-black text-white border-2 border-gray-400 shadow-md flex items-center justify-center text-sm font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        Negro
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-gray-500 text-white border-2 border-gray-400 shadow-md flex items-center justify-center text-sm font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        Gris
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-pink-400 text-white border-2 border-gray-400 shadow-md flex items-center justify-center text-sm font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        Rosa
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-yellow-600 text-white border-2 border-gray-400 shadow-md flex items-center justify-center text-sm font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        Mostaza
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-violet-500 text-white border-2 border-gray-400 shadow-md flex items-center justify-center text-sm font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        Violeta
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-blue-300 text-gray-800 border-2 border-gray-400 shadow-md flex items-center justify-center text-sm font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        Azul Francia
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-blue-800 text-white border-2 border-gray-400 shadow-md flex items-center justify-center text-sm font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        Azul Marino
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-[#D4C4A8] text-gray-800 border-2 border-gray-400 shadow-md flex items-center justify-center text-sm font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        Beige
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-green-600 text-white border-2 border-gray-400 shadow-md flex items-center justify-center text-sm font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        Verde Inglés
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-emerald-500 text-white border-2 border-gray-400 shadow-md flex items-center justify-center text-sm font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        Verde Benetton
+                    </div>
+                    <div class="w-20 h-20 rounded-full bg-red-900 text-white border-2 border-gray-400 shadow-md flex items-center justify-center text-sm font-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        Bordo
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Precios -->
+            <div class="mt-12 text-center">
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 inline-block relative">
+                    Precio
+                    <div class="absolute -bottom-2 left-0 w-full h-0.5 bg-amber-400 rounded-full"></div>
+                </h2>
+                <div class="max-w-md mx-auto mt-8">
+                    <div class="bg-gradient-to-br from-white to-amber-50 rounded-2xl shadow-lg border-2 border-amber-200 p-8 hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-orange-400 flex items-center justify-center shadow-md">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-amber-700">Gorra + Bordado</h3>
+                        </div>
+                        <p class="text-4xl font-bold text-gray-800 mb-2">$22.000</p>
+                        <p class="text-sm text-gray-600">ARS</p>
+                    </div>
+                </div>
+            </div>
 
             <!-- Como Comprar -->
             <div class="flex flex-col mx-auto items-center justify-center mt-12 text-center">
-                <a href="/#como-comprar" id="comprar" class="group relative flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-500 hover:shadow-xl">
+                <a href="https://api.whatsapp.com/send?phone=5492915050471&text=Hola%21%20Me%20interesa%20comprar%20una%20gorra." target="_blank" rel="noopener noreferrer" id="comprar" class="group relative flex items-center gap-2 px-6 py-3 bg-yellow-400 text-black text-lg font-bold rounded-lg shadow-lg transition-all duration-300 hover:bg-yellow-500 hover:shadow-xl">
                     <span class="font-bold text-lg z-10">Comprar</span>
                     <img id="cart" src="/assets/cart.svg" alt="" class="w-8 h-8 z-10 transition-all duration-300 group-hover:invert group-hover:brightness-0">
                     <span class="absolute inset-0 bg-yellow-400 z-0"></span> <!-- Span que se animará -->
