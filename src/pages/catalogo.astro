@@ -224,6 +224,13 @@ import "@splidejs/splide/css";
                 
                 // Show selected category
                 showCategory(category);
+                
+                // En móvil: bajar y posicionar en las imágenes
+                if (window.innerWidth < 768 && categoryContent) {
+                    requestAnimationFrame(() => {
+                        categoryContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    });
+                }
             });
         });
         

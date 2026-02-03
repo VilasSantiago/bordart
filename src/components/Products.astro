@@ -22,11 +22,11 @@
       <div class="w-24 h-1 bg-gradient-to-r from-yellow-200 to-yellow-500 mx-auto rounded-full"></div>
     </div>
     
-    <!-- Product grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Product grid: en móvil carrusel (una card, deslizar); en desktop grid -->
+    <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none pb-2 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide">
       
       <!-- Product card 1 -->
-      <a href="/remeras" class="group relative block cursor-pointer">
+      <a href="/remeras" class="group relative block cursor-pointer flex-shrink-0 w-[85vw] min-w-[280px] max-w-[340px] md:w-auto md:min-w-0 md:max-w-none snap-center">
         <div class="aspect-square overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 group-hover:shadow-xl">
           <!-- Badge Más Vendidos -->
           <div class="absolute top-3 right-3 z-30 flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full shadow-lg transform rotate-12 group-hover:rotate-6 transition-transform duration-300">
@@ -47,7 +47,7 @@
           </div>   
         </div>
         <!-- Hover button -->
-        <div class="absolute inset-x-0 -bottom-4 flex justify-center opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 z-20">
+        <div class="absolute inset-x-0 -bottom-4 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
           <span class="px-6 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm font-medium shadow-lg shadow-yellow-200 hover:shadow-xl hover:shadow-orange-300 transition-all duration-300">
             Ver detalles
           </span>
@@ -55,7 +55,7 @@
       </a>
       
       <!-- Product card 2 -->
-      <a href="/buzos" class="group relative block cursor-pointer">
+      <a href="/buzos" class="group relative block cursor-pointer flex-shrink-0 w-[85vw] min-w-[280px] max-w-[340px] md:w-auto md:min-w-0 md:max-w-none snap-center">
         <div class="aspect-square overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 group-hover:shadow-xl">
           <!-- Badge Descuento -->
           <div class="absolute top-3 left-3 z-30 flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-red-500 to-pink-600 rounded-full shadow-lg transform -rotate-12 group-hover:-rotate-6 transition-transform duration-300">
@@ -78,7 +78,7 @@
          
         </div>
         
-        <div class="absolute inset-x-0 -bottom-4 flex justify-center opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 z-20">
+        <div class="absolute inset-x-0 -bottom-4 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
           <span class="px-6 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm font-medium shadow-lg shadow-yellow-200 hover:shadow-xl hover:shadow-orange-300 transition-all duration-300">
             Ver detalles
           </span>
@@ -86,7 +86,7 @@
       </a>
       
       <!-- Product card 3 -->
-      <a href="/gorros" class="group relative block cursor-pointer">
+      <a href="/gorros" class="group relative block cursor-pointer flex-shrink-0 w-[85vw] min-w-[280px] max-w-[340px] md:w-auto md:min-w-0 md:max-w-none snap-center">
         <div class="aspect-square overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 group-hover:shadow-xl">
           <div class="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           
@@ -102,7 +102,7 @@
           
         </div>
         
-        <div class="absolute inset-x-0 -bottom-4 flex justify-center opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 z-20">
+        <div class="absolute inset-x-0 -bottom-4 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
           <span class="px-6 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm font-medium shadow-lg shadow-yellow-200 hover:shadow-xl hover:shadow-orange-300 transition-all duration-300">
             Ver detalles
           </span>
@@ -110,7 +110,7 @@
       </a>
       
       <!-- Product card 4 -->
-      <a href="/parches" class="group relative block cursor-pointer">
+      <a href="/parches" class="group relative block cursor-pointer flex-shrink-0 w-[85vw] min-w-[280px] max-w-[340px] md:w-auto md:min-w-0 md:max-w-none snap-center">
         <div class="aspect-square overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 group-hover:shadow-xl">
           <div class="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           
@@ -124,7 +124,7 @@
           </div>
         </div>
         
-        <div class="absolute inset-x-0 -bottom-4 flex justify-center opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 z-20">
+        <div class="absolute inset-x-0 -bottom-4 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
           <span class="px-6 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm font-medium shadow-lg shadow-yellow-200 hover:shadow-xl hover:shadow-orange-300 transition-all duration-300">
             Ver detalles
           </span>
@@ -132,7 +132,7 @@
       </a>
       
       <!-- Product card 5 -->
-      <a href="/pines" class="group relative block cursor-pointer">
+      <a href="/pines" class="group relative block cursor-pointer flex-shrink-0 w-[85vw] min-w-[280px] max-w-[340px] md:w-auto md:min-w-0 md:max-w-none snap-center">
         <div class="aspect-square overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 group-hover:shadow-xl">
           <div class="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           
@@ -146,7 +146,7 @@
           </div>
         </div>
 
-        <div class="absolute inset-x-0 -bottom-4 flex justify-center opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 z-20">
+        <div class="absolute inset-x-0 -bottom-4 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
           <span class="px-6 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm font-medium shadow-lg shadow-yellow-200 hover:shadow-xl hover:shadow-orange-300 transition-all duration-300">
             Ver detalles
           </span>
@@ -154,7 +154,7 @@
       </a>
       
       <!-- Product card 6 - Próximamente -->
-      <div class="group relative block">
+      <div class="group relative block flex-shrink-0 w-[85vw] min-w-[280px] max-w-[340px] md:w-auto md:min-w-0 md:max-w-none snap-center">
         <div class="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 shadow-md border-2 border-dashed border-gray-300 transition-all duration-500">
           <div class="relative h-full w-full flex flex-col items-center justify-center p-6">
             <div class="mb-4 opacity-50">
@@ -178,6 +178,40 @@
 </section>
 
 <style>
+  /* Carrusel móvil: ocultar scrollbar y cards estáticas (sin movimiento al deslizar) */
+  @media (max-width: 767px) {
+    .scrollbar-hide {
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    /* Sin transiciones ni efectos hover en móvil: cards estáticas al deslizar */
+    #productos .scrollbar-hide .group,
+    #productos .scrollbar-hide .group * {
+      transition: none !important;
+    }
+    /* Badge: rotación fija, no cambiar en hover */
+    #productos .scrollbar-hide .group .rotate-12,
+    #productos .scrollbar-hide .group:hover .rotate-12 {
+      transform: rotate(12deg) !important;
+    }
+    #productos .scrollbar-hide .group .\-rotate-12,
+    #productos .scrollbar-hide .group:hover .\-rotate-12 {
+      transform: rotate(-12deg) !important;
+    }
+    /* Imagen: sin zoom en hover */
+    #productos .scrollbar-hide .group img {
+      transform: none !important;
+    }
+    /* Botón Ver detalles: siempre oculto en móvil para que no aparezca al tocar/deslizar */
+    #productos .scrollbar-hide .group .absolute.z-20 {
+      opacity: 0 !important;
+    }
+  }
+
   /* Animation keyframes for floating elements */
   @keyframes float {
     0% { transform: translateY(0px) translateX(0px); }
