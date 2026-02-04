@@ -1,5 +1,33 @@
----
----
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        const footer = document.getElementById('footer');
+
+        // Si no existe el botón o el footer, no hacemos nada
+        if (!whatsappBtn || !footer) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Cuando el footer es visible, ocultamos el botón flotante
+                        whatsappBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                    } else {
+                        // Cuando el footer deja de ser visible, volvemos a mostrar el botón
+                        whatsappBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                    }
+                });
+            },
+            {
+                root: null,
+                threshold: 0.1,
+            }
+        );
+
+        observer.observe(footer);
+    });
+</script>
+
 <a 
     href="https://api.whatsapp.com/send?phone=5492915050471" 
     target="_blank" 
