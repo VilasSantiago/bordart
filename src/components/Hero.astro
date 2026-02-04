@@ -35,7 +35,9 @@ import '../styles/tailwind.css';
     }
     efectTyping1();
 
-    // Notificación de envíos (solo mobile y aparece al hacer scroll)
+    // Notificación de envíos:
+    // - Desktop: siempre visible (como antes), solo se puede cerrar.
+    // - Mobile: aparece al hacer un poco de scroll.
     document.addEventListener("DOMContentLoaded", () => {
         const notification = document.getElementById('shipping-notification');
         const closeBtn = document.getElementById('close-notification');
@@ -44,14 +46,13 @@ import '../styles/tailwind.css';
         if (!notification) return;
 
         const handleScroll = () => {
-            // Solo mobile
             const isMobile = window.innerWidth < 768;
-            if (!isMobile || dismissed) {
-                notification.classList.add('hidden');
-                return;
-            }
+            // Desktop: dejamos que se muestre normalmente (sin depender del scroll)
+            if (!isMobile) return;
 
-            // Muestra cuando se scrollea un poco hacia abajo
+            if (dismissed) return;
+
+            // Mobile: mostrar cuando se scrollea un poco hacia abajo
             if (window.scrollY > 80) {
                 notification.classList.remove('hidden');
             } else {
@@ -76,8 +77,8 @@ import '../styles/tailwind.css';
 </script>
 
 <section class="md:h-screen h-auto w-full flex flex-col items-center justify-center md:justify-between max-h-[600px] relative">
-    <!-- Notificación de Envíos (solo mobile, aparece al hacer scroll) -->
-    <div id="shipping-notification" class="fixed top-20 right-4 md:right-8 z-50 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-4 py-3 rounded-lg shadow-xl flex items-center gap-3 animate-slide-in hidden md:hidden">
+    <!-- Notificación de Envíos (desktop siempre visible, en mobile aparece al hacer scroll) -->
+    <div id="shipping-notification" class="fixed top-20 right-4 md:right-8 z-50 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-4 py-3 rounded-lg shadow-xl flex items-center gap-3 animate-slide-in hidden md:flex">
         <div class="flex items-center gap-2">
             <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
