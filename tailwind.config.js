@@ -3,7 +3,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        miFuente: ['MiFuente', 'sans-serif'],
+        MiFuente: ['MiFuente', 'sans-serif'],
       },
     },
   },

@@ -49,17 +49,38 @@ import Divider from '../../components/Divider.astro';
           <!-- Info del producto -->
           <div class="w-full md:w-2/6 flex flex-col p-4 gap-6">
             <div>
-              <h2 class="text-3xl font-bold">{producto.nombre}</h2>
-              <span class="text-3xl font-bold">{producto.descripcion}</span>
+              <h2 class="text-3xl font-bold">
+                {'subtitulo' in producto && producto.subtitulo
+                  ? producto.subtitulo
+                  : producto.nombre}
+              </h2>
+              {Array.isArray(producto.descripcion) && producto.descripcion.length > 0 ? (
+                <div class="mt-4 space-y-3 text-gray-700 leading-relaxed text-base">
+                  {producto.descripcion.map((parrafo) => (
+                    <p>{parrafo}</p>
+                  ))}
+                </div>
+              ) : typeof producto.descripcion === 'string' && producto.descripcion ? (
+                <p class="mt-4 text-gray-700 leading-relaxed">{producto.descripcion}</p>
+              ) : null}
               {typeof producto.precio === 'number' ? (
                 <p class="text-xl text-gray-700 mt-4">
-                  {producto.precio.toLocaleString()} <span class="text-sm text-gray-500">ARS</span>
+                  ${producto.precio.toLocaleString('es-AR')} <span class="text-sm text-gray-500">ARS</span>
                 </p>
               ) : (
                 <p class="text-xl text-red-500 mt-4 font-semibold">{producto.precio}</p>
               )}
 
             </div>
+
+            {'coloresDisponibles' in producto && producto.coloresDisponibles && (
+              <div>
+                <h3 class="text-sm text-gray-500 mb-1">Colores disponibles</h3>
+                <p class="text-base font-medium text-gray-800">
+                  {producto.coloresDisponibles}
+                </p>
+              </div>
+            )}
       
             <!-- Talles con sus colores asociados -->
             {producto.variantes && producto.variantes.length > 0 && (

@@ -1,0 +1,87 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import Divider from '../../components/Divider.astro';
+
+import productos from '../../data/productos.json';
+
+const idsBasicos = [
+  'basico-shirt-core-logo',
+  'basico-shirt-full-statement',
+  'basico-cap-sonrisol',
+  'basico-docker-core',
+  'basico-tote-daily',
+];
+
+const basicos = idsBasicos
+  .map((id) => productos.find((p) => p.id === id))
+  .filter((p): p is (typeof productos)[number] => Boolean(p));
+---
+
+<Layout>
+  <Navigation />
+
+  <section id="productos" class="px-4 bg-gradient-to-b from-white to-yellow-50 pt-4">
+    <div class="max-w-4xl mx-auto flex flex-col items-center justify-center text-center gap-4 p-4">
+      <h2 class="basicos-typing-look font-MiFuente font-bold text-xl md:text-3xl text-gray-900">
+        Básicos.
+      </h2>
+      <h3 class="basicos-typing-look font-MiFuente font-bold text-lg md:text-2xl text-gray-900 max-w-2xl leading-snug">
+        Piezas esenciales del día a día.
+      </h3>
+    </div>
+
+    <div class="max-w-4xl mx-auto p-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {basicos.map((producto) => (
+          <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+            <a href={`/producto/${producto.id}`}>
+              <img src={producto.imagen[0]} alt={producto.nombre} class="w-full h-64 object-cover" />
+
+              <div class="p-4 text-center">
+                <h3 class="text-xl font-semibold">{producto.nombre}</h3>
+                {typeof producto.precio === 'number' ? (
+                  <p class="text-gray-700 font-semibold mt-2">
+                    ${producto.precio.toLocaleString('es-AR')} <span class="text-sm font-normal text-gray-500">ARS</span>
+                  </p>
+                ) : (
+                  <p class="text-red-500 font-semibold mt-2">{producto.precio}</p>
+                )}
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center text-center gap-4 p-4">
+      <h3 class="basicos-typing-look font-MiFuente font-bold text-xl md:text-3xl text-gray-900">
+        Colección básica BORDART.
+      </h3>
+    </div>
+  </section>
+
+  <div class="bg-yellow-50">
+    <Divider />
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+  /* Solo offset del navbar fijo (sin franja de texto) */
+  section#productos {
+    margin-top: 5rem;
+  }
+
+  /* Misma tipografía que "Próximamente capítulo..." en /producto/ropa (#typing-text),
+     adaptada a fondo claro (contorno/sombra invertidos para texto oscuro) */
+  .basicos-typing-look {
+    font-family: 'MiFuente', sans-serif;
+    text-align: center;
+    margin: 0;
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.12);
+    text-stroke: 0.5px rgba(0, 0, 0, 0.12);
+    text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.15);
+  }
+</style>

@@ -2,7 +2,7 @@
     {
       "id": "remera-made-in",
       "nombre": "Remera 'made in'",
-      "descripcion": [],
+      "descripcion": "",
       "precio": "SOLD OUT",
       "imagen": [
         "/assets/drop/remera-made-in-1.webp",
@@ -112,6 +112,92 @@
       ],
       "colores": [],
       "talles": ["S", "M", "L"]
+    },
+    {
+      "id": "basico-shirt-core-logo",
+      "coleccion": "basicos",
+      "nombre": "Shirt — CORE LOGO",
+      "descripcion": [
+        "La versión más limpia de Bordart.",
+        "Minimalista, directa y fácil de combinar.",
+        "Cada prenda está bordada con combinaciones de hilo seleccionadas para lograr un contraste más cálido y natural."
+      ],
+      "precio": 25000,
+      "coloresDisponibles": "Blanco y negro",
+      "imagen": [
+        "/assets/drop/remera-made-in-1.webp",
+        "/assets/drop/remera-made-in-2.webp",
+        "/assets/drop/remera-made-in-3.webp"
+      ]
+    },
+    {
+      "id": "basico-shirt-full-statement",
+      "coleccion": "basicos",
+      "nombre": "Shirt — FULL STATEMENT",
+      "descripcion": [
+        "Más presencia, más actitud.",
+        "Una pieza para llevar la identidad Bordart al frente.",
+        "No pasa desapercibida.",
+        "Cada prenda está bordada con combinaciones de hilo seleccionadas para lograr un contraste más cálido y natural."
+      ],
+      "precio": 25000,
+      "coloresDisponibles": "Blanco y negro",
+      "imagen": [
+        "/assets/drop/remera-bordart-1.webp",
+        "/assets/drop/remera-bordart-2.webp"
+      ]
+    },
+    {
+      "id": "basico-cap-sonrisol",
+      "coleccion": "basicos",
+      "nombre": "CAP — SONRISOL VINTAGE",
+      "descripcion": [
+        "Un clásico reinterpretado con la esencia Bordart.",
+        "Versátil, cómoda y lista para cualquier día.",
+        "De esas prendas que usás sin pensar… pero dicen todo."
+      ],
+      "precio": 21000,
+      "coloresDisponibles": "Bordo, azul marino, negro y beig",
+      "imagen": [
+        "/assets/drop/remera-sonrisol-1.webp",
+        "/assets/drop/remera-sonrisol-2.webp",
+        "/assets/drop/remera-sonrisol-3.webp"
+      ]
+    },
+    {
+      "id": "basico-docker-core",
+      "coleccion": "basicos",
+      "nombre": "DOCKER — BORDART CORE",
+      "descripcion": [
+        "Gorro de corderoy con presencia propia.",
+        "Una pieza distinta, pensada para quienes buscan salirse de lo común.",
+        "Ajuste cómodo y carácter en cada detalle.",
+        "Cada prenda está bordada con combinaciones de hilo seleccionadas para lograr un contraste más cálido y natural."
+      ],
+      "precio": 29000,
+      "coloresDisponibles": "Negro",
+      "imagen": [
+        "/assets/drop/buzo-universe-bordart-1.webp",
+        "/assets/drop/buzo-universe-bordart-2.webp",
+        "/assets/drop/buzo-universe-bordart-3.webp"
+      ]
+    },
+    {
+      "id": "basico-tote-daily",
+      "coleccion": "basicos",
+      "nombre": "TOTE — DAILY BORDART",
+      "descripcion": [
+        "Hecha para el uso diario, con el peso y la resistencia que necesitás.",
+        "Simple, práctica y con identidad.",
+        "Una forma fácil de llevar Bordart a todos lados. Lienzo pesado."
+      ],
+      "precio": 18000,
+      "coloresDisponibles": "Beig",
+      "imagen": [
+        "/assets/drop/totebag-1.webp",
+        "/assets/drop/totebag-2.webp",
+        "/assets/drop/totebag-3.webp"
+      ]
     },
     {
       "id": "gorrito-bordart",
