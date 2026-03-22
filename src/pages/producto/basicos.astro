@@ -22,20 +22,43 @@ const basicos = idsBasicos
 <Layout>
   <Navigation />
 
-  <section id="productos" class="px-4 bg-gradient-to-b from-white to-yellow-50 pt-4">
-    <div class="max-w-4xl mx-auto flex flex-col items-center justify-center text-center gap-4 p-4">
-      <h2 class="basicos-typing-look font-MiFuente font-bold text-xl md:text-3xl text-gray-900">
-        Básicos.
-      </h2>
-      <h3 class="basicos-typing-look font-MiFuente font-bold text-lg md:text-2xl text-gray-900 max-w-2xl leading-snug">
-        Piezas esenciales del día a día.
-      </h3>
+  <div class="basicos-page relative isolate min-h-screen">
+    <!-- Fondo fijo: imagen a pantalla completa + velo (el contenido va encima) -->
+    <div class="basicos-fixed-bg pointer-events-none fixed left-0 right-0 bottom-0 top-16 z-[1]" aria-hidden="true">
+      <img
+        src="/assets/basicos/fondo-basicos.jpeg"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover object-center"
+        loading="eager"
+        decoding="async"
+      />
+      <div class="absolute inset-0 bg-white/68"></div>
     </div>
 
-    <div class="max-w-4xl mx-auto p-4">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div class="relative z-[2]">
+      <!-- Encabezado (texto sobre el fondo) -->
+      <section
+        id="basicos-hero"
+        class="relative w-full flex flex-col items-center justify-center overflow-hidden px-4 pt-10 pb-10 md:pt-14 md:pb-12"
+        aria-label="Encabezado Básicos"
+      >
+        <div class="w-full max-w-6xl mx-auto flex flex-col items-center justify-center text-center gap-4 md:gap-5 px-4 py-4">
+          <div class="flex flex-col gap-3 md:gap-4">
+            <h2 class="basicos-typing-look font-MiFuente font-bold text-xl md:text-3xl text-gray-900">
+              Esenciales.
+            </h2>
+            <h3 class="basicos-typing-look font-MiFuente font-bold text-lg md:text-2xl text-gray-900 max-w-2xl leading-snug mx-auto">
+              Piezas clave del día a día.
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="productos" class="px-4 pt-2 pb-8">
+        <div class="max-w-4xl mx-auto p-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {basicos.map((producto) => (
-          <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+          <div class="border border-white/40 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition bg-white/90 backdrop-blur-md">
             <a href={`/producto/${producto.id}`}>
               <img src={producto.imagen[0]} alt={producto.nombre} class="w-full h-64 object-cover" />
 
@@ -55,24 +78,23 @@ const basicos = idsBasicos
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-center text-center gap-4 p-4">
+    <div class="flex flex-col items-center justify-center text-center gap-4 p-4 pb-8">
       <h3 class="basicos-typing-look font-MiFuente font-bold text-xl md:text-3xl text-gray-900">
         Colección básica BORDART.
       </h3>
     </div>
-  </section>
+      </section>
 
-  <div class="bg-yellow-50">
-    <Divider />
+      <div class="relative z-[2] bg-white/50 backdrop-blur-[2px]">
+        <Divider />
+      </div>
+      <Footer />
+    </div>
   </div>
-  <Footer />
 </Layout>
 
 <style>
-  /* Solo offset del navbar fijo (sin franja de texto) */
-  section#productos {
-    margin-top: 5rem;
-  }
+  /* El espaciador h-16 del nav ya deja hueco; el fondo fijo usa top-16 */
 
   /* Misma tipografía que "Próximamente capítulo..." en /producto/ropa (#typing-text),
      adaptada a fondo claro (contorno/sombra invertidos para texto oscuro) */

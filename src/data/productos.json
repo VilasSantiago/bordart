@@ -125,9 +125,9 @@
       "precio": 25000,
       "coloresDisponibles": "Blanco y negro",
       "imagen": [
-        "/assets/drop/remera-made-in-1.webp",
-        "/assets/drop/remera-made-in-2.webp",
-        "/assets/drop/remera-made-in-3.webp"
+        "/assets/drop/remera-bordart-1.webp",
+        "/assets/drop/remera-maria-1.webp",
+        "/assets/basicos/remera-black-basico.jpeg"
       ]
     },
     {
@@ -143,8 +143,8 @@
       "precio": 25000,
       "coloresDisponibles": "Blanco y negro",
       "imagen": [
-        "/assets/drop/remera-bordart-1.webp",
-        "/assets/drop/remera-bordart-2.webp"
+        "/assets/basicos/remera-black%20(1).jpeg",
+        "/assets/basicos/remera-black%20(2).jpeg"
       ]
     },
     {
@@ -157,11 +157,10 @@
         "De esas prendas que usás sin pensar… pero dicen todo."
       ],
       "precio": 21000,
-      "coloresDisponibles": "Bordo, azul marino, negro y beig",
+      "coloresDisponibles": "Bordo, azul marino, negro y beige",
       "imagen": [
-        "/assets/drop/remera-sonrisol-1.webp",
-        "/assets/drop/remera-sonrisol-2.webp",
-        "/assets/drop/remera-sonrisol-3.webp"
+        "/assets/basicos/gorra-bordart%20(2).jpeg",
+        "/assets/basicos/gorra-bordart%20(1).jpeg"
       ]
     },
     {
@@ -177,9 +176,10 @@
       "precio": 29000,
       "coloresDisponibles": "Negro",
       "imagen": [
-        "/assets/drop/buzo-universe-bordart-1.webp",
-        "/assets/drop/buzo-universe-bordart-2.webp",
-        "/assets/drop/buzo-universe-bordart-3.webp"
+        "/assets/basicos/gorro%20(4).jpeg",
+        "/assets/basicos/gorro%20(1).jpeg",
+        "/assets/basicos/gorro%20(3).jpeg",
+        "/assets/basicos/gorro%20(5).jpeg"
       ]
     },
     {
@@ -192,11 +192,12 @@
         "Una forma fácil de llevar Bordart a todos lados. Lienzo pesado."
       ],
       "precio": 18000,
-      "coloresDisponibles": "Beig",
+      "coloresDisponibles": "Beige",
       "imagen": [
-        "/assets/drop/totebag-1.webp",
-        "/assets/drop/totebag-2.webp",
-        "/assets/drop/totebag-3.webp"
+        "/assets/basicos/tote%20(6).jpeg",
+        "/assets/basicos/tote%20(5).jpeg",
+        "/assets/basicos/tote%20(4).jpeg",
+        "/assets/basicos/tote%20(1).jpeg"
       ]
     },
     {
